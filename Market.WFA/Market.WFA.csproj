@@ -63,6 +63,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="KayitliUrunAlisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KayitliUrunAlisForm.Designer.cs">
+      <DependentUpon>KayitliUrunAlisForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="YeniUrunForm.cs">
@@ -73,6 +79,9 @@
     </Compile>
     <EmbeddedResource Include="BarkodAnaForm.resx">
       <DependentUpon>BarkodAnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KayitliUrunAlisForm.resx">
+      <DependentUpon>KayitliUrunAlisForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

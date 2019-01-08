@@ -80,6 +80,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBarkodUret;
-        private System.Windows.Forms.TextBox txtBarkod;
+        public System.Windows.Forms.TextBox txtBarkod;
     }
 }

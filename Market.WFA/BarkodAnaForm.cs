@@ -13,8 +13,9 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
-
-
+        private YeniUrunForm yeniurunform;
+        private KayitliUrunAlisForm kayitliurunalisform;
+        string ara;
         private void btnBarkodUret_Click(object sender, EventArgs e)
         {
 
@@ -42,12 +43,34 @@ namespace Market.WFA
             txtBarkod.Select(0, 0);
             txtBarkod.SelectionStart = txtBarkod.MaxLength;
             #endregion
-            var ara = txtBarkod.Text;
+            ara = txtBarkod.Text;
             var sonuc = new UrunDetayRepo().GetAll().FirstOrDefault(x=>x.Barkod==ara);
             if (sonuc==null)
             {
-                Form1 a = new Form1();
-                a.Show();
+                if (yeniurunform == null || yeniurunform.IsDisposed)
+                {
+                    yeniurunform = new YeniUrunForm
+                    {
+                        MdiParent = this
+                    };
+                    yeniurunform.Show();
+                    yeniurunform.txtBarkodNo.Text = ara;
+                }
+             
+              
+            }
+            else
+            {
+                if (kayitliurunalisform == null || kayitliurunalisform.IsDisposed)
+                {
+                    kayitliurunalisform = new KayitliUrunAlisForm
+                    {
+                        MdiParent = this
+                    };
+                    kayitliurunalisform.Show();
+                    kayitliurunalisform.txtBarkodNo.Text = ara;
+                }
+
             }
         }
         private string UrunKodu()
