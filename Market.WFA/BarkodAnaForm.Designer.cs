@@ -44,7 +44,7 @@
             // 
             // btnBarkodUret
             // 
-            this.btnBarkodUret.Location = new System.Drawing.Point(246, 26);
+            this.btnBarkodUret.Location = new System.Drawing.Point(256, 26);
             this.btnBarkodUret.Name = "btnBarkodUret";
             this.btnBarkodUret.Size = new System.Drawing.Size(85, 36);
             this.btnBarkodUret.TabIndex = 26;

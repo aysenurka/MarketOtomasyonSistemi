@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Market.BLL.Repository;
+using Market.Models.Entities;
+using System;
 using System.Drawing.Printing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -14,6 +17,8 @@ namespace Market.WFA
 
         private void btnBarkodUret_Click(object sender, EventArgs e)
         {
+
+            #region Barkod
 
             txtBarkod.Visible = true;
             PrintDocument doc = new PrintDocument();
@@ -36,7 +41,14 @@ namespace Market.WFA
             txtBarkod.Focus();
             txtBarkod.Select(0, 0);
             txtBarkod.SelectionStart = txtBarkod.MaxLength;
-
+            #endregion
+            var ara = txtBarkod.Text;
+            var sonuc = new UrunDetayRepo().GetAll().FirstOrDefault(x=>x.Barkod==ara);
+            if (sonuc==null)
+            {
+                Form1 a = new Form1();
+                a.Show();
+            }
         }
         private string UrunKodu()
         {
