@@ -17,7 +17,7 @@ namespace Market.WFA
 
             txtBarkod.Visible = true;
             PrintDocument doc = new PrintDocument();
-            Market.WFA.Ean13 barkod = new Market.WFA.Ean13();
+            Barkod barkod = new Barkod();
 
             barkod.Height = 30f;
             barkod.Width = 70f;

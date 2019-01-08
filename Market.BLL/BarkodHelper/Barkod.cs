@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Text;
+using System.Drawing;
 
 namespace Market.WFA
 {
-    public class Ean13
+    public class Barkod
     {
 
         private string _sName = "EAN13";
@@ -42,12 +43,12 @@ namespace Market.WFA
         private string _sProductCode;
         private string _sChecksumDigit;
 
-        public Ean13()
+        public Barkod()
         {
 
         }
 
-        public Ean13(string mfgNumber, string productId)
+        public Barkod(string mfgNumber, string productId)
         {
             this.CountryCode = "00";
             this.ManufacturerCode = mfgNumber;
@@ -55,7 +56,7 @@ namespace Market.WFA
             this.CalculateChecksumDigit();
         }
 
-        public Ean13(string countryCode, string mfgNumber, string productId)
+        public Barkod(string countryCode, string mfgNumber, string productId)
         {
             this.CountryCode = countryCode;
             this.ManufacturerCode = mfgNumber;
@@ -63,7 +64,7 @@ namespace Market.WFA
             this.CalculateChecksumDigit();
         }
 
-        public Ean13(string countryCode, string mfgNumber, string productId, string checkDigit)
+        public Barkod(string countryCode, string mfgNumber, string productId, string checkDigit)
         {
             this.CountryCode = countryCode;
             this.ManufacturerCode = mfgNumber;
