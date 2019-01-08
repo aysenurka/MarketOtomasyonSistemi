@@ -1,7 +1,9 @@
 ﻿using Market.DAL;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Market.BLL.Repository
 {
@@ -25,6 +27,7 @@ namespace Market.BLL.Repository
             }
         }
 
+      
         public virtual T GetById(TId id)
         {
             try
@@ -52,6 +55,17 @@ namespace Market.BLL.Repository
             }
         }
 
+        public virtual async Task<List<T>> GetAllAsync()
+        {
+            try
+            {
+                return await db.Set<T>().ToListAsync();
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public virtual int Delete(T entity)
         {
             try
@@ -78,6 +92,7 @@ namespace Market.BLL.Repository
                 throw;
             }
         }
+     
         public virtual List<T> GetAll(Func<T, bool> predicate)
         {
             try
