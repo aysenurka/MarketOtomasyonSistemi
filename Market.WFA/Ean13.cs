@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Market.WFA
 {
     public class Ean13
     {
+
         private string _sName = "EAN13";
 
         private float _fMinimumAllowableScale = 0.8f;

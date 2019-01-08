@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -21,12 +15,27 @@ namespace Market.WFA
         {
 
         }
+   
+        private string UrunKodu()
+        {
+            Random rnd = new Random();
+            int sayi = rnd.Next(1, 1500);
+            return sayi.ToString();
+        }
 
-        private void btnBarkod_Click(object sender, EventArgs e)
+        private void btnBarkod_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                MessageBox.Show("Barkod okundu");
+            }
+        }
+
+        private void btnBarkodUret_Click(object sender, EventArgs e)
         {
             txtBarkod.Visible = true;
             PrintDocument doc = new PrintDocument();
-            Ean13Barcode2005.Ean13 barkod = new Ean13Barcode2005.Ean13();
+            Market.WFA.Ean13 barkod = new Market.WFA.Ean13();
 
             barkod.Height = 30f;
             barkod.Width = 70f;
@@ -45,12 +54,6 @@ namespace Market.WFA
             txtBarkod.Focus();
             txtBarkod.Select(0, 0);
             txtBarkod.SelectionStart = txtBarkod.MaxLength;
-        }
-        private string UrunKodu()
-        {
-            Random rnd = new Random();
-            int sayi = rnd.Next(1, 11);
-            return sayi.ToString();
         }
     }
 }

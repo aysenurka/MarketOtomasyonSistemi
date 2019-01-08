@@ -47,18 +47,17 @@
             this.btnYeniKategori = new System.Windows.Forms.Button();
             this.pnYeniUrunEkle = new System.Windows.Forms.Panel();
             this.pnKategoriEkle = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtYeniKategoriAdi = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.nuYeniKategoriKDV = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
             this.btnYeniKategoriEkle = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.nuYeniKategoriKDV = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtYeniKategoriAdi = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtBarkod = new System.Windows.Forms.TextBox();
             this.btnBarkodUret = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnBarkod = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdetBilgisi)).BeginInit();
@@ -73,7 +72,7 @@
             // cmbYeniCategory
             // 
             this.cmbYeniCategory.FormattingEnabled = true;
-            this.cmbYeniCategory.Location = new System.Drawing.Point(96, 86);
+            this.cmbYeniCategory.Location = new System.Drawing.Point(98, 115);
             this.cmbYeniCategory.Name = "cmbYeniCategory";
             this.cmbYeniCategory.Size = new System.Drawing.Size(121, 21);
             this.cmbYeniCategory.TabIndex = 0;
@@ -81,7 +80,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 27);
+            this.label1.Location = new System.Drawing.Point(11, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 1;
@@ -90,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 70);
+            this.label2.Location = new System.Drawing.Point(12, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 2;
@@ -99,14 +98,14 @@
             // cmbUrunCategory
             // 
             this.cmbUrunCategory.FormattingEnabled = true;
-            this.cmbUrunCategory.Location = new System.Drawing.Point(96, 124);
+            this.cmbUrunCategory.Location = new System.Drawing.Point(98, 153);
             this.cmbUrunCategory.Name = "cmbUrunCategory";
             this.cmbUrunCategory.Size = new System.Drawing.Size(121, 21);
             this.cmbUrunCategory.TabIndex = 3;
             // 
             // btnYeniUrunEkle
             // 
-            this.btnYeniUrunEkle.Location = new System.Drawing.Point(232, 124);
+            this.btnYeniUrunEkle.Location = new System.Drawing.Point(234, 153);
             this.btnYeniUrunEkle.Name = "btnYeniUrunEkle";
             this.btnYeniUrunEkle.Size = new System.Drawing.Size(110, 26);
             this.btnYeniUrunEkle.TabIndex = 4;
@@ -115,7 +114,7 @@
             // 
             // nuUrunAdetBilgisi
             // 
-            this.nuUrunAdetBilgisi.Location = new System.Drawing.Point(98, 208);
+            this.nuUrunAdetBilgisi.Location = new System.Drawing.Point(100, 237);
             this.nuUrunAdetBilgisi.Maximum = new decimal(new int[] {
             500,
             0,
@@ -138,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 105);
+            this.label3.Location = new System.Drawing.Point(7, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 6;
@@ -147,7 +146,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 147);
+            this.label4.Location = new System.Drawing.Point(11, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 7;
@@ -155,7 +154,7 @@
             // 
             // nuUrunKoliFiyati
             // 
-            this.nuUrunKoliFiyati.Location = new System.Drawing.Point(96, 168);
+            this.nuUrunKoliFiyati.Location = new System.Drawing.Point(98, 197);
             this.nuUrunKoliFiyati.Maximum = new decimal(new int[] {
             500,
             0,
@@ -251,7 +250,7 @@
             // 
             // btnYeniKategori
             // 
-            this.btnYeniKategori.Location = new System.Drawing.Point(232, 86);
+            this.btnYeniKategori.Location = new System.Drawing.Point(234, 115);
             this.btnYeniKategori.Name = "btnYeniKategori";
             this.btnYeniKategori.Size = new System.Drawing.Size(110, 26);
             this.btnYeniKategori.TabIndex = 16;
@@ -287,45 +286,14 @@
             this.pnKategoriEkle.Size = new System.Drawing.Size(312, 201);
             this.pnKategoriEkle.TabIndex = 19;
             // 
-            // label9
+            // btnYeniKategoriEkle
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Kategori Adı";
-            // 
-            // txtYeniKategoriAdi
-            // 
-            this.txtYeniKategoriAdi.Location = new System.Drawing.Point(87, 8);
-            this.txtYeniKategoriAdi.Name = "txtYeniKategoriAdi";
-            this.txtYeniKategoriAdi.Size = new System.Drawing.Size(125, 20);
-            this.txtYeniKategoriAdi.TabIndex = 1;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(87, 35);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(125, 56);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 42);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 13);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Açıklama";
-            // 
-            // nuYeniKategoriKDV
-            // 
-            this.nuYeniKategoriKDV.Location = new System.Drawing.Point(87, 98);
-            this.nuYeniKategoriKDV.Name = "nuYeniKategoriKDV";
-            this.nuYeniKategoriKDV.Size = new System.Drawing.Size(120, 20);
-            this.nuYeniKategoriKDV.TabIndex = 4;
+            this.btnYeniKategoriEkle.Location = new System.Drawing.Point(46, 143);
+            this.btnYeniKategoriEkle.Name = "btnYeniKategoriEkle";
+            this.btnYeniKategoriEkle.Size = new System.Drawing.Size(161, 47);
+            this.btnYeniKategoriEkle.TabIndex = 20;
+            this.btnYeniKategoriEkle.Text = "Urun Kaydet";
+            this.btnYeniKategoriEkle.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -336,18 +304,49 @@
             this.label11.TabIndex = 5;
             this.label11.Text = "KDV Degeri";
             // 
-            // btnYeniKategoriEkle
+            // nuYeniKategoriKDV
             // 
-            this.btnYeniKategoriEkle.Location = new System.Drawing.Point(46, 143);
-            this.btnYeniKategoriEkle.Name = "btnYeniKategoriEkle";
-            this.btnYeniKategoriEkle.Size = new System.Drawing.Size(161, 47);
-            this.btnYeniKategoriEkle.TabIndex = 20;
-            this.btnYeniKategoriEkle.Text = "Urun Kaydet";
-            this.btnYeniKategoriEkle.UseVisualStyleBackColor = true;
+            this.nuYeniKategoriKDV.Location = new System.Drawing.Point(87, 98);
+            this.nuYeniKategoriKDV.Name = "nuYeniKategoriKDV";
+            this.nuYeniKategoriKDV.Size = new System.Drawing.Size(120, 20);
+            this.nuYeniKategoriKDV.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 42);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Açıklama";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(87, 35);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(125, 56);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
+            // 
+            // txtYeniKategoriAdi
+            // 
+            this.txtYeniKategoriAdi.Location = new System.Drawing.Point(87, 8);
+            this.txtYeniKategoriAdi.Name = "txtYeniKategoriAdi";
+            this.txtYeniKategoriAdi.Size = new System.Drawing.Size(125, 20);
+            this.txtYeniKategoriAdi.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Kategori Adı";
             // 
             // txtBarkod
             // 
-            this.txtBarkod.Location = new System.Drawing.Point(98, 13);
+            this.txtBarkod.Location = new System.Drawing.Point(100, 20);
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(100, 20);
             this.txtBarkod.TabIndex = 20;
@@ -360,11 +359,12 @@
             this.btnBarkodUret.TabIndex = 21;
             this.btnBarkodUret.Text = "Barkod Tanı";
             this.btnBarkodUret.UseVisualStyleBackColor = true;
+            this.btnBarkodUret.Click += new System.EventHandler(this.btnBarkodUret_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(229, 170);
+            this.label12.Location = new System.Drawing.Point(231, 199);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(93, 13);
             this.label12.TabIndex = 22;
@@ -373,25 +373,15 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(229, 215);
+            this.label13.Location = new System.Drawing.Point(231, 244);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(50, 13);
             this.label13.TabIndex = 23;
             this.label13.Text = "Alış Fiyatı";
             // 
-            // btnBarkod
-            // 
-            this.btnBarkod.Location = new System.Drawing.Point(410, 239);
-            this.btnBarkod.Name = "btnBarkod";
-            this.btnBarkod.Size = new System.Drawing.Size(75, 23);
-            this.btnBarkod.TabIndex = 25;
-            this.btnBarkod.Text = "Barkod Oluştur";
-            this.btnBarkod.UseVisualStyleBackColor = true;
-            this.btnBarkod.Click += new System.EventHandler(this.btnBarkod_Click);
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(347, 427);
+            this.textBox1.Location = new System.Drawing.Point(410, 417);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(214, 20);
@@ -400,7 +390,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(308, 269);
+            this.pictureBox1.Location = new System.Drawing.Point(371, 259);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(283, 152);
             this.pictureBox1.TabIndex = 24;
@@ -411,7 +401,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 512);
-            this.Controls.Add(this.btnBarkod);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label13);
@@ -479,7 +468,6 @@
         private System.Windows.Forms.Button btnBarkodUret;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btnBarkod;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
