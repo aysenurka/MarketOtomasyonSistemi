@@ -49,7 +49,6 @@
   <ItemGroup>
     <Compile Include="Abstracts\BaseEntity.cs" />
     <Compile Include="Abstracts\BaseEntity2.cs" />
-    <Compile Include="Entities\Alis.cs" />
     <Compile Include="Entities\Kategori.cs" />
     <Compile Include="Entities\Satis.cs" />
     <Compile Include="Entities\SatisDetay.cs" />

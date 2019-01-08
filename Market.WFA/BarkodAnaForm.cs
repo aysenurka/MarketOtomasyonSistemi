@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -18,12 +11,7 @@ namespace Market.WFA
             InitializeComponent();
         }
 
-        private string UrunKodu()
-        {
-            Random rnd = new Random();
-            int sayi = rnd.Next(1, 1500);
-            return sayi.ToString();
-        }
+
         private void btnBarkodUret_Click(object sender, EventArgs e)
         {
 
@@ -50,7 +38,12 @@ namespace Market.WFA
             txtBarkod.SelectionStart = txtBarkod.MaxLength;
 
         }
-
+        private string UrunKodu()
+        {
+            Random rnd = new Random();
+            int sayi = rnd.Next(1, 1500);
+            return sayi.ToString();
+        }
         private void btnBarkodUret_KeyDown(object sender, KeyEventArgs e)
         {
 

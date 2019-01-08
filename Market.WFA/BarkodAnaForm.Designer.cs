@@ -36,7 +36,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(288, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(99, 118);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(283, 152);
             this.pictureBox1.TabIndex = 27;
@@ -55,7 +55,7 @@
             // 
             // txtBarkod
             // 
-            this.txtBarkod.Location = new System.Drawing.Point(123, 33);
+            this.txtBarkod.Location = new System.Drawing.Point(110, 42);
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(100, 20);
             this.txtBarkod.TabIndex = 25;

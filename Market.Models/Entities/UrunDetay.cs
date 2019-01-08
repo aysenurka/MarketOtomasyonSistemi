@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Market.Models.Abstracts;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Market.Models.Abstracts;
 
 namespace Market.Models.Entities
 {
@@ -26,6 +22,7 @@ namespace Market.Models.Entities
         public decimal Fiyat { get; set; }
         public decimal AlisFiyat { get; set; }//computed
         public decimal SatisFiyat { get; set; }//computed
+        public DateTime UrunAlısTarihi { get; set; } = DateTime.Now;
 
         [ForeignKey("UrunId")]
         public virtual Urun Urun { get; set; }
