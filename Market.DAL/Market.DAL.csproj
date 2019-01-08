@@ -51,6 +51,34 @@
     <Compile Include="Migrations\201901072056225_entitiescreated.Designer.cs">
       <DependentUpon>201901072056225_entitiescreated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901080652351_entities2.cs" />
+    <Compile Include="Migrations\201901080652351_entities2.Designer.cs">
+      <DependentUpon>201901080652351_entities2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901080728404_barkodunique.cs" />
+    <Compile Include="Migrations\201901080728404_barkodunique.Designer.cs">
+      <DependentUpon>201901080728404_barkodunique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901080830454_a1.cs" />
+    <Compile Include="Migrations\201901080830454_a1.Designer.cs">
+      <DependentUpon>201901080830454_a1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901080844458_a2.cs" />
+    <Compile Include="Migrations\201901080844458_a2.Designer.cs">
+      <DependentUpon>201901080844458_a2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901081011039_relationfixed.cs" />
+    <Compile Include="Migrations\201901081011039_relationfixed.Designer.cs">
+      <DependentUpon>201901081011039_relationfixed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901081031489_kategorikar.cs" />
+    <Compile Include="Migrations\201901081031489_kategorikar.Designer.cs">
+      <DependentUpon>201901081031489_kategorikar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901081050270_uniquefields.cs" />
+    <Compile Include="Migrations\201901081050270_uniquefields.Designer.cs">
+      <DependentUpon>201901081050270_uniquefields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +96,27 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901072056225_entitiescreated.resx">
       <DependentUpon>201901072056225_entitiescreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901080652351_entities2.resx">
+      <DependentUpon>201901080652351_entities2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901080728404_barkodunique.resx">
+      <DependentUpon>201901080728404_barkodunique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901080830454_a1.resx">
+      <DependentUpon>201901080830454_a1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901080844458_a2.resx">
+      <DependentUpon>201901080844458_a2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901081011039_relationfixed.resx">
+      <DependentUpon>201901081011039_relationfixed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901081031489_kategorikar.resx">
+      <DependentUpon>201901081031489_kategorikar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901081050270_uniquefields.resx">
+      <DependentUpon>201901081050270_uniquefields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

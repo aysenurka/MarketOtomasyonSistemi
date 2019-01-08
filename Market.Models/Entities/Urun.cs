@@ -10,23 +10,22 @@ using Market.Models.Abstracts;
 namespace Market.Models.Entities
 {
     [Table("Urunler")]
-    public class Urun:BaseEntity<Guid>
+    public class Urun : BaseEntity<Guid>
     {
         public Urun()
         {
-            this.Id=Guid.NewGuid();
+            this.Id = Guid.NewGuid();
         }
         [Required]
         [StringLength(30)]
+        [Index("IX_UrunAd", IsUnique = true)]
         public string UrunAd { get; set; }
         public short UrunStok { get; set; }
         public decimal UrunFiyat { get; set; }
         public Guid KategoriId { get; set; }
 
-
         [ForeignKey("KategoriId")]
         public virtual Kategori Kategori { get; set; }
-        //[ForeignKey("UrunDetayId")]
-        //public virtual UrunDetay UrunDetay { get; set; }
+        public virtual ICollection<UrunDetay> UrunDetaylar { get; set; } = new HashSet<UrunDetay>();
     }
 }

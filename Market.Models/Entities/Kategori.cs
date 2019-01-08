@@ -18,13 +18,16 @@ namespace Market.Models.Entities
         }
         [Required]
         [StringLength(30)]
+        [Index("IX_KategoriAd", IsUnique = true)]
         public string KategoriAd { get; set; }
         [StringLength(100)]
         public string Aciklama { get; set; }
         [Required]
         public decimal Kdv { get; set; }
+        [Required]
+        public decimal Kar { get; set; }
 
 
-        public virtual ICollection<Urun> Urunler { get; set; }=new HashSet<Urun>();
+        public virtual ICollection<Urun> Urunler { get; set; } = new HashSet<Urun>();
     }
 }

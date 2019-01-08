@@ -52,8 +52,10 @@
     <Compile Include="Entities\Alis.cs" />
     <Compile Include="Entities\Kategori.cs" />
     <Compile Include="Entities\Satis.cs" />
+    <Compile Include="Entities\SatisDetay.cs" />
     <Compile Include="Entities\Urun.cs" />
     <Compile Include="Entities\UrunDetay.cs" />
+    <Compile Include="Enums\OdemeTipi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
