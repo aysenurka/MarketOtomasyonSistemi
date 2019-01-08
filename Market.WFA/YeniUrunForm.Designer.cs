@@ -54,19 +54,14 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.txtYeniKategoriAdi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtBarkod = new System.Windows.Forms.TextBox();
-            this.btnBarkodUret = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdetBilgisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKoliFiyati)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunTaneFiyat)).BeginInit();
             this.pnYeniUrunEkle.SuspendLayout();
             this.pnKategoriEkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniKategoriKDV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbYeniCategory
@@ -285,6 +280,7 @@
             this.pnKategoriEkle.Name = "pnKategoriEkle";
             this.pnKategoriEkle.Size = new System.Drawing.Size(312, 201);
             this.pnKategoriEkle.TabIndex = 19;
+            this.pnKategoriEkle.Visible = false;
             // 
             // btnYeniKategoriEkle
             // 
@@ -344,23 +340,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Kategori Adı";
             // 
-            // txtBarkod
-            // 
-            this.txtBarkod.Location = new System.Drawing.Point(100, 20);
-            this.txtBarkod.Name = "txtBarkod";
-            this.txtBarkod.Size = new System.Drawing.Size(100, 20);
-            this.txtBarkod.TabIndex = 20;
-            // 
-            // btnBarkodUret
-            // 
-            this.btnBarkodUret.Location = new System.Drawing.Point(223, 13);
-            this.btnBarkodUret.Name = "btnBarkodUret";
-            this.btnBarkodUret.Size = new System.Drawing.Size(85, 36);
-            this.btnBarkodUret.TabIndex = 21;
-            this.btnBarkodUret.Text = "Barkod Tanı";
-            this.btnBarkodUret.UseVisualStyleBackColor = true;
-            this.btnBarkodUret.Click += new System.EventHandler(this.btnBarkodUret_Click);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -379,34 +358,13 @@
             this.label13.TabIndex = 23;
             this.label13.Text = "Alış Fiyatı";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(410, 417);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(214, 20);
-            this.textBox1.TabIndex = 26;
-            this.textBox1.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(371, 259);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(283, 152);
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
             // YeniUrunForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 512);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.btnBarkodUret);
-            this.Controls.Add(this.txtBarkod);
             this.Controls.Add(this.pnKategoriEkle);
             this.Controls.Add(this.pnYeniUrunEkle);
             this.Controls.Add(this.btnYeniKategori);
@@ -430,7 +388,6 @@
             this.pnKategoriEkle.ResumeLayout(false);
             this.pnKategoriEkle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniKategoriKDV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,11 +421,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox txtYeniKategoriAdi;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtBarkod;
-        private System.Windows.Forms.Button btnBarkodUret;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
