@@ -18,9 +18,16 @@ namespace Market.Models.Entities
         public string Barkod { get; set; }
         public short Adet { get; set; }
         public int BirimAdet { get; set; } = 1;
-        public int ToplamAdet { get; set; }//computed
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public int ToplamAdet
+        {
+            get => Adet * BirimAdet;
+            set { }
+        }//computed
         public decimal Fiyat { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public decimal AlisFiyat { get; set; }//computed
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public decimal SatisFiyat { get; set; }//computed
         public DateTime UrunAlısTarihi { get; set; } = DateTime.Now;
 
