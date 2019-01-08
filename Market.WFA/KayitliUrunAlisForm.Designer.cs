@@ -37,6 +37,7 @@
             this.txtBarkodNo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtAlinanadetSayisi = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -121,11 +122,19 @@
             this.label5.TabIndex = 27;
             this.label5.Text = "Alınan Adet Sayisi";
             // 
-            // KayıtlıUrunAlısForm
+            // txtAlinanadetSayisi
+            // 
+            this.txtAlinanadetSayisi.Location = new System.Drawing.Point(275, 164);
+            this.txtAlinanadetSayisi.Name = "txtAlinanadetSayisi";
+            this.txtAlinanadetSayisi.Size = new System.Drawing.Size(154, 20);
+            this.txtAlinanadetSayisi.TabIndex = 28;
+            // 
+            // KayitliUrunAlisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtAlinanadetSayisi);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBarkodNo);
@@ -135,7 +144,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "KayıtlıUrunAlısForm";
+            this.Name = "KayitliUrunAlisForm";
             this.Text = "KayıtlıUrunAlısForm";
             this.Load += new System.EventHandler(this.KayıtlıUrunAlısForm_Load);
             this.ResumeLayout(false);
@@ -154,5 +163,6 @@
         public System.Windows.Forms.TextBox txtBarkodNo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtAlinanadetSayisi;
     }
 }
