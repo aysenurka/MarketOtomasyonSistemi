@@ -23,7 +23,7 @@ namespace Market.WFA
             cmbUrunCategory.DataSource = UrunleriGetir();
         }
 
-        private List<KategoriViewModel> KategorileriGetir()
+        public List<KategoriViewModel> KategorileriGetir()
         {
             var sonuc = new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null).Select(x => new KategoriViewModel
             {
@@ -63,9 +63,6 @@ namespace Market.WFA
 
         private void btnYeniKategori_Click(object sender, EventArgs e)
         {
-            pnKategoriEkle.Visible = true;
-            pnYeniUrunEkle.Visible = false;
-            pnUrunBilgileri.Visible = false;
 
             var categories = new List<KategoriViewModel>
             {
@@ -81,23 +78,25 @@ namespace Market.WFA
                 }));
             lstCategoryiSec.DataSource = categories;
 
+            KategoriEkleForm urun = new KategoriEkleForm();
+            urun.Show();
+            this.Hide();
+           
+           
+
         }
 
         private void btnUrunVazgec_Click(object sender, EventArgs e)
         {
             pnUrunBilgileri.Visible = true;
             pnYeniUrunEkle.Visible = false;
-            pnKategoriEkle.Visible = false;
-
-
-
         }
 
         private void btnKategoriVazgec_Click(object sender, EventArgs e)
         {
             pnUrunBilgileri.Visible = true;
             pnYeniUrunEkle.Visible = false;
-            pnKategoriEkle.Visible = false;
+          
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -164,7 +163,7 @@ namespace Market.WFA
             }
             pnUrunBilgileri.Visible = true;
             pnYeniUrunEkle.Visible = false;
-            pnKategoriEkle.Visible = false;
+          
             cmbYeniCategory.DataSource = KategorileriGetir();
 
         }

@@ -56,15 +56,7 @@
             this.nuYeniUrunIndirim = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtYeniKategoriAdi = new System.Windows.Forms.TextBox();
-            this.txtKategoriOzet = new System.Windows.Forms.RichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnYeniKategoriEkle = new System.Windows.Forms.Button();
-            this.btnKategoriVazgec = new System.Windows.Forms.Button();
-            this.pnKategoriEkle = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.lstCategoryiSec = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdetBilgisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKoliFiyati)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunTaneFiyat)).BeginInit();
@@ -72,7 +64,6 @@
             this.pnUrunBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunKdvDegeri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunIndirim)).BeginInit();
-            this.pnKategoriEkle.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbYeniCategory
@@ -410,74 +401,6 @@
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Kategori Adı";
-            // 
-            // txtYeniKategoriAdi
-            // 
-            this.txtYeniKategoriAdi.Location = new System.Drawing.Point(87, 8);
-            this.txtYeniKategoriAdi.Name = "txtYeniKategoriAdi";
-            this.txtYeniKategoriAdi.Size = new System.Drawing.Size(125, 20);
-            this.txtYeniKategoriAdi.TabIndex = 1;
-            // 
-            // txtKategoriOzet
-            // 
-            this.txtKategoriOzet.Location = new System.Drawing.Point(87, 35);
-            this.txtKategoriOzet.Name = "txtKategoriOzet";
-            this.txtKategoriOzet.Size = new System.Drawing.Size(125, 56);
-            this.txtKategoriOzet.TabIndex = 2;
-            this.txtKategoriOzet.Text = "";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 42);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 13);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Açıklama";
-            // 
-            // btnYeniKategoriEkle
-            // 
-            this.btnYeniKategoriEkle.Location = new System.Drawing.Point(23, 159);
-            this.btnYeniKategoriEkle.Name = "btnYeniKategoriEkle";
-            this.btnYeniKategoriEkle.Size = new System.Drawing.Size(107, 47);
-            this.btnYeniKategoriEkle.TabIndex = 20;
-            this.btnYeniKategoriEkle.Text = "Kategori Kaydet";
-            this.btnYeniKategoriEkle.UseVisualStyleBackColor = true;
-            this.btnYeniKategoriEkle.Click += new System.EventHandler(this.btnYeniKategoriEkle_Click);
-            // 
-            // btnKategoriVazgec
-            // 
-            this.btnKategoriVazgec.Location = new System.Drawing.Point(164, 159);
-            this.btnKategoriVazgec.Name = "btnKategoriVazgec";
-            this.btnKategoriVazgec.Size = new System.Drawing.Size(109, 47);
-            this.btnKategoriVazgec.TabIndex = 26;
-            this.btnKategoriVazgec.Text = "Vazgec";
-            this.btnKategoriVazgec.UseVisualStyleBackColor = true;
-            this.btnKategoriVazgec.Click += new System.EventHandler(this.btnKategoriVazgec_Click);
-            // 
-            // pnKategoriEkle
-            // 
-            this.pnKategoriEkle.Controls.Add(this.lstCategoryiSec);
-            this.pnKategoriEkle.Controls.Add(this.btnKategoriVazgec);
-            this.pnKategoriEkle.Controls.Add(this.btnYeniKategoriEkle);
-            this.pnKategoriEkle.Controls.Add(this.label10);
-            this.pnKategoriEkle.Controls.Add(this.txtKategoriOzet);
-            this.pnKategoriEkle.Controls.Add(this.txtYeniKategoriAdi);
-            this.pnKategoriEkle.Controls.Add(this.label9);
-            this.pnKategoriEkle.Location = new System.Drawing.Point(768, 41);
-            this.pnKategoriEkle.Name = "pnKategoriEkle";
-            this.pnKategoriEkle.Size = new System.Drawing.Size(483, 247);
-            this.pnKategoriEkle.TabIndex = 19;
-            this.pnKategoriEkle.Visible = false;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -487,14 +410,6 @@
             this.label15.TabIndex = 26;
             this.label15.Text = "label15";
             // 
-            // lstCategoryiSec
-            // 
-            this.lstCategoryiSec.FormattingEnabled = true;
-            this.lstCategoryiSec.Location = new System.Drawing.Point(273, 3);
-            this.lstCategoryiSec.Name = "lstCategoryiSec";
-            this.lstCategoryiSec.Size = new System.Drawing.Size(127, 147);
-            this.lstCategoryiSec.TabIndex = 27;
-            // 
             // YeniUrunForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,10 +418,8 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pnUrunBilgileri);
             this.Controls.Add(this.txtBarkodNo);
-            this.Controls.Add(this.pnKategoriEkle);
             this.Controls.Add(this.pnYeniUrunEkle);
             this.Name = "YeniUrunForm";
-            this.Text = "YeniUrunForm";
             this.Load += new System.EventHandler(this.YeniUrunForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdetBilgisi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKoliFiyati)).EndInit();
@@ -517,16 +430,12 @@
             this.pnUrunBilgileri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunKdvDegeri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunIndirim)).EndInit();
-            this.pnKategoriEkle.ResumeLayout(false);
-            this.pnKategoriEkle.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbYeniCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbUrunCategory;
@@ -548,20 +457,13 @@
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.TextBox txtBarkodNo;
         private System.Windows.Forms.Button btnUrunVazgec;
-        private System.Windows.Forms.Panel pnUrunBilgileri;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.NumericUpDown nuYeniUrunIndirim;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.NumericUpDown nuYeniUrunKdvDegeri;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtYeniKategoriAdi;
-        private System.Windows.Forms.RichTextBox txtKategoriOzet;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnYeniKategoriEkle;
-        private System.Windows.Forms.Button btnKategoriVazgec;
-        private System.Windows.Forms.Panel pnKategoriEkle;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ListBox lstCategoryiSec;
+        public System.Windows.Forms.ComboBox cmbYeniCategory;
+        public System.Windows.Forms.Panel pnUrunBilgileri;
     }
 }
