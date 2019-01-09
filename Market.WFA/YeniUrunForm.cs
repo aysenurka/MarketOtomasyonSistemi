@@ -18,20 +18,26 @@ namespace Market.WFA
 
         private void YeniUrunForm_Load(object sender, EventArgs e)
         {
-            cmbYeniCategory.DataSource = new KategoriRepo().GetAll().Select(x => new KategoriViewModel
+            cmbYeniCategory.DataSource = KategorileriGetir();
+
+            cmbUrunCategory.DataSource = UrunleriGetir();
+        }
+
+        private List<KategoriViewModel> KategorileriGetir()
+        {
+           var sonuc = new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null).Select(x => new KategoriViewModel
             {
                 KategoriId = x.Id,
                 Aciklama = x.Aciklama,
                 KategoriAd = x.KategoriAd,
                 UstKategoriId = x.UstKategoriId
             }).ToList();
-            
-            cmbUrunCategory.DataSource = UrunleriGetir();
+            return sonuc;
         }
 
         private List<UrunViewModel> UrunleriGetir()
         {
-          var sonuc =  new UrunRepo().GetAll().Select(x => new UrunViewModel
+            var sonuc = new UrunRepo().GetAll().Select(x => new UrunViewModel
             {
                 UrunId = x.Id,
                 UrunAd = x.UrunAd,
@@ -50,6 +56,22 @@ namespace Market.WFA
         private void btnYeniKategori_Click(object sender, EventArgs e)
         {
             pnKategoriEkle.Visible = true;
+            pnYeniUrunEkle.Visible = false;
+            pnUrunBilgileri.Visible = false;
+
+            var categories = new List<KategoriViewModel>
+            {
+                new KategoriViewModel() { KategoriId=0, KategoriAd = "Boş"}
+            };
+            categories.AddRange( new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null)
+                .Select(x => new KategoriViewModel
+                {
+                    KategoriId = x.Id,
+                    Aciklama = x.Aciklama,
+                    KategoriAd = x.KategoriAd,
+                    UstKategoriId = x.UstKategoriId
+                }));
+            lstCategoryiSec.DataSource = categories;
 
         }
 
@@ -103,7 +125,7 @@ namespace Market.WFA
                     UrunStok = 0
                 });
                 MessageBox.Show("Urun eklendi");
-              cmbUrunCategory.DataSource=  UrunleriGetir();
+                cmbUrunCategory.DataSource = UrunleriGetir();
             }
             catch (Exception ex)
             {
@@ -114,18 +136,29 @@ namespace Market.WFA
 
         private void btnYeniKategoriEkle_Click(object sender, EventArgs e)
         {
+            if (lstCategoryiSec.SelectedItem == null) return;
+            var seciliUstKategori = lstCategoryiSec.SelectedItem as KategoriViewModel;
             try
             {
+
                 new KategoriRepo().Insert(new Kategori
                 {
-
+                    Aciklama = txtKategoriOzet.Text,
+                    KategoriAd = txtYeniKategoriAdi.Text,
+                    UstKategoriId = seciliUstKategori.KategoriId == 0 ? (int?)null : seciliUstKategori.KategoriId,
                 });
+            
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
+            pnUrunBilgileri.Visible = true;
+            pnYeniUrunEkle.Visible = false;
+            pnKategoriEkle.Visible = false;
+            cmbYeniCategory.DataSource = KategorileriGetir();
+
         }
 
         private void cmbYeniCategory_SelectedIndexChanged(object sender, EventArgs e)
