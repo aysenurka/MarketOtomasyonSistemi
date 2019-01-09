@@ -21,7 +21,7 @@ namespace Market.WFA
             var sonuc = new UrunDetayRepo().GetAll().Where(x => x.Barkod == urunbul)
                  .Select(x => new KayitliUrunDetayViewModel
                  {
-                     barkod = x.Barkod,
+                     Barkod = x.Barkod,
                      //Düzeltilcek CategoryId=x.Urun.KategoriId,
                      //UrunDetayId = x.Id,
                      //UrunId = x.UrunId,
@@ -29,12 +29,10 @@ namespace Market.WFA
                      UrunAlıstarihi = x.UrunAlısTarihi,
                      BirimAdet = x.BirimAdet,
                      Urun = x.Urun,
-                     Kategori = x.Urun.Kategori,
-
 
                  }).ToList().FirstOrDefault();
 
-            txtBarkodNo.Text = sonuc.barkod;
+            txtBarkodNo.Text = sonuc.Barkod;
             txtAlinanadetSayisi.Text = sonuc.BirimAdet.ToString();
             txtUrunİsmi.Text = sonuc.Urun.UrunAd;
 

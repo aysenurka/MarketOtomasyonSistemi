@@ -19,7 +19,7 @@ namespace Market.WFA
 
         private void YeniUrunForm_Load(object sender, EventArgs e)
         {
-            cmbYeniCategory.DataSource = BLL.Helpers.KategoriHelper.EnUstKategorileriGetir();
+            cmbYeniCategory.DataSource = KategoriHelper.EnUstKategorileriGetir();
 
             cmbUrunCategory.DataSource = UrunHelper.UrunleriGetir();
         }
@@ -51,12 +51,22 @@ namespace Market.WFA
         {
             try
             {
-                new UrunDetayRepo().Insert(new UrunDetay
+                var id = new UrunDetayRepo().UrunDetayEkle(new KayitliUrunDetayViewModel()
                 {
+                    Barkod = txtBarkodNo.Text,
+                    Adet = 0,
+                    Indirim = nuYeniUrunIndirim.Value,
+                    Kar = nuUrunKarOranı.Value,
+                    Kdv = nuYeniUrunKdvDegeri.Value,
+                    UrunId = (cmbUrunCategory.SelectedItem as UrunViewModel).UrunId,
+                    CategoryId = (cmbYeniCategory.SelectedItem as KategoriViewModel).KategoriId,
+                    UrunAlıstarihi = DateTime.Now,
+                    BirimAdet= (short)nuUrunAdetBilgisi.Value,
+                     Fiyat=nuUrunKoliFiyati.Value,
 
                 });
 
-
+                MessageBox.Show($"Oldu bu iş\n{id}");
             }
             catch (Exception ex)
             {

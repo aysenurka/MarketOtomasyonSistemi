@@ -9,14 +9,23 @@ namespace Market.Models.ViewModels
 {
     public class KayitliUrunDetayViewModel
     {
-        public Guid UrunDetayId { get; set; }
-        public Guid UrunId { get; set; }
+        public int UrunDetayId { get; set; }
+        public int UrunId { get; set; }
         public int CategoryId { get; set; }
-        public string barkod { get; set; }
+        public string Barkod { get; set; }
         public int BirimAdet { get; set; }
+        public short Adet { get; set; }
         public decimal Fiyat { get; set; }
-        public DateTime UrunAlıstarihi { get; set; }
-        public Urun Urun { get; set; }
-        public Kategori Kategori { get; set; }
+        public DateTime UrunAlıstarihi { get; set; } = DateTime.Now;
+        public decimal Kdv { get; set; }
+        public decimal Kar { get; set; }
+        public decimal Indirim { get; set; }
+       
+                                           //public Urun Urun { get; set; }
+                                           //public Kategori Kategori { get; set; }
+
+
+
+        public virtual Urun Urun { get; set; }
     }
 }
