@@ -1,4 +1,5 @@
-﻿using Market.BLL.Repository;
+﻿using Market.BLL.Helpers;
+using Market.BLL.Repository;
 using Market.Models.Entities;
 using Market.Models.ViewModels;
 using System;
@@ -15,56 +16,114 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
-
+    
         private void KategoriEkleForm_Load(object sender, EventArgs e)
         {
-           
+            KategorileriGetir();
+            KategorilerTreeView();
+
+        }
+
+        private void KategorilerTreeView()
+        {
+            treeKategoriView.Nodes.Clear();
+            var categories = new KategoriRepo().GetAll(x => x.AltKategoriId == null).OrderBy(x => x.KategoriAd).ToList();
+            foreach (var category in categories)
+            {
+
+                TreeNode node = new TreeNode(category.KategoriAd)
+                {
+                    Tag = category.Id
+                };
+                treeKategoriView.Nodes.Add(node);
+                if (category.Kategoriler.Count>0)
+                {
+                    AltKategoriSetle(node, category.Kategoriler.OrderBy(x => x.KategoriAd).ToList());
+                }
+            }
+            treeKategoriView.ExpandAll();
+        }
+
+        private void AltKategoriSetle(TreeNode node, List<Kategori> categories)
+        {
+            foreach (var category in categories)
+            {
+                TreeNode subNode = new TreeNode(category.KategoriAd)
+                {
+                    Tag = category.Id
+                };
+                node.Nodes.Add(subNode);
+                if (category.Kategoriler.Count>0)
+                {
+                    AltKategoriSetle(subNode, category.Kategoriler.OrderBy(x => x.KategoriAd).ToList());
+                }
+            }
+        }
+
+        private void KategorileriGetir()
+        {
 
             var categories = new List<KategoriViewModel>
             {
-                new KategoriViewModel() { KategoriId=0, KategoriAd = "Üst Kategori Ekle"}
+                new KategoriViewModel() {KategoriId = 0,  KategoriAd = "Ust Kategori Ekle"}
             };
-            categories.AddRange(new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null)
-                .Select(x => new KategoriViewModel
-                {
-                    KategoriId = x.Id,
-                    Aciklama = x.Aciklama,
-                    KategoriAd = x.KategoriAd,
-                    UstKategoriId = x.UstKategoriId
-                }));
-            lstCategoryiSec.DataSource = categories;
+            try
+            {
+                categories.AddRange(new KategoriRepo().GetAll()
+                    .OrderBy(x => x.KategoriAd)
+                    .Select(x => new KategoriViewModel()
+                    {
+                        KategoriAd = x.KategoriAd,
+                        Aciklama = x.Aciklama,
+                        KategoriId = x.Id,
+                        SubCategorySayisi = x.Kategoriler.Count
+                        
+                      
+                    }));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            cmbKategoriler.DataSource = categories;
         }
 
         private void btnYeniKategoriEkle_Click(object sender, EventArgs e)
         {
-            if (lstCategoryiSec.SelectedItem == null || txtYeniKategoriAdi.Text==string.Empty || txtYeniKategoriAdi.Text=="") return;
-            var seciliUstKategori = lstCategoryiSec.SelectedItem as KategoriViewModel;
+            if (cmbKategoriler.SelectedItem == null ) return;
             try
             {
-
+                var SeciliKategori = cmbKategoriler.SelectedItem as KategoriViewModel;
                 new KategoriRepo().Insert(new Kategori
                 {
-                    Aciklama = txtKategoriOzet.Text,
-                    KategoriAd = txtYeniKategoriAdi.Text,
-                    UstKategoriId = seciliUstKategori.KategoriId == 0 ? (int?)null : seciliUstKategori.KategoriId,
+                    Aciklama = txtAciklama.Text,
+                    KategoriAd = txtKategoriAdi.Text,
+                    AltKategoriId = SeciliKategori.KategoriId == 0 ? (int?)null : SeciliKategori.KategoriId,
                 });
                 MessageBox.Show("Kategori Basarılı bir Şekilde Kaydedildi.");
-              
+
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
-            
-            
+            KategorileriGetir();
+            KategorilerTreeView();
+
         }
-        
+
+
+        public YeniUrunDetayForm yeniurundetayform;
         private void btnKategoriVazgec_Click(object sender, EventArgs e)
         {
             this.Close();
-            
-     
+            //Bu şekildede digerdaki public olan tüm alanlara erişebiliyoruz.
+            yeniurundetayform.cmbYeniCategory.DataSource = KategoriHelper.EnUstKategorileriGetir();
+
         }
+    
+      
     }
 }

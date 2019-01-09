@@ -12,7 +12,8 @@ namespace Market.Models.ViewModels
         public string KategoriAd { get; set; }
 
         public string Aciklama { get; set; }
-        public int? UstKategoriId { get; set; }
+       
+        public int  SubCategorySayisi { get; set; }
 
         public override string ToString() => $" {KategoriAd}";
        

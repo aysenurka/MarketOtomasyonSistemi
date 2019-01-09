@@ -1,6 +1,6 @@
 ﻿namespace Market.WFA
 {
-    partial class YeniUrunForm
+    partial class YeniUrunDetayForm
     {
         /// <summary>
         /// Required designer variable.
@@ -73,7 +73,7 @@
             this.cmbYeniCategory.Name = "cmbYeniCategory";
             this.cmbYeniCategory.Size = new System.Drawing.Size(121, 21);
             this.cmbYeniCategory.TabIndex = 0;
-            this.cmbYeniCategory.SelectedIndexChanged += new System.EventHandler(this.cmbYeniCategory_SelectedIndexChanged);
+           
             // 
             // label1
             // 
@@ -285,7 +285,7 @@
             this.btnUrunVazgec.TabIndex = 16;
             this.btnUrunVazgec.Text = "Vazgec";
             this.btnUrunVazgec.UseVisualStyleBackColor = true;
-            this.btnUrunVazgec.Click += new System.EventHandler(this.btnUrunVazgec_Click);
+         
             // 
             // label12
             // 

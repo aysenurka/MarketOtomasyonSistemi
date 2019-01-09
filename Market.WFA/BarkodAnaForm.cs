@@ -47,7 +47,7 @@ namespace Market.WFA
             var sonuc = new UrunDetayRepo().GetAll().FirstOrDefault(x=>x.Barkod==ara);
             if (sonuc==null)
             {
-                YeniUrunForm yeniurunform = new YeniUrunForm();
+                YeniUrunDetayForm yeniurunform = new YeniUrunDetayForm();
                 yeniurunform.txtBarkodNo.Text = ara;
                 yeniurunform.Show();
              

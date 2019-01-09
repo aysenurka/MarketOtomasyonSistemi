@@ -46,16 +46,16 @@ namespace Market.WFA
         }
         private List<KategoriViewModel> KategorileriGetir()
         {
-            var sonuc = new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null).Select(x => new KategoriViewModel
+            var sonuc = new KategoriRepo().GetAll().Where(x => x.AltKategoriId == null).Select(x => new KategoriViewModel
             {
                 KategoriId = x.Id,
                 Aciklama = x.Aciklama,
                 KategoriAd = x.KategoriAd,
-                UstKategoriId = x.UstKategoriId
+               SubCategorySayisi=x.Kategoriler.Count,
             }).ToList();
             return sonuc;
         }
-        private YeniUrunForm frmYeniUrun;
+      
         private void btnUrunVazgec_Click(object sender, EventArgs e)
         {
             this.Close();

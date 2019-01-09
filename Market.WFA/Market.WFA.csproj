@@ -83,11 +83,11 @@
     <Compile Include="UrunEkleForm.Designer.cs">
       <DependentUpon>UrunEkleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="YeniUrunForm.cs">
+    <Compile Include="YeniUrunDetayForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="YeniUrunForm.Designer.cs">
-      <DependentUpon>YeniUrunForm.cs</DependentUpon>
+    <Compile Include="YeniUrunDetayForm.Designer.cs">
+      <DependentUpon>YeniUrunDetayForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BarkodAnaForm.resx">
       <DependentUpon>BarkodAnaForm.cs</DependentUpon>
@@ -110,8 +110,8 @@
     <EmbeddedResource Include="UrunEkleForm.resx">
       <DependentUpon>UrunEkleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="YeniUrunForm.resx">
-      <DependentUpon>YeniUrunForm.cs</DependentUpon>
+    <EmbeddedResource Include="YeniUrunDetayForm.resx">
+      <DependentUpon>YeniUrunDetayForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

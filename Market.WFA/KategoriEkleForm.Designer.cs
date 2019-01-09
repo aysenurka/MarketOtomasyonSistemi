@@ -28,22 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstCategoryiSec = new System.Windows.Forms.ListBox();
             this.btnKategoriVazgec = new System.Windows.Forms.Button();
             this.btnYeniKategoriEkle = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtKategoriOzet = new System.Windows.Forms.RichTextBox();
-            this.txtYeniKategoriAdi = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtAciklama = new System.Windows.Forms.RichTextBox();
+            this.txtKategoriAdi = new System.Windows.Forms.TextBox();
+            this.cmbKategoriler = new System.Windows.Forms.ComboBox();
+            this.treeKategoriView = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
-            // 
-            // lstCategoryiSec
-            // 
-            this.lstCategoryiSec.FormattingEnabled = true;
-            this.lstCategoryiSec.Location = new System.Drawing.Point(295, 32);
-            this.lstCategoryiSec.Name = "lstCategoryiSec";
-            this.lstCategoryiSec.Size = new System.Drawing.Size(127, 199);
-            this.lstCategoryiSec.TabIndex = 34;
             // 
             // btnKategoriVazgec
             // 
@@ -65,51 +56,47 @@
             this.btnYeniKategoriEkle.UseVisualStyleBackColor = true;
             this.btnYeniKategoriEkle.Click += new System.EventHandler(this.btnYeniKategoriEkle_Click);
             // 
-            // label10
+            // txtAciklama
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(35, 66);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 13);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "Açıklama";
+            this.txtAciklama.Location = new System.Drawing.Point(36, 71);
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(162, 111);
+            this.txtAciklama.TabIndex = 37;
+            this.txtAciklama.Text = "";
             // 
-            // txtKategoriOzet
+            // txtKategoriAdi
             // 
-            this.txtKategoriOzet.Location = new System.Drawing.Point(115, 59);
-            this.txtKategoriOzet.Name = "txtKategoriOzet";
-            this.txtKategoriOzet.Size = new System.Drawing.Size(125, 56);
-            this.txtKategoriOzet.TabIndex = 30;
-            this.txtKategoriOzet.Text = "";
+            this.txtKategoriAdi.Location = new System.Drawing.Point(36, 44);
+            this.txtKategoriAdi.Name = "txtKategoriAdi";
+            this.txtKategoriAdi.Size = new System.Drawing.Size(162, 20);
+            this.txtKategoriAdi.TabIndex = 36;
             // 
-            // txtYeniKategoriAdi
+            // cmbKategoriler
             // 
-            this.txtYeniKategoriAdi.Location = new System.Drawing.Point(115, 32);
-            this.txtYeniKategoriAdi.Name = "txtYeniKategoriAdi";
-            this.txtYeniKategoriAdi.Size = new System.Drawing.Size(125, 20);
-            this.txtYeniKategoriAdi.TabIndex = 29;
+            this.cmbKategoriler.FormattingEnabled = true;
+            this.cmbKategoriler.Location = new System.Drawing.Point(36, 16);
+            this.cmbKategoriler.Name = "cmbKategoriler";
+            this.cmbKategoriler.Size = new System.Drawing.Size(162, 21);
+            this.cmbKategoriler.TabIndex = 35;
             // 
-            // label9
+            // treeKategoriView
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(32, 39);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 13);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Kategori Adı";
+            this.treeKategoriView.Location = new System.Drawing.Point(319, 16);
+            this.treeKategoriView.Name = "treeKategoriView";
+            this.treeKategoriView.Size = new System.Drawing.Size(208, 258);
+            this.treeKategoriView.TabIndex = 38;
             // 
             // KategoriEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 467);
-            this.Controls.Add(this.lstCategoryiSec);
+            this.Controls.Add(this.treeKategoriView);
+            this.Controls.Add(this.txtAciklama);
+            this.Controls.Add(this.txtKategoriAdi);
+            this.Controls.Add(this.cmbKategoriler);
             this.Controls.Add(this.btnKategoriVazgec);
             this.Controls.Add(this.btnYeniKategoriEkle);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtKategoriOzet);
-            this.Controls.Add(this.txtYeniKategoriAdi);
-            this.Controls.Add(this.label9);
             this.Name = "KategoriEkleForm";
             this.Text = "KategoriEkleForm";
             this.Load += new System.EventHandler(this.KategoriEkleForm_Load);
@@ -119,13 +106,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lstCategoryiSec;
         private System.Windows.Forms.Button btnKategoriVazgec;
         private System.Windows.Forms.Button btnYeniKategoriEkle;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox txtKategoriOzet;
-        private System.Windows.Forms.TextBox txtYeniKategoriAdi;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RichTextBox txtAciklama;
+        private System.Windows.Forms.TextBox txtKategoriAdi;
+        private System.Windows.Forms.ComboBox cmbKategoriler;
+        private System.Windows.Forms.TreeView treeKategoriView;
     }
 }
