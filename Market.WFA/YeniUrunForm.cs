@@ -23,7 +23,7 @@ namespace Market.WFA
             cmbUrunCategory.DataSource = UrunleriGetir();
         }
 
-        private List<KategoriViewModel> KategorileriGetir()
+        public List<KategoriViewModel> KategorileriGetir()
         {
            var sonuc = new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null).Select(x => new KategoriViewModel
             {
@@ -55,23 +55,12 @@ namespace Market.WFA
 
         private void btnYeniKategori_Click(object sender, EventArgs e)
         {
-            pnKategoriEkle.Visible = true;
-            pnYeniUrunEkle.Visible = false;
-            pnUrunBilgileri.Visible = false;
 
-            var categories = new List<KategoriViewModel>
-            {
-                new KategoriViewModel() { KategoriId=0, KategoriAd = "Boş"}
-            };
-            categories.AddRange( new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null)
-                .Select(x => new KategoriViewModel
-                {
-                    KategoriId = x.Id,
-                    Aciklama = x.Aciklama,
-                    KategoriAd = x.KategoriAd,
-                    UstKategoriId = x.UstKategoriId
-                }));
-            lstCategoryiSec.DataSource = categories;
+            KategoriEkleForm urun = new KategoriEkleForm();
+            urun.Show();
+            this.Hide();
+           
+           
 
         }
 
@@ -79,17 +68,13 @@ namespace Market.WFA
         {
             pnUrunBilgileri.Visible = true;
             pnYeniUrunEkle.Visible = false;
-            pnKategoriEkle.Visible = false;
-
-
-
         }
 
         private void btnKategoriVazgec_Click(object sender, EventArgs e)
         {
             pnUrunBilgileri.Visible = true;
             pnYeniUrunEkle.Visible = false;
-            pnKategoriEkle.Visible = false;
+          
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -136,27 +121,10 @@ namespace Market.WFA
 
         private void btnYeniKategoriEkle_Click(object sender, EventArgs e)
         {
-            if (lstCategoryiSec.SelectedItem == null) return;
-            var seciliUstKategori = lstCategoryiSec.SelectedItem as KategoriViewModel;
-            try
-            {
-
-                new KategoriRepo().Insert(new Kategori
-                {
-                    Aciklama = txtKategoriOzet.Text,
-                    KategoriAd = txtYeniKategoriAdi.Text,
-                    UstKategoriId = seciliUstKategori.KategoriId == 0 ? (int?)null : seciliUstKategori.KategoriId,
-                });
             
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
             pnUrunBilgileri.Visible = true;
             pnYeniUrunEkle.Visible = false;
-            pnKategoriEkle.Visible = false;
+          
             cmbYeniCategory.DataSource = KategorileriGetir();
 
         }
