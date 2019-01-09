@@ -27,11 +27,16 @@ namespace Market.WFA
                      //UrunId = x.UrunId,
                      Fiyat = x.Fiyat,
                      UrunAlıstarihi = x.UrunAlısTarihi,
-                     BirimAdet = x.BirimAdet
+                     BirimAdet = x.BirimAdet,
+                     Urun = x.Urun,
+                     Kategori = x.Urun.Kategori,
 
-                 }).ToList();
 
-            //txtUrunAdetSayisi.Text = sonuc;
+                 }).ToList().FirstOrDefault();
+
+            txtBarkodNo.Text = sonuc.barkod;
+            txtAlinanadetSayisi.Text = sonuc.BirimAdet.ToString();
+            txtUrunİsmi.Text = sonuc.Urun.UrunAd;
 
         }
     }

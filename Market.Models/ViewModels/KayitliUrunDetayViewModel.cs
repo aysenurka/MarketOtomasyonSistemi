@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Market.Models.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +16,7 @@ namespace Market.Models.ViewModels
         public int BirimAdet { get; set; }
         public decimal Fiyat { get; set; }
         public DateTime UrunAlıstarihi { get; set; }
+        public Urun Urun { get; set; }
+        public Kategori Kategori { get; set; }
     }
 }
