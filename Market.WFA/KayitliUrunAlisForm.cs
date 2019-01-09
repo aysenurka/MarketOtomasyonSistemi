@@ -23,15 +23,15 @@ namespace Market.WFA
                  {
                      barkod = x.Barkod,
                      //Düzeltilcek CategoryId=x.Urun.KategoriId,
-                     UrunDetayId = x.Id,
-                     UrunId = x.UrunId,
+                     //UrunDetayId = x.Id,
+                     //UrunId = x.UrunId,
                      Fiyat = x.Fiyat,
                      UrunAlıstarihi = x.UrunAlısTarihi,
                      BirimAdet = x.BirimAdet
 
                  }).ToList();
 
-            txtUrunAdetSayisi.Text=sonuc.
+            //txtUrunAdetSayisi.Text = sonuc;
 
         }
     }

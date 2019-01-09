@@ -3,7 +3,7 @@ namespace Market.DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class x34 : DbMigration
+    public partial class a1 : DbMigration
     {
         public override void Up()
         {
@@ -11,24 +11,25 @@ namespace Market.DAL.Migrations
                 "dbo.Kategoriler",
                 c => new
                     {
-                        Id = c.Guid(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         KategoriAd = c.String(nullable: false, maxLength: 30),
                         Aciklama = c.String(maxLength: 100),
-                        Kdv = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Kar = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        UstKategoriId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .Index(t => t.KategoriAd, unique: true);
+                .ForeignKey("dbo.Kategoriler", t => t.UstKategoriId)
+                .Index(t => t.KategoriAd, unique: true)
+                .Index(t => t.UstKategoriId);
             
             CreateTable(
                 "dbo.Urunler",
                 c => new
                     {
-                        Id = c.Guid(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         UrunAd = c.String(nullable: false, maxLength: 30),
                         UrunStok = c.Short(nullable: false),
                         UrunFiyat = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        KategoriId = c.Guid(nullable: false),
+                        KategoriId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Kategoriler", t => t.KategoriId, cascadeDelete: true)
@@ -39,12 +40,15 @@ namespace Market.DAL.Migrations
                 "dbo.UrunDetaylar",
                 c => new
                     {
-                        Id = c.Guid(nullable: false),
-                        UrunId = c.Guid(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
+                        UrunId = c.Int(nullable: false),
                         Barkod = c.String(maxLength: 11),
                         Adet = c.Short(nullable: false),
                         BirimAdet = c.Int(nullable: false),
                         ToplamAdet = c.Int(nullable: false),
+                        Kdv = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Kar = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Indirim = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Fiyat = c.Decimal(nullable: false, precision: 18, scale: 2),
                         AlisFiyat = c.Decimal(nullable: false, precision: 18, scale: 2),
                         SatisFiyat = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -71,7 +75,7 @@ namespace Market.DAL.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        UrunDetayId = c.Guid(nullable: false),
+                        UrunDetayId = c.Int(nullable: false),
                         SatisId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
@@ -79,7 +83,15 @@ namespace Market.DAL.Migrations
                 .ForeignKey("dbo.UrunDetaylar", t => t.UrunDetayId, cascadeDelete: true)
                 .Index(t => t.UrunDetayId)
                 .Index(t => t.SatisId);
-            
+
+            Sql("alter table dbo.UrunDetaylar drop column ToplamAdet");
+            Sql("alter table dbo.UrunDetaylar add [ToplamAdet] as ([Adet]*[BirimAdet])");
+
+            Sql("alter table dbo.UrunDetaylar drop column AlisFiyat");
+            Sql("alter table dbo.UrunDetaylar add [AlisFiyat] as [Fiyat]+[Fiyat]*[Kdv]");
+            Sql("alter table dbo.UrunDetaylar drop column SatisFiyat");
+            Sql("alter table dbo.UrunDetaylar add [SatisFiyat] as (([Fiyat]+[Fiyat]*[Kdv])-([Fiyat]+[Fiyat]*[Kdv])*[Indirim]+([Fiyat]+[Fiyat]*[Kdv])*[Kar]-([Fiyat]+[Fiyat]*[Kdv])*[Kar]*Indirim)");
+
         }
         
         public override void Down()
@@ -88,12 +100,14 @@ namespace Market.DAL.Migrations
             DropForeignKey("dbo.SatisDetaylar", "SatisId", "dbo.Satislar");
             DropForeignKey("dbo.UrunDetaylar", "UrunId", "dbo.Urunler");
             DropForeignKey("dbo.Urunler", "KategoriId", "dbo.Kategoriler");
+            DropForeignKey("dbo.Kategoriler", "UstKategoriId", "dbo.Kategoriler");
             DropIndex("dbo.SatisDetaylar", new[] { "SatisId" });
             DropIndex("dbo.SatisDetaylar", new[] { "UrunDetayId" });
             DropIndex("dbo.UrunDetaylar", new[] { "Barkod" });
             DropIndex("dbo.UrunDetaylar", new[] { "UrunId" });
             DropIndex("dbo.Urunler", new[] { "KategoriId" });
             DropIndex("dbo.Urunler", new[] { "UrunAd" });
+            DropIndex("dbo.Kategoriler", new[] { "UstKategoriId" });
             DropIndex("dbo.Kategoriler", new[] { "KategoriAd" });
             DropTable("dbo.SatisDetaylar");
             DropTable("dbo.Satislar");

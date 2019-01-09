@@ -47,13 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201901081607256_x34.cs" />
-    <Compile Include="Migrations\201901081607256_x34.Designer.cs">
-      <DependentUpon>201901081607256_x34.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901081831400_computedtoplamadet.cs" />
-    <Compile Include="Migrations\201901081831400_computedtoplamadet.Designer.cs">
-      <DependentUpon>201901081831400_computedtoplamadet.cs</DependentUpon>
+    <Compile Include="Migrations\201901090745105_a1.cs" />
+    <Compile Include="Migrations\201901090745105_a1.Designer.cs">
+      <DependentUpon>201901090745105_a1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -70,11 +66,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901081607256_x34.resx">
-      <DependentUpon>201901081607256_x34.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901081831400_computedtoplamadet.resx">
-      <DependentUpon>201901081831400_computedtoplamadet.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901090745105_a1.resx">
+      <DependentUpon>201901090745105_a1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

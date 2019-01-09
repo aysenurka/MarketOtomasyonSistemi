@@ -3,7 +3,7 @@ using System;
 
 namespace Market.BLL.Repository
 {
-   public class KategoriRepo:RepositoryBase<Kategori,Guid>
+   public class KategoriRepo:RepositoryBase<Kategori,int>
     {
 
     }

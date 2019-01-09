@@ -8,7 +8,7 @@ namespace Market.Models.Entities
     public class SatisDetay:BaseEntity<int>
     {
 
-        public Guid UrunDetayId { get; set; }
+        public int UrunDetayId { get; set; }
         public int SatisId { get; set; }
 
 

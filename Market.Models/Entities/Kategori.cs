@@ -10,24 +10,20 @@ using Market.Models.Abstracts;
 namespace Market.Models.Entities
 {
     [Table("Kategoriler")]
-    public class Kategori : BaseEntity<Guid>
+    public class Kategori : BaseEntity<int>
     {
-        public Kategori()
-        {
-            this.Id = Guid.NewGuid();
-        }
         [Required]
         [StringLength(30)]
         [Index("IX_KategoriAd", IsUnique = true)]
         public string KategoriAd { get; set; }
         [StringLength(100)]
         public string Aciklama { get; set; }
-        [Required]
-        public decimal Kdv { get; set; }
-        [Required]
-        public decimal Kar { get; set; }
+        public int? UstKategoriId { get; set; }
 
 
+        [ForeignKey("UstKategoriId")]
+        public virtual Kategori UstKategori { get; set; }
+        public virtual ICollection<Kategori> Kategoriler { get; set; } = new HashSet<Kategori>();
         public virtual ICollection<Urun> Urunler { get; set; } = new HashSet<Urun>();
     }
 }
