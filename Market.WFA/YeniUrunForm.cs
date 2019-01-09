@@ -1,7 +1,10 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
+using Market.Models.ViewModels;
 using System;
+using System.Collections.Generic;
 using System.Drawing.Printing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -15,31 +18,56 @@ namespace Market.WFA
 
         private void YeniUrunForm_Load(object sender, EventArgs e)
         {
+            cmbYeniCategory.DataSource = new KategoriRepo().GetAll().Select(x => new KategoriViewModel
+            {
+                KategoriId = x.Id,
+                Aciklama = x.Aciklama,
+                KategoriAd = x.KategoriAd,
+                UstKategoriId = x.UstKategoriId
+            }).ToList();
+            
+            cmbUrunCategory.DataSource = UrunleriGetir();
+        }
 
+        private List<UrunViewModel> UrunleriGetir()
+        {
+          var sonuc =  new UrunRepo().GetAll().Select(x => new UrunViewModel
+            {
+                UrunId = x.Id,
+                UrunAd = x.UrunAd,
+                KategoriId = x.KategoriId,
+                UrunFiyat = x.UrunFiyat,
+                UrunStok = x.UrunStok
+            }).ToList();
+            return sonuc;
         }
 
         private void btnYeniUrunEkle_Click(object sender, EventArgs e)
         {
-            if (pnKategoriEkle.Visible == true) return;
+            pnYeniUrunEkle.Visible = true;
         }
 
         private void btnYeniKategori_Click(object sender, EventArgs e)
         {
-            if (pnYeniUrunEkle.Visible == true) return;
+            pnKategoriEkle.Visible = true;
+
         }
 
         private void btnUrunVazgec_Click(object sender, EventArgs e)
         {
             pnUrunBilgileri.Visible = true;
             pnYeniUrunEkle.Visible = false;
-            pnYeniUrunEkle.Controls.Clear();
+            pnKategoriEkle.Visible = false;
+
+
+
         }
 
         private void btnKategoriVazgec_Click(object sender, EventArgs e)
         {
             pnUrunBilgileri.Visible = true;
             pnYeniUrunEkle.Visible = false;
-            pnKategoriEkle.Controls.Clear();
+            pnKategoriEkle.Visible = false;
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -56,21 +84,26 @@ namespace Market.WFA
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message,"bir hata olustu");
+                MessageBox.Show(ex.Message, "bir hata olustu");
             }
         }
 
         private void btnUrunKaydet_Click(object sender, EventArgs e)
         {
             //gerek olmayabilir. veritabanında required ise
-            if (txtYeniUrunAdi.Text == null || txtYeniUrunAdi.Text==string.Empty) return;
-            
+            if (txtYeniUrunAdi.Text == null || txtYeniUrunAdi.Text == string.Empty) return;
+
             try
             {
                 new UrunRepo().Insert(new Urun
                 {
-
+                    UrunAd = txtYeniUrunAdi.Text,
+                    UrunFiyat = nuYeniUrunTaneFiyat.Value,
+                    KategoriId = (cmbYeniCategory.SelectedItem as KategoriViewModel).KategoriId,
+                    UrunStok = 0
                 });
+                MessageBox.Show("Urun eklendi");
+              cmbUrunCategory.DataSource=  UrunleriGetir();
             }
             catch (Exception ex)
             {

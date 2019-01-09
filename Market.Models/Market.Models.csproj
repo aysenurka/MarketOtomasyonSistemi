@@ -56,7 +56,9 @@
     <Compile Include="Entities\UrunDetay.cs" />
     <Compile Include="Enums\OdemeTipi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\KategoriViewModel.cs" />
     <Compile Include="ViewModels\KayitliUrunDetayViewModel.cs" />
+    <Compile Include="ViewModels\UrunViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

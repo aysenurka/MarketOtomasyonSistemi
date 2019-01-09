@@ -13,7 +13,7 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
-        private YeniUrunForm yeniurunform;
+       
         private KayitliUrunAlisForm kayitliurunalisform;
         string ara;
         private void btnBarkodUret_Click(object sender, EventArgs e)
@@ -47,15 +47,9 @@ namespace Market.WFA
             var sonuc = new UrunDetayRepo().GetAll().FirstOrDefault(x=>x.Barkod==ara);
             if (sonuc==null)
             {
-                if (yeniurunform == null || yeniurunform.IsDisposed)
-                {
-                    yeniurunform = new YeniUrunForm
-                    {
-                        MdiParent = this
-                    };
-                    yeniurunform.Show();
-                    yeniurunform.txtBarkodNo.Text = ara;
-                }
+                YeniUrunForm yeniurunform = new YeniUrunForm();
+                yeniurunform.txtBarkodNo.Text = ara;
+                yeniurunform.Show();
              
               
             }
