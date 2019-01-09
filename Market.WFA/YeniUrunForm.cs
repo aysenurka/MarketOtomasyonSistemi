@@ -25,7 +25,7 @@ namespace Market.WFA
 
         private List<KategoriViewModel> KategorileriGetir()
         {
-           var sonuc = new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null).Select(x => new KategoriViewModel
+            var sonuc = new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null).Select(x => new KategoriViewModel
             {
                 KategoriId = x.Id,
                 Aciklama = x.Aciklama,
@@ -47,10 +47,18 @@ namespace Market.WFA
             }).ToList();
             return sonuc;
         }
-
+        private UrunEkleForm frmUrunEkle;
         private void btnYeniUrunEkle_Click(object sender, EventArgs e)
         {
             pnYeniUrunEkle.Visible = true;
+            if (frmUrunEkle == null || frmUrunEkle.IsDisposed)
+            {
+                frmUrunEkle = new UrunEkleForm
+                {
+                    Text = "Urun Ekle Form"
+                };
+            }
+            frmUrunEkle.Show();
         }
 
         private void btnYeniKategori_Click(object sender, EventArgs e)
@@ -63,7 +71,7 @@ namespace Market.WFA
             {
                 new KategoriViewModel() { KategoriId=0, KategoriAd = "Boş"}
             };
-            categories.AddRange( new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null)
+            categories.AddRange(new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null)
                 .Select(x => new KategoriViewModel
                 {
                     KategoriId = x.Id,
@@ -147,7 +155,7 @@ namespace Market.WFA
                     KategoriAd = txtYeniKategoriAdi.Text,
                     UstKategoriId = seciliUstKategori.KategoriId == 0 ? (int?)null : seciliUstKategori.KategoriId,
                 });
-            
+
             }
             catch (Exception ex)
             {
