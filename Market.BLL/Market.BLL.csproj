@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BarkodHelper\Barkod.cs" />
+    <Compile Include="Helpers\EntityHelper.cs" />
     <Compile Include="Helpers\KategoriHelper.cs" />
     <Compile Include="Helpers\UrunHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
