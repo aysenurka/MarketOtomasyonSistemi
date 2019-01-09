@@ -51,7 +51,7 @@ namespace Market.WFA
         {
             try
             {
-                var id = new UrunDetayRepo().UrunDetayEkle(new KayitliUrunDetayViewModel()
+                var id = new UrunDetayRepo().UrunDetayEkle(new KayitliOlmayanUrunViewModel()
                 {
                     Barkod = txtBarkodNo.Text,
                     Adet = 0,
@@ -60,9 +60,9 @@ namespace Market.WFA
                     Kdv = nuYeniUrunKdvDegeri.Value,
                     UrunId = (cmbUrunCategory.SelectedItem as UrunViewModel).UrunId,
                     CategoryId = (cmbYeniCategory.SelectedItem as KategoriViewModel).KategoriId,
-                    UrunAlıstarihi = DateTime.Now,
+                     UrunAlındıgıTarih = DateTime.Now,
                     BirimAdet= (short)nuUrunAdetBilgisi.Value,
-                     Fiyat=nuUrunKoliFiyati.Value,
+                    Fiyat=nuUrunKoliFiyati.Value,
 
                 });
 

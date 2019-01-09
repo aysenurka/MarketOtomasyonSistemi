@@ -7,7 +7,7 @@ namespace Market.BLL.Repository
 {
     public class UrunDetayRepo : RepositoryBase<UrunDetay, int>
     {
-        public int UrunDetayEkle(KayitliUrunDetayViewModel model)
+        public int UrunDetayEkle(KayitliOlmayanUrunViewModel model)
         {
             using (var tran = db.Database.BeginTransaction())
             {
@@ -16,7 +16,7 @@ namespace Market.BLL.Repository
                     var UrunDetayEkle = new UrunDetay
                     {
                         Barkod = model.Barkod,
-                        UrunAlısTarihi = model.UrunAlıstarihi,
+                        UrunAlısTarihi = model.UrunAlındıgıTarih,
                         Fiyat = model.Fiyat,
                         Kar = model.Kar,
                         Kdv = model.Kdv,
