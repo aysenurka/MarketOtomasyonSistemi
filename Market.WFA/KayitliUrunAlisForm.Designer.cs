@@ -120,7 +120,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1, 231);
+            this.label5.Location = new System.Drawing.Point(13, 231);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 16);
             this.label5.TabIndex = 27;
@@ -128,7 +128,7 @@
             // 
             // txtAlinanadetSayisi
             // 
-            this.txtAlinanadetSayisi.Location = new System.Drawing.Point(264, 231);
+            this.txtAlinanadetSayisi.Location = new System.Drawing.Point(313, 227);
             this.txtAlinanadetSayisi.Name = "txtAlinanadetSayisi";
             this.txtAlinanadetSayisi.Size = new System.Drawing.Size(154, 20);
             this.txtAlinanadetSayisi.TabIndex = 28;
