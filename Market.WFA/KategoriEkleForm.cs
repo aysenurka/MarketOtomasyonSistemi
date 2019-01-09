@@ -19,6 +19,7 @@ namespace Market.WFA
     
         private void KategoriEkleForm_Load(object sender, EventArgs e)
         {
+            
             KategorileriGetir();
             KategorilerTreeView();
 
@@ -97,9 +98,12 @@ namespace Market.WFA
                 var SeciliKategori = cmbKategoriler.SelectedItem as KategoriViewModel;
                 new KategoriRepo().Insert(new Kategori
                 {
+                    Id = SeciliKategori.KategoriId,
                     Aciklama = txtAciklama.Text,
                     KategoriAd = txtKategoriAdi.Text,
                     AltKategoriId = SeciliKategori.KategoriId == 0 ? (int?)null : SeciliKategori.KategoriId,
+                    
+                    
                 });
                 MessageBox.Show("Kategori Basarılı bir Şekilde Kaydedildi.");
 

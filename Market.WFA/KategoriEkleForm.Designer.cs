@@ -81,6 +81,7 @@
             // 
             // treeKategoriView
             // 
+            this.treeKategoriView.FullRowSelect = true;
             this.treeKategoriView.Location = new System.Drawing.Point(319, 16);
             this.treeKategoriView.Name = "treeKategoriView";
             this.treeKategoriView.Size = new System.Drawing.Size(208, 258);
