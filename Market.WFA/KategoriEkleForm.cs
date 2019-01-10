@@ -77,8 +77,7 @@ namespace Market.WFA
                         KategoriAd = x.KategoriAd,
                         Aciklama = x.Aciklama,
                         KategoriId = x.Id,
-                        SubCategorySayisi = x.Kategoriler.Count
-                        
+                        SubCategorySayisi = x.Kategoriler.Count                       
                       
                     }));
             }
@@ -98,7 +97,6 @@ namespace Market.WFA
                 var SeciliKategori = cmbKategoriler.SelectedItem as KategoriViewModel;
                 new KategoriRepo().Insert(new Kategori
                 {
-                    Id = SeciliKategori.KategoriId,
                     Aciklama = txtAciklama.Text,
                     KategoriAd = txtKategoriAdi.Text,
                     AltKategoriId = SeciliKategori.KategoriId == 0 ? (int?)null : SeciliKategori.KategoriId,
