@@ -18,11 +18,11 @@ namespace Market.Models.Entities
         public string KategoriAd { get; set; }
         [StringLength(100)]
         public string Aciklama { get; set; }
-        public int? AltKategoriId { get; set; }
+        public int? UstKategoriId { get; set; }
 
 
-        [ForeignKey("AltKategoriId")]
-        public virtual Kategori AltKategori { get; set; }
+        [ForeignKey("UstKategoriId")]
+        public virtual Kategori UstKategori { get; set; }
         public virtual ICollection<Kategori> Kategoriler { get; set; } = new HashSet<Kategori>();
         public virtual ICollection<Urun> Urunler { get; set; } = new HashSet<Urun>();
     }

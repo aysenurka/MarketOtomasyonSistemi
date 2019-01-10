@@ -12,8 +12,8 @@ namespace Market.Models.Entities
         [Index("IX_Barkod", IsUnique = true)]
         [StringLength(11)]
         public string Barkod { get; set; }
-        public short Adet { get; set; }
-        public int BirimAdet { get; set; }
+        public int Adet { get; set; }
+        public int BirimAdet { get; set; } = 1;
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int ToplamAdet
         {

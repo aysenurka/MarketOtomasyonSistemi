@@ -54,14 +54,14 @@ namespace Market.WFA
                 var id = new UrunDetayRepo().UrunDetayEkle(new KayitliOlmayanUrunViewModel()
                 {
                     Barkod = txtBarkodNo.Text,
-                    Adet = (short)nuAdet.Value,
+                    Adet = (int)nuAdet.Value,
                     Indirim = nuYeniUrunIndirim.Value,
                     Kar = nuUrunKarOranı.Value,
                     Kdv = nuYeniUrunKdvDegeri.Value,
                     UrunId = (cmbUrunCategory.SelectedItem as UrunViewModel).UrunId,
                     CategoryId = (cmbYeniCategory.SelectedItem as KategoriViewModel).KategoriId,
                      UrunAlındıgıTarih = DateTime.Now,
-                    BirimAdet= (short)nuUrunAdetBilgisi.Value,
+                    BirimAdet= (int)nuUrunAdetBilgisi.Value,
                     Fiyat=nuUrunKoliFiyati.Value,
 
                 });

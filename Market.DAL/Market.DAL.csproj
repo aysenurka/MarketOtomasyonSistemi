@@ -47,17 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201901090745105_a1.cs" />
-    <Compile Include="Migrations\201901090745105_a1.Designer.cs">
-      <DependentUpon>201901090745105_a1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901091540447_alsd.cs" />
-    <Compile Include="Migrations\201901091540447_alsd.Designer.cs">
-      <DependentUpon>201901091540447_alsd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901091618474_Xcw3.cs" />
-    <Compile Include="Migrations\201901091618474_Xcw3.Designer.cs">
-      <DependentUpon>201901091618474_Xcw3.cs</DependentUpon>
+    <Compile Include="Migrations\201901100718493_altustkat.cs" />
+    <Compile Include="Migrations\201901100718493_altustkat.Designer.cs">
+      <DependentUpon>201901100718493_altustkat.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -74,14 +66,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901090745105_a1.resx">
-      <DependentUpon>201901090745105_a1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901091540447_alsd.resx">
-      <DependentUpon>201901091540447_alsd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901091618474_Xcw3.resx">
-      <DependentUpon>201901091618474_Xcw3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901100718493_altustkat.resx">
+      <DependentUpon>201901100718493_altustkat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

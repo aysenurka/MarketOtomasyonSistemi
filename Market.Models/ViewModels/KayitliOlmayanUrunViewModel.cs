@@ -15,7 +15,7 @@ namespace Market.Models.ViewModels
         public string Categoryİsmi { get; set; }
         public string Barkod { get; set; }
         public int BirimAdet { get; set; }
-        public short Adet { get; set; }
+        public int Adet { get; set; }
         public decimal Fiyat { get; set; }
         public DateTime UrunAlındıgıTarih { get; set; } 
         public decimal Kdv { get; set; }

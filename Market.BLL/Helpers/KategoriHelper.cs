@@ -12,7 +12,7 @@ namespace Market.BLL.Helpers
     {
         public static object EnUstKategorileriGetir()
         {
-            return new KategoriRepo().GetAll().Where(x => x.AltKategoriId == null)
+            return new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null)
                 .Select(x => new KategoriViewModel
                 {
                     KategoriId = x.Id,

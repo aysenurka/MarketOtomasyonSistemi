@@ -13,8 +13,8 @@ namespace Market.Models.Entities
         [StringLength(30)]
         [Index("IX_UrunAd", IsUnique = true)]
         public string UrunAd { get; set; }
-        public short UrunStok { get; set; }
-        public decimal UrunFiyat { get; set; }
+        public int UrunStok { get; set; } = 0;
+        public decimal UrunFiyat { get; set; } = 0;
         public int KategoriId { get; set; }
       
 

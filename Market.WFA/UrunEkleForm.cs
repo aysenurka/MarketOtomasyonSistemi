@@ -46,7 +46,7 @@ namespace Market.WFA
         }
         private List<KategoriViewModel> KategorileriGetir()
         {
-            var sonuc = new KategoriRepo().GetAll().Where(x => x.AltKategoriId == null).Select(x => new KategoriViewModel
+            var sonuc = new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null).Select(x => new KategoriViewModel
             {
                 KategoriId = x.Id,
                 Aciklama = x.Aciklama,

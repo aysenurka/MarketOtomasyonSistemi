@@ -28,7 +28,7 @@ namespace Market.WFA
         private void KategorilerTreeView()
         {
             treeKategoriView.Nodes.Clear();
-            var categories = new KategoriRepo().GetAll(x => x.AltKategoriId == null).OrderBy(x => x.KategoriAd).ToList();
+            var categories = new KategoriRepo().GetAll(x => x.UstKategoriId == null).OrderBy(x => x.KategoriAd).ToList();
             foreach (var category in categories)
             {
 
@@ -39,13 +39,13 @@ namespace Market.WFA
                 treeKategoriView.Nodes.Add(node);
                 if (category.Kategoriler.Count>0)
                 {
-                    AltKategoriSetle(node, category.Kategoriler.OrderBy(x => x.KategoriAd).ToList());
+                    UstKategoriSetle(node, category.Kategoriler.OrderBy(x => x.KategoriAd).ToList());
                 }
             }
             treeKategoriView.ExpandAll();
         }
 
-        private void AltKategoriSetle(TreeNode node, List<Kategori> categories)
+        private void UstKategoriSetle(TreeNode node, List<Kategori> categories)
         {
             foreach (var category in categories)
             {
@@ -56,7 +56,7 @@ namespace Market.WFA
                 node.Nodes.Add(subNode);
                 if (category.Kategoriler.Count>0)
                 {
-                    AltKategoriSetle(subNode, category.Kategoriler.OrderBy(x => x.KategoriAd).ToList());
+                    UstKategoriSetle(subNode, category.Kategoriler.OrderBy(x => x.KategoriAd).ToList());
                 }
             }
         }
@@ -101,7 +101,7 @@ namespace Market.WFA
                     Id = SeciliKategori.KategoriId,
                     Aciklama = txtAciklama.Text,
                     KategoriAd = txtKategoriAdi.Text,
-                    AltKategoriId = SeciliKategori.KategoriId == 0 ? (int?)null : SeciliKategori.KategoriId,
+                    UstKategoriId = SeciliKategori.KategoriId == 0 ? (int?)null : SeciliKategori.KategoriId,
                     
                     
                 });
