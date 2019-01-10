@@ -33,7 +33,7 @@ namespace Market.WFA
                      Barkod = x.Barkod,
                      Indirim = x.Indirim,
                      Kar = x.Kar,
-                     Adet = x.Adet,
+                     Adet = Convert.ToInt32(txtAlinanadetSayisi.Text),
                      Kdv = x.Kdv,
                      UrunDetayId = x.Id,
                      UrunId = x.UrunId,
@@ -50,6 +50,14 @@ namespace Market.WFA
 
             //sonuc.Adet =Convert.ToInt32( txtAlinanadetSayisi.Text);
             txtUrunTaneSatısFiyat.Text = (sonuc.SatisFiyati / sonuc.ToplamAdet).ToString("c2");
+            var gelenurun=new UrunRepo().GetById(sonuc.UrunId);
+            gelenurun.UrunStok = gelenurun.UrunStok + (sonuc.Adet*sonuc.BirimAdet);
+            //var urundetay = new UrunDetayRepo().GetById(sonuc.UrunDetayId);
+           
+            new UrunRepo().Update();
+
+
+
             txtGuncelSatisFiyat.Text = sonuc.SatisFiyati.ToString("c2");
             txtGuncelStok.Text = sonuc.GuncelStok.ToString();
             txtBarkodNo.Text = sonuc.Barkod;
