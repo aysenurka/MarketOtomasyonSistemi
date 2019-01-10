@@ -59,6 +59,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.nuAdet = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdetBilgisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKoliFiyati)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunTaneFiyat)).BeginInit();
@@ -67,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKarOranı)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunKdvDegeri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunIndirim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuAdet)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbYeniCategory
@@ -140,14 +143,14 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(5, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Urun Adet Sayısı";
+            this.label3.Text = "Urun Birim Adet";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 108);
+            this.label4.Location = new System.Drawing.Point(2, 140);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 13);
             this.label4.TabIndex = 7;
@@ -155,7 +158,7 @@
             // 
             // nuUrunKoliFiyati
             // 
-            this.nuUrunKoliFiyati.Location = new System.Drawing.Point(198, 103);
+            this.nuUrunKoliFiyati.Location = new System.Drawing.Point(198, 135);
             this.nuUrunKoliFiyati.Maximum = new decimal(new int[] {
             500,
             0,
@@ -312,6 +315,8 @@
             // 
             // pnUrunBilgileri
             // 
+            this.pnUrunBilgileri.Controls.Add(this.label10);
+            this.pnUrunBilgileri.Controls.Add(this.nuAdet);
             this.pnUrunBilgileri.Controls.Add(this.label9);
             this.pnUrunBilgileri.Controls.Add(this.nuUrunKarOranı);
             this.pnUrunBilgileri.Controls.Add(this.nuYeniUrunKdvDegeri);
@@ -339,7 +344,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(5, 193);
+            this.label9.Location = new System.Drawing.Point(5, 225);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 13);
             this.label9.TabIndex = 30;
@@ -353,7 +358,7 @@
             0,
             0,
             131072});
-            this.nuUrunKarOranı.Location = new System.Drawing.Point(200, 186);
+            this.nuUrunKarOranı.Location = new System.Drawing.Point(200, 218);
             this.nuUrunKarOranı.Maximum = new decimal(new int[] {
             1,
             0,
@@ -371,7 +376,7 @@
             0,
             0,
             131072});
-            this.nuYeniUrunKdvDegeri.Location = new System.Drawing.Point(198, 156);
+            this.nuYeniUrunKdvDegeri.Location = new System.Drawing.Point(198, 188);
             this.nuYeniUrunKdvDegeri.Maximum = new decimal(new int[] {
             1,
             0,
@@ -384,7 +389,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1, 163);
+            this.label11.Location = new System.Drawing.Point(1, 195);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 13);
             this.label11.TabIndex = 27;
@@ -398,7 +403,7 @@
             0,
             0,
             131072});
-            this.nuYeniUrunIndirim.Location = new System.Drawing.Point(198, 130);
+            this.nuYeniUrunIndirim.Location = new System.Drawing.Point(198, 162);
             this.nuYeniUrunIndirim.Maximum = new decimal(new int[] {
             1,
             0,
@@ -411,7 +416,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(-3, 137);
+            this.label14.Location = new System.Drawing.Point(-3, 169);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 13);
             this.label14.TabIndex = 26;
@@ -419,7 +424,7 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(200, 230);
+            this.btnKaydet.Location = new System.Drawing.Point(200, 262);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(121, 46);
             this.btnKaydet.TabIndex = 24;
@@ -435,6 +440,37 @@
             this.label15.Size = new System.Drawing.Size(41, 13);
             this.label15.TabIndex = 26;
             this.label15.Text = "label15";
+            // 
+            // nuAdet
+            // 
+            this.nuAdet.Location = new System.Drawing.Point(198, 103);
+            this.nuAdet.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nuAdet.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nuAdet.Name = "nuAdet";
+            this.nuAdet.Size = new System.Drawing.Size(123, 20);
+            this.nuAdet.TabIndex = 31;
+            this.nuAdet.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(13, 110);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 13);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Adet Sayisi";
             // 
             // YeniUrunDetayForm
             // 
@@ -457,6 +493,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKarOranı)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunKdvDegeri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunIndirim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuAdet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,5 +531,7 @@
         public System.Windows.Forms.Panel pnUrunBilgileri;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown nuUrunKarOranı;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown nuAdet;
     }
 }

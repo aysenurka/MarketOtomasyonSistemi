@@ -51,6 +51,7 @@
             this.txtGuncelStok = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtGuncelSatisFiyat = new System.Windows.Forms.TextBox();
+            this.lblKayitliUrunBilgileri = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -259,11 +260,21 @@
             this.txtGuncelSatisFiyat.Size = new System.Drawing.Size(153, 20);
             this.txtGuncelSatisFiyat.TabIndex = 40;
             // 
+            // lblKayitliUrunBilgileri
+            // 
+            this.lblKayitliUrunBilgileri.AutoSize = true;
+            this.lblKayitliUrunBilgileri.Location = new System.Drawing.Point(582, 191);
+            this.lblKayitliUrunBilgileri.Name = "lblKayitliUrunBilgileri";
+            this.lblKayitliUrunBilgileri.Size = new System.Drawing.Size(41, 13);
+            this.lblKayitliUrunBilgileri.TabIndex = 42;
+            this.lblKayitliUrunBilgileri.Text = "label12";
+            // 
             // KayitliUrunAlisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblKayitliUrunBilgileri);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtGuncelSatisFiyat);
             this.Controls.Add(this.label10);
@@ -320,5 +331,6 @@
         private System.Windows.Forms.TextBox txtGuncelStok;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtGuncelSatisFiyat;
+        private System.Windows.Forms.Label lblKayitliUrunBilgileri;
     }
 }

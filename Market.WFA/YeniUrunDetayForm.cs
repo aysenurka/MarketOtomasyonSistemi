@@ -54,7 +54,7 @@ namespace Market.WFA
                 var id = new UrunDetayRepo().UrunDetayEkle(new KayitliOlmayanUrunViewModel()
                 {
                     Barkod = txtBarkodNo.Text,
-                    Adet = 0,
+                    Adet = (short)nuAdet.Value,
                     Indirim = nuYeniUrunIndirim.Value,
                     Kar = nuUrunKarOranı.Value,
                     Kdv = nuYeniUrunKdvDegeri.Value,
