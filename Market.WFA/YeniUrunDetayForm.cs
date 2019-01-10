@@ -70,6 +70,9 @@ namespace Market.WFA
             }
         }
 
-      
+        private void pnUrunBilgileri_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

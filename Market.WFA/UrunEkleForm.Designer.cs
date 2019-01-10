@@ -48,29 +48,32 @@
             this.pnYeniUrunEkle.Controls.Add(this.txtYeniUrunAdi);
             this.pnYeniUrunEkle.Location = new System.Drawing.Point(12, 12);
             this.pnYeniUrunEkle.Name = "pnYeniUrunEkle";
-            this.pnYeniUrunEkle.Size = new System.Drawing.Size(566, 255);
+            this.pnYeniUrunEkle.Size = new System.Drawing.Size(356, 255);
             this.pnYeniUrunEkle.TabIndex = 19;
             // 
             // cmbKategoriler
             // 
+            this.cmbKategoriler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbKategoriler.FormattingEnabled = true;
             this.cmbKategoriler.Location = new System.Drawing.Point(142, 51);
             this.cmbKategoriler.Name = "cmbKategoriler";
-            this.cmbKategoriler.Size = new System.Drawing.Size(121, 21);
+            this.cmbKategoriler.Size = new System.Drawing.Size(121, 24);
             this.cmbKategoriler.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 51);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(84, 16);
             this.label1.TabIndex = 17;
             this.label1.Text = "Kategoriler";
             // 
             // btnUrunVazgec
             // 
-            this.btnUrunVazgec.Location = new System.Drawing.Point(167, 92);
+            this.btnUrunVazgec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUrunVazgec.Location = new System.Drawing.Point(154, 140);
             this.btnUrunVazgec.Name = "btnUrunVazgec";
             this.btnUrunVazgec.Size = new System.Drawing.Size(109, 47);
             this.btnUrunVazgec.TabIndex = 16;
@@ -80,7 +83,8 @@
             // 
             // btnUrunKaydet
             // 
-            this.btnUrunKaydet.Location = new System.Drawing.Point(35, 94);
+            this.btnUrunKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUrunKaydet.Location = new System.Drawing.Point(22, 142);
             this.btnUrunKaydet.Name = "btnUrunKaydet";
             this.btnUrunKaydet.Size = new System.Drawing.Size(109, 47);
             this.btnUrunKaydet.TabIndex = 15;
@@ -91,24 +95,26 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 15);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(32, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
+            this.label5.Size = new System.Drawing.Size(102, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "Yeni Urün Adı";
             // 
             // txtYeniUrunAdi
             // 
+            this.txtYeniUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYeniUrunAdi.Location = new System.Drawing.Point(142, 15);
             this.txtYeniUrunAdi.Name = "txtYeniUrunAdi";
-            this.txtYeniUrunAdi.Size = new System.Drawing.Size(121, 20);
+            this.txtYeniUrunAdi.Size = new System.Drawing.Size(121, 22);
             this.txtYeniUrunAdi.TabIndex = 10;
             // 
             // UrunEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 280);
+            this.ClientSize = new System.Drawing.Size(377, 269);
             this.Controls.Add(this.pnYeniUrunEkle);
             this.Name = "UrunEkleForm";
             this.Text = "UrunEkleForm";
