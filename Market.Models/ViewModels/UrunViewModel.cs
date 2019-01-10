@@ -14,10 +14,11 @@ namespace Market.Models.ViewModels
         public int UrunStok { get; set; }
         public decimal UrunFiyat { get; set; }
         public int KategoriId { get; set; }
-
+        public int UrunDetayId { get; set; }
 
         public Kategori Kategori { get; set; }
+        public UrunDetay UrunDetay { get; set; }
 
-        public override string ToString() => $"{UrunAd} - {(UrunStok)}";
+        public override string ToString() => $"{UrunAd} - {UrunFiyat:c2}";
     }
 }

@@ -33,9 +33,9 @@
             this.lstSepet = new System.Windows.Forms.ListBox();
             this.lblToplam = new System.Windows.Forms.Label();
             this.pnlOdeme = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rbNakit = new System.Windows.Forms.RadioButton();
             this.rbKart = new System.Windows.Forms.RadioButton();
+            this.rbNakit = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnTamamla = new System.Windows.Forms.Button();
             this.pnlOdeme.SuspendLayout();
             this.SuspendLayout();
@@ -92,15 +92,17 @@
             this.pnlOdeme.TabIndex = 4;
             this.pnlOdeme.Visible = false;
             // 
-            // label1
+            // rbKart
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(3, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Odeme Tipi: ";
+            this.rbKart.AutoSize = true;
+            this.rbKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rbKart.Location = new System.Drawing.Point(243, 13);
+            this.rbKart.Name = "rbKart";
+            this.rbKart.Size = new System.Drawing.Size(53, 20);
+            this.rbKart.TabIndex = 6;
+            this.rbKart.TabStop = true;
+            this.rbKart.Text = "Kart";
+            this.rbKart.UseVisualStyleBackColor = true;
             // 
             // rbNakit
             // 
@@ -114,17 +116,15 @@
             this.rbNakit.Text = "Nakit";
             this.rbNakit.UseVisualStyleBackColor = true;
             // 
-            // rbKart
+            // label1
             // 
-            this.rbKart.AutoSize = true;
-            this.rbKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbKart.Location = new System.Drawing.Point(243, 13);
-            this.rbKart.Name = "rbKart";
-            this.rbKart.Size = new System.Drawing.Size(53, 20);
-            this.rbKart.TabIndex = 6;
-            this.rbKart.TabStop = true;
-            this.rbKart.Text = "Kart";
-            this.rbKart.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(3, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Odeme Tipi: ";
             // 
             // btnTamamla
             // 
