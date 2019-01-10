@@ -1,6 +1,6 @@
 ﻿namespace Market.WFA
 {
-    partial class AlisSifreForm
+    partial class SatisSifreForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,10 +44,10 @@
             this.pnlSifre.Controls.Add(this.lblSifre);
             this.pnlSifre.Controls.Add(this.txtSifre);
             this.pnlSifre.Controls.Add(this.txtAd);
-            this.pnlSifre.Location = new System.Drawing.Point(23, 12);
+            this.pnlSifre.Location = new System.Drawing.Point(12, 12);
             this.pnlSifre.Name = "pnlSifre";
             this.pnlSifre.Size = new System.Drawing.Size(312, 115);
-            this.pnlSifre.TabIndex = 8;
+            this.pnlSifre.TabIndex = 9;
             // 
             // lblAd
             // 
@@ -97,15 +97,15 @@
             this.txtAd.Size = new System.Drawing.Size(136, 26);
             this.txtAd.TabIndex = 3;
             // 
-            // AlisSifreForm
+            // SatisSifreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 168);
+            this.ClientSize = new System.Drawing.Size(351, 158);
             this.Controls.Add(this.pnlSifre);
-            this.Name = "AlisSifreForm";
+            this.Name = "SatisSifreForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SifreForm";
+            this.Text = "SatisSifreForm";
             this.pnlSifre.ResumeLayout(false);
             this.pnlSifre.PerformLayout();
             this.ResumeLayout(false);

@@ -22,13 +22,26 @@ namespace Market.WFA
         {
             if (frmAlisSifre == null || frmAlisSifre.IsDisposed)
             {
-                frmAlisSifre=new AlisSifreForm()
+                frmAlisSifre = new AlisSifreForm()
                 {
                     MdiParent = this,
                     Text = "Sifre Giris"
                 };
             }
             frmAlisSifre.Show();
+        }
+        private SatisSifreForm frmSatisSifre;
+        private void satisIslemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmSatisSifre == null || frmSatisSifre.IsDisposed)
+            {
+                frmSatisSifre = new SatisSifreForm()
+                {
+                    MdiParent = this,
+                    Text = "Sifre Giris"
+                };
+            }
+            frmSatisSifre.Show();
         }
     }
 }

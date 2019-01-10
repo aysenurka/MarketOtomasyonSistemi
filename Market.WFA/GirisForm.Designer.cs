@@ -57,15 +57,16 @@
             // alisIslemleriToolStripMenuItem1
             // 
             this.alisIslemleriToolStripMenuItem1.Name = "alisIslemleriToolStripMenuItem1";
-            this.alisIslemleriToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
+            this.alisIslemleriToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.alisIslemleriToolStripMenuItem1.Text = "Alis Islemleri";
             this.alisIslemleriToolStripMenuItem1.Click += new System.EventHandler(this.alisIslemleriToolStripMenuItem1_Click);
             // 
             // satisIslemleriToolStripMenuItem
             // 
             this.satisIslemleriToolStripMenuItem.Name = "satisIslemleriToolStripMenuItem";
-            this.satisIslemleriToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.satisIslemleriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.satisIslemleriToolStripMenuItem.Text = "Satis Islemleri";
+            this.satisIslemleriToolStripMenuItem.Click += new System.EventHandler(this.satisIslemleriToolStripMenuItem_Click);
             // 
             // GirisForm
             // 

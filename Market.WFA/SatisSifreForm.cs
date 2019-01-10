@@ -10,33 +10,27 @@ using System.Windows.Forms;
 
 namespace Market.WFA
 {
-    public partial class AlisSifreForm : Form
+    public partial class SatisSifreForm : Form
     {
-        public AlisSifreForm()
+        public SatisSifreForm()
         {
             InitializeComponent();
         }
-        private YeniUrunDetayForm frmYeniUrunDetay;
-
+        private SatisDetayForm frmSatisDetay;
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if (txtAd.Text == "admin" && txtSifre.Text == "1234")
+            if (txtAd.Text == "admin2" && txtSifre.Text == "1234")
             {
-                if (frmYeniUrunDetay == null || frmYeniUrunDetay.IsDisposed)
+                if (frmSatisDetay == null || frmSatisDetay.IsDisposed)
                 {
-                    frmYeniUrunDetay = new YeniUrunDetayForm()
+                    frmSatisDetay = new SatisDetayForm()
                     {
-                        Text = "Yeni Urun Detay Form"
+                        Text = "Satis Detay Form"
                     };
                 }
-                //lblAd.Visible = false;
-                //lblSifre.Visible = false;
-                //txtAd.Visible = false;
-                //txtSifre.Visible = false;
-                //btnGiris.Visible = false;
                 pnlSifre.Visible = false;
                 this.Close();
-                frmYeniUrunDetay.Show();
+                frmSatisDetay.Show();
             }
             else
             {
