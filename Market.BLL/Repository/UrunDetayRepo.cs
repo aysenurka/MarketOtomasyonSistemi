@@ -23,17 +23,17 @@ namespace Market.BLL.Repository
                         Adet = model.Adet,
                         BirimAdet = model.BirimAdet,
                         UrunId = model.UrunId,
-                        Indirim = model.Indirim, 
-                       
+                        Indirim = model.Indirim,
+
                     };
                     db.UrunDetaylar.Add(UrunDetayEkle);
                     db.SaveChanges();
-                  var urun  =  db.Urunler.Find(model.UrunId);
+                    var urun = db.Urunler.Find(model.UrunId);
                     urun.UrunFiyat = UrunDetayEkle.SatisFiyat;
                     urun.UrunStok = 0;
                     db.SaveChanges();
-                
-                    MessageBox.Show("UrunEklendi");
+
+                    MessageBox.Show("Yeni UrunDetay Olusturuldu.");
                     tran.Commit();
                     return model.UrunId;
                 }
@@ -45,5 +45,35 @@ namespace Market.BLL.Repository
 
             }
         }
+        public int KayitliUrunEkle(KayitliOlanUrunViewModel model)
+        {
+            using (var tran = db.Database.BeginTransaction())
+            {
+                try
+                {
+
+                    var bulurundetay = new UrunDetayRepo().GetById(model.UrunDetayId);
+                    bulurundetay.Adet = bulurundetay.Adet+model.Adet;
+                    bulurundetay.UrunAlısTarihi = DateTime.Now;
+                    new UrunDetayRepo().Update();
+
+                    var urun = new UrunRepo().GetById(model.UrunId);
+                    urun.UrunStok = urun.UrunStok + (model.Adet*bulurundetay.BirimAdet);
+                    
+                    new UrunRepo().Update();
+                    tran.Commit();
+                    MessageBox.Show("oldu bu iş.");
+                    return (int)model.Adet*bulurundetay.BirimAdet;
+
+                }
+                catch (Exception ex)
+                {
+                    tran.Rollback();
+                    throw;
+                }
+
+            }
+        }
+
     }
 }
