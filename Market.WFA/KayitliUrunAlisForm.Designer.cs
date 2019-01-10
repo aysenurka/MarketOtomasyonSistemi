@@ -42,7 +42,7 @@
             this.txtSEcilenindirim = new System.Windows.Forms.TextBox();
             this.txtKDVDegeri = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUrunAl = new System.Windows.Forms.Button();
             this.txtUrunGuncelFiyat = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtAlisFiyat = new System.Windows.Forms.TextBox();
@@ -51,7 +51,6 @@
             this.txtGuncelStok = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtGuncelSatisFiyat = new System.Windows.Forms.TextBox();
-            this.lblKayitliUrunBilgileri = new System.Windows.Forms.Label();
             this.txtUrunTaneSatısFiyat = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -187,15 +186,15 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "Secilen Urun\'e Uygulanacak KDV Degeri";
             // 
-            // button1
+            // btnUrunAl
             // 
-            this.button1.Location = new System.Drawing.Point(576, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 42);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnUrunAl.Location = new System.Drawing.Point(600, 200);
+            this.btnUrunAl.Name = "btnUrunAl";
+            this.btnUrunAl.Size = new System.Drawing.Size(92, 42);
+            this.btnUrunAl.TabIndex = 33;
+            this.btnUrunAl.Text = "Urunu AL";
+            this.btnUrunAl.UseVisualStyleBackColor = true;
+            this.btnUrunAl.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtUrunGuncelFiyat
             // 
@@ -273,15 +272,6 @@
             this.txtGuncelSatisFiyat.Size = new System.Drawing.Size(153, 22);
             this.txtGuncelSatisFiyat.TabIndex = 40;
             // 
-            // lblKayitliUrunBilgileri
-            // 
-            this.lblKayitliUrunBilgileri.AutoSize = true;
-            this.lblKayitliUrunBilgileri.Location = new System.Drawing.Point(582, 191);
-            this.lblKayitliUrunBilgileri.Name = "lblKayitliUrunBilgileri";
-            this.lblKayitliUrunBilgileri.Size = new System.Drawing.Size(41, 13);
-            this.lblKayitliUrunBilgileri.TabIndex = 42;
-            this.lblKayitliUrunBilgileri.Text = "label12";
-            // 
             // txtUrunTaneSatısFiyat
             // 
             this.txtUrunTaneSatısFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -308,7 +298,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtUrunTaneSatısFiyat);
-            this.Controls.Add(this.lblKayitliUrunBilgileri);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtGuncelSatisFiyat);
             this.Controls.Add(this.label10);
@@ -317,7 +306,7 @@
             this.Controls.Add(this.txtAlisFiyat);
             this.Controls.Add(this.txtUrunGuncelFiyat);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUrunAl);
             this.Controls.Add(this.txtKDVDegeri);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtSEcilenindirim);
@@ -356,7 +345,7 @@
         private System.Windows.Forms.TextBox txtSEcilenindirim;
         private System.Windows.Forms.TextBox txtKDVDegeri;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUrunAl;
         private System.Windows.Forms.TextBox txtUrunGuncelFiyat;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtAlisFiyat;
@@ -365,7 +354,6 @@
         private System.Windows.Forms.TextBox txtGuncelStok;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtGuncelSatisFiyat;
-        private System.Windows.Forms.Label lblKayitliUrunBilgileri;
         private System.Windows.Forms.TextBox txtUrunTaneSatısFiyat;
         private System.Windows.Forms.Label label12;
     }
