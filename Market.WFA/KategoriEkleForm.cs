@@ -99,8 +99,7 @@ namespace Market.WFA
                 {
                     Aciklama = txtAciklama.Text,
                     KategoriAd = txtKategoriAdi.Text,
-                    AltKategoriId = SeciliKategori.KategoriId == 0 ? (int?)null : SeciliKategori.KategoriId,
-                    
+                    AltKategoriId = SeciliKategori.KategoriId == 0 ? (int?)null : SeciliKategori.KategoriId,    
                     
                 });
                 MessageBox.Show("Kategori Basarılı bir Şekilde Kaydedildi.");

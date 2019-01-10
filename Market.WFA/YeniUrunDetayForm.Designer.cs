@@ -37,16 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.nuUrunKoliFiyati = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtYeniUrunAdi = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.nuYeniUrunTaneFiyat = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnUrunKaydet = new System.Windows.Forms.Button();
             this.btnYeniKategori = new System.Windows.Forms.Button();
-            this.pnYeniUrunEkle = new System.Windows.Forms.Panel();
-            this.btnUrunVazgec = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtBarkodNo = new System.Windows.Forms.TextBox();
@@ -61,11 +52,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.nuAdet = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdetBilgisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKoliFiyati)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunTaneFiyat)).BeginInit();
-            this.pnYeniUrunEkle.SuspendLayout();
             this.pnUrunBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKarOranı)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunKdvDegeri)).BeginInit();
@@ -179,81 +167,6 @@
             0,
             0});
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Yeni Urün Adı";
-            // 
-            // txtYeniUrunAdi
-            // 
-            this.txtYeniUrunAdi.Location = new System.Drawing.Point(144, 12);
-            this.txtYeniUrunAdi.Name = "txtYeniUrunAdi";
-            this.txtYeniUrunAdi.Size = new System.Drawing.Size(117, 20);
-            this.txtYeniUrunAdi.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 51);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Yeni Ürün Tane Fiyat";
-            // 
-            // nuYeniUrunTaneFiyat
-            // 
-            this.nuYeniUrunTaneFiyat.Location = new System.Drawing.Point(140, 49);
-            this.nuYeniUrunTaneFiyat.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.nuYeniUrunTaneFiyat.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nuYeniUrunTaneFiyat.Name = "nuYeniUrunTaneFiyat";
-            this.nuYeniUrunTaneFiyat.Size = new System.Drawing.Size(121, 20);
-            this.nuYeniUrunTaneFiyat.TabIndex = 12;
-            this.nuYeniUrunTaneFiyat.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(78, 88);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Stok Otomatik Default 0 atanıcak";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(78, 130);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(219, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Kategorisi Yanda secilen kategoriden alıncak";
-            // 
-            // btnUrunKaydet
-            // 
-            this.btnUrunKaydet.Location = new System.Drawing.Point(44, 161);
-            this.btnUrunKaydet.Name = "btnUrunKaydet";
-            this.btnUrunKaydet.Size = new System.Drawing.Size(109, 47);
-            this.btnUrunKaydet.TabIndex = 15;
-            this.btnUrunKaydet.Text = "Urun Kaydet";
-            this.btnUrunKaydet.UseVisualStyleBackColor = true;
-            this.btnUrunKaydet.Click += new System.EventHandler(this.btnUrunKaydet_Click);
-            // 
             // btnYeniKategori
             // 
             this.btnYeniKategori.Location = new System.Drawing.Point(336, 16);
@@ -263,31 +176,6 @@
             this.btnYeniKategori.Text = "Yeni Kategori Ekle";
             this.btnYeniKategori.UseVisualStyleBackColor = true;
             this.btnYeniKategori.Click += new System.EventHandler(this.btnYeniKategori_Click);
-            // 
-            // pnYeniUrunEkle
-            // 
-            this.pnYeniUrunEkle.Controls.Add(this.btnUrunVazgec);
-            this.pnYeniUrunEkle.Controls.Add(this.btnUrunKaydet);
-            this.pnYeniUrunEkle.Controls.Add(this.label8);
-            this.pnYeniUrunEkle.Controls.Add(this.label6);
-            this.pnYeniUrunEkle.Controls.Add(this.label5);
-            this.pnYeniUrunEkle.Controls.Add(this.nuYeniUrunTaneFiyat);
-            this.pnYeniUrunEkle.Controls.Add(this.label7);
-            this.pnYeniUrunEkle.Controls.Add(this.txtYeniUrunAdi);
-            this.pnYeniUrunEkle.Location = new System.Drawing.Point(572, 51);
-            this.pnYeniUrunEkle.Name = "pnYeniUrunEkle";
-            this.pnYeniUrunEkle.Size = new System.Drawing.Size(305, 228);
-            this.pnYeniUrunEkle.TabIndex = 18;
-            this.pnYeniUrunEkle.Visible = false;
-            // 
-            // btnUrunVazgec
-            // 
-            this.btnUrunVazgec.Location = new System.Drawing.Point(176, 159);
-            this.btnUrunVazgec.Name = "btnUrunVazgec";
-            this.btnUrunVazgec.Size = new System.Drawing.Size(109, 47);
-            this.btnUrunVazgec.TabIndex = 16;
-            this.btnUrunVazgec.Text = "Vazgec";
-            this.btnUrunVazgec.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -473,32 +361,18 @@
             this.label10.TabIndex = 32;
             this.label10.Text = "Adet Sayisi";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(633, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // YeniUrunDetayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 512);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pnUrunBilgileri);
             this.Controls.Add(this.txtBarkodNo);
-            this.Controls.Add(this.pnYeniUrunEkle);
             this.Name = "YeniUrunDetayForm";
             this.Load += new System.EventHandler(this.YeniUrunForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdetBilgisi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKoliFiyati)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunTaneFiyat)).EndInit();
-            this.pnYeniUrunEkle.ResumeLayout(false);
-            this.pnYeniUrunEkle.PerformLayout();
             this.pnUrunBilgileri.ResumeLayout(false);
             this.pnUrunBilgileri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKarOranı)).EndInit();
@@ -519,19 +393,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown nuUrunKoliFiyati;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtYeniUrunAdi;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown nuYeniUrunTaneFiyat;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnUrunKaydet;
         private System.Windows.Forms.Button btnYeniKategori;
-        private System.Windows.Forms.Panel pnYeniUrunEkle;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.TextBox txtBarkodNo;
-        private System.Windows.Forms.Button btnUrunVazgec;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.NumericUpDown nuYeniUrunIndirim;
         private System.Windows.Forms.Label label14;
@@ -544,6 +409,5 @@
         private System.Windows.Forms.NumericUpDown nuUrunKarOranı;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown nuAdet;
-        private System.Windows.Forms.Button button1;
     }
 }
