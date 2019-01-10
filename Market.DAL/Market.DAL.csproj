@@ -47,9 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201901100718493_altustkat.cs" />
-    <Compile Include="Migrations\201901100718493_altustkat.Designer.cs">
-      <DependentUpon>201901100718493_altustkat.cs</DependentUpon>
+    <Compile Include="Migrations\201901100817409_altustkat.cs" />
+    <Compile Include="Migrations\201901100817409_altustkat.Designer.cs">
+      <DependentUpon>201901100817409_altustkat.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -66,8 +66,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901100718493_altustkat.resx">
-      <DependentUpon>201901100718493_altustkat.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901100817409_altustkat.resx">
+      <DependentUpon>201901100817409_altustkat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

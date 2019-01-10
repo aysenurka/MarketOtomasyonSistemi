@@ -13,7 +13,7 @@ namespace Market.DAL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201901100718493_altustkat"; }
+            get { return "201901100817409_altustkat"; }
         }
         
         string IMigrationMetadata.Source

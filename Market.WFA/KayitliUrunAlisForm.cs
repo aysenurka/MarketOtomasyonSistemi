@@ -25,14 +25,15 @@ namespace Market.WFA
         {
             //Düzeltilicek Bulunan Barkodun gelmesine göre 
             //Belki Görünüşte Numaric Yapılabilir.
-            //var urunbul = txtBarkodNo.Text;
-            string urunbul = 14785.ToString();
+            var urunbul = txtBarkodNo.Text;
+            //string urunbul = 12354.ToString();
             var sonuc = new UrunDetayRepo().GetAll().Where(x => x.Barkod == urunbul)
                  .Select(x => new KayitliOlmayanUrunViewModel
                  {
                      Barkod = x.Barkod,
                      Indirim = x.Indirim,
                      Kar = x.Kar,
+                     Adet = x.Adet,
                      Kdv = x.Kdv,
                      UrunDetayId = x.Id,
                      UrunId = x.UrunId,
@@ -41,17 +42,18 @@ namespace Market.WFA
                      UrunAlındıgıTarih = x.UrunAlısTarihi,
                      BirimAdet = x.BirimAdet,
                      Urun = x.Urun,
-                      AlişFiyat=x.AlisFiyat,
-                      GuncelStok=x.Urun.UrunStok,
-                       SatisFiyati=x.SatisFiyat,
-                        ToplamAdet=x.ToplamAdet
+                     AlişFiyat = x.AlisFiyat,
+                     GuncelStok = x.Urun.UrunStok,
+                     SatisFiyati = x.SatisFiyat,
+                     ToplamAdet = x.ToplamAdet
                  }).ToList().FirstOrDefault();
 
-            sonuc.Adet = Convert.ToSByte(txtAlinanadetSayisi.Text);
-            txtGuncelSatisFiyat.Text = sonuc.SatisFiyati.ToString();
+            //sonuc.Adet =Convert.ToInt32( txtAlinanadetSayisi.Text);
+            txtUrunTaneSatısFiyat.Text = (sonuc.SatisFiyati / sonuc.ToplamAdet).ToString("c2");
+            txtGuncelSatisFiyat.Text = sonuc.SatisFiyati.ToString("c2");
             txtGuncelStok.Text = sonuc.GuncelStok.ToString();
             txtBarkodNo.Text = sonuc.Barkod;
-            txtAlisFiyat.Text = sonuc.AlişFiyat.ToString();
+            txtAlisFiyat.Text = sonuc.AlişFiyat.ToString("c2");
             txtUrunİsmi.Text = sonuc.Urun.UrunAd;
             txtSEcilenindirim.Text = sonuc.Indirim.ToString();
             txtUrunKategori.Text = sonuc.Categoryİsmi;
@@ -59,9 +61,9 @@ namespace Market.WFA
             txtBarkodNo.Text = sonuc.Barkod;
             txtUrunAdetSayisi.Text = sonuc.BirimAdet.ToString();
             txtKDVDegeri.Text = sonuc.Kdv.ToString();
-            txtUrunGuncelFiyat.Text = sonuc.Fiyat.ToString();
-            
-           
+            txtUrunGuncelFiyat.Text = sonuc.Fiyat.ToString("c2");
+
+
 
         }
     }
