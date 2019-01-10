@@ -27,7 +27,7 @@ namespace Market.WFA
         private UrunEkleForm frmUrunEkle;
         private void btnYeniUrunEkle_Click(object sender, EventArgs e)
         {
-            pnYeniUrunEkle.Visible = true;
+           
             if (frmUrunEkle == null || frmUrunEkle.IsDisposed)
             {
                 frmUrunEkle = new UrunEkleForm
@@ -75,29 +75,6 @@ namespace Market.WFA
             }
         }
 
-        private void btnUrunKaydet_Click(object sender, EventArgs e)
-        {
-            //gerek olmayabilir. veritabanında required ise
-            if (txtYeniUrunAdi.Text == null || txtYeniUrunAdi.Text == string.Empty) return;
-
-            try
-            {
-                new UrunRepo().Insert(new Urun
-                {
-                    UrunAd = txtYeniUrunAdi.Text,
-                    UrunFiyat = nuYeniUrunTaneFiyat.Value,
-                    KategoriId = (cmbYeniCategory.SelectedItem as KategoriViewModel).KategoriId,
-                    UrunStok = 0
-                });
-                MessageBox.Show("Urun eklendi");
-                cmbUrunCategory.DataSource = UrunHelper.UrunleriGetir();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-        }
-
+      
     }
 }
