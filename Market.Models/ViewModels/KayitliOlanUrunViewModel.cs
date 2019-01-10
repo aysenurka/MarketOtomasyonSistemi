@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Market.Models.ViewModels
 {
-   public class KayitliOlanUrunViewModel
+    public class KayitliOlanUrunViewModel
     {
         public int UrunDetayId { get; set; }
         public int UrunId { get; set; }
@@ -17,11 +17,14 @@ namespace Market.Models.ViewModels
         public int BirimAdet { get; set; }
         public short Adet { get; set; }
         public decimal Fiyat { get; set; }
-        public DateTime UrunAlıstarihi { get; set; } = DateTime.Now;
+        public DateTime UrunAlındıgıTarih { get; set; }
         public decimal Kdv { get; set; }
         public decimal Kar { get; set; }
         public decimal Indirim { get; set; }
-
+        public decimal AlişFiyat { get; set; }
+        public decimal ToplamAdet { get; set; }
+        public decimal SatisFiyati { get; set; }
+        public decimal GuncelStok { get; set; }
 
         public virtual Urun Urun { get; set; }
     }
