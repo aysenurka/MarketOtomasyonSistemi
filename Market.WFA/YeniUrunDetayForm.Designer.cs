@@ -273,7 +273,7 @@
             this.pnYeniUrunEkle.Controls.Add(this.nuYeniUrunTaneFiyat);
             this.pnYeniUrunEkle.Controls.Add(this.label7);
             this.pnYeniUrunEkle.Controls.Add(this.txtYeniUrunAdi);
-            this.pnYeniUrunEkle.Location = new System.Drawing.Point(574, 41);
+            this.pnYeniUrunEkle.Location = new System.Drawing.Point(572, 51);
             this.pnYeniUrunEkle.Name = "pnYeniUrunEkle";
             this.pnYeniUrunEkle.Size = new System.Drawing.Size(305, 228);
             this.pnYeniUrunEkle.TabIndex = 18;

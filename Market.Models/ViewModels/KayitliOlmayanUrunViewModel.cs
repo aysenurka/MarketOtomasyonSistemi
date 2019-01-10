@@ -25,7 +25,7 @@ namespace Market.Models.ViewModels
         public decimal ToplamAdet { get; set; }
         public decimal SatisFiyati { get; set; }
         public decimal GuncelStok { get; set; }
-
+  
         public virtual Urun Urun { get; set; }
     }
 }
