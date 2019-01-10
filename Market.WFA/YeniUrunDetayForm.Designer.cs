@@ -42,6 +42,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtBarkodNo = new System.Windows.Forms.TextBox();
             this.pnUrunBilgileri = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nuAdet = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.nuUrunKarOranı = new System.Windows.Forms.NumericUpDown();
             this.nuYeniUrunKdvDegeri = new System.Windows.Forms.NumericUpDown();
@@ -50,15 +52,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.nuAdet = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdetBilgisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKoliFiyati)).BeginInit();
             this.pnUrunBilgileri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuAdet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKarOranı)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunKdvDegeri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunIndirim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuAdet)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbYeniCategory
@@ -230,6 +230,37 @@
             this.pnUrunBilgileri.Size = new System.Drawing.Size(463, 311);
             this.pnUrunBilgileri.TabIndex = 25;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(13, 110);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 13);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Adet Sayisi";
+            // 
+            // nuAdet
+            // 
+            this.nuAdet.Location = new System.Drawing.Point(198, 103);
+            this.nuAdet.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nuAdet.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nuAdet.Name = "nuAdet";
+            this.nuAdet.Size = new System.Drawing.Size(123, 20);
+            this.nuAdet.TabIndex = 31;
+            this.nuAdet.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -330,37 +361,6 @@
             this.label15.TabIndex = 26;
             this.label15.Text = "label15";
             // 
-            // nuAdet
-            // 
-            this.nuAdet.Location = new System.Drawing.Point(198, 103);
-            this.nuAdet.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.nuAdet.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nuAdet.Name = "nuAdet";
-            this.nuAdet.Size = new System.Drawing.Size(123, 20);
-            this.nuAdet.TabIndex = 31;
-            this.nuAdet.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 110);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 13);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Adet Sayisi";
-            // 
             // YeniUrunDetayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,10 +375,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKoliFiyati)).EndInit();
             this.pnUrunBilgileri.ResumeLayout(false);
             this.pnUrunBilgileri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuAdet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKarOranı)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunKdvDegeri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuYeniUrunIndirim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuAdet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,7 +387,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbUrunCategory;
         private System.Windows.Forms.Button btnYeniUrunEkle;
         private System.Windows.Forms.NumericUpDown nuUrunAdetBilgisi;
         private System.Windows.Forms.Label label3;
@@ -409,5 +408,6 @@
         private System.Windows.Forms.NumericUpDown nuUrunKarOranı;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown nuAdet;
+        public System.Windows.Forms.ComboBox cmbUrunCategory;
     }
 }

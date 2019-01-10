@@ -1,4 +1,5 @@
-﻿using Market.BLL.Repository;
+﻿using Market.BLL.Helpers;
+using Market.BLL.Repository;
 using Market.Models.Entities;
 using Market.Models.ViewModels;
 using System;
@@ -29,36 +30,30 @@ namespace Market.WFA
                 new UrunRepo().Insert(new Urun
                 {
                     UrunAd = txtYeniUrunAdi.Text,
-                    UrunFiyat = nuYeniUrunTaneFiyat.Value,
                     KategoriId = (cmbKategoriler.SelectedItem as KategoriViewModel).KategoriId,
-                    UrunStok = 0
+                    //UrunStok = 0,
+                    //UrunFiyat = 0
+
                 });
+                MessageBox.Show("Urun basarili bir sekilde kaydedildi");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Urun eklenirken bir hata olustu\n"+ex.Message);
             }
+            yeniurundetayform.cmbUrunCategory.DataSource = UrunHelper.UrunleriGetir();
         }
 
         private void UrunEkleForm_Load(object sender, EventArgs e)
         {
-            cmbKategoriler.DataSource = KategorileriGetir();
+            cmbKategoriler.DataSource =KategoriHelper.EnUstKategorileriGetir();
         }
-        private List<KategoriViewModel> KategorileriGetir()
-        {
-            var sonuc = new KategoriRepo().GetAll().Where(x => x.UstKategoriId == null).Select(x => new KategoriViewModel
-            {
-                KategoriId = x.Id,
-                Aciklama = x.Aciklama,
-                KategoriAd = x.KategoriAd,
-               SubCategorySayisi=x.Kategoriler.Count,
-            }).ToList();
-            return sonuc;
-        }
-      
+
+        public YeniUrunDetayForm yeniurundetayform;
         private void btnUrunVazgec_Click(object sender, EventArgs e)
         {
             this.Close();
+            yeniurundetayform.cmbUrunCategory.DataSource = UrunHelper.UrunleriGetir();
         }
     }
 }

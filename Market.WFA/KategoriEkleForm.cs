@@ -110,6 +110,9 @@ namespace Market.WFA
 
                 MessageBox.Show(ex.Message);
             }
+            yeniurundetayform.cmbYeniCategory.DataSource = KategoriHelper.EnUstKategorileriGetir();
+            //this.Close();
+          
             KategorileriGetir();
             KategorilerTreeView();
 

@@ -24,18 +24,13 @@ namespace Market.WFA
             cmbUrunCategory.DataSource = UrunHelper.UrunleriGetir();
         }
 
-        private UrunEkleForm frmUrunEkle;
+     
         private void btnYeniUrunEkle_Click(object sender, EventArgs e)
         {
-           
-            if (frmUrunEkle == null || frmUrunEkle.IsDisposed)
-            {
-                frmUrunEkle = new UrunEkleForm
-                {
-                    Text = "Urun Ekle Form"
-                };
-            }
-            frmUrunEkle.Show();
+            UrunEkleForm urunekle = new UrunEkleForm();
+            urunekle.yeniurundetayform = this;
+            urunekle.Show();
+         
         }
 
         private void btnYeniKategori_Click(object sender, EventArgs e)
