@@ -19,6 +19,7 @@ namespace Market.Models.ViewModels
         public decimal Fiyat { get; set; }
         public DateTime UrunAlındıgıTarih { get; set; }
         public decimal Kdv { get; set; }
+        public decimal TaneSatis { get; set; }
         public decimal Kar { get; set; }
         public decimal Indirim { get; set; }
         public decimal AlişFiyat { get; set; }
