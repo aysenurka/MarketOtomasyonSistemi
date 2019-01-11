@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Market.Models.ViewModels;
+using Market.Models.Entities;
 
 namespace Market.WFA
 {
@@ -23,13 +24,9 @@ namespace Market.WFA
         private UrunViewModel seciliUrun;
         private void SatisDetayForm_Load(object sender, EventArgs e)
         {
+
             lstUrunler.DataSource = UrunHelper.UrunleriGetir();
             //lstSepet.DataSource=
-        }
-
-        private void btnTamamla_Click(object sender, EventArgs e)
-        {
-            pnlOdeme.Visible = true;
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -49,24 +46,27 @@ namespace Market.WFA
                     break;
                 }
             }
-
-            if (varMi)
-                sepettekiUrun.Adet++;
-            else
+            if (seciliUrun.UrunStok > 0)
             {
-                sepet.Add(new SepetViewModel()
+                if (varMi)
+                    sepettekiUrun.Adet++;
+                else
                 {
-                    UrunId = seciliUrun.UrunId,
-                    UrunAdi = seciliUrun.UrunAd,
-                    BirimFiyat = seciliUrun.UrunFiyat,
-                    Adet = 1
-                    //Kdv =seciliUrun.UrunDetay.Kdv
-                });
+                    sepet.Add(new SepetViewModel()
+                    {
+                        UrunId = seciliUrun.UrunId,
+                        UrunAdi = seciliUrun.UrunAd,
+                        BirimFiyat = seciliUrun.UrunFiyat,
+                        Adet = 1,
+                        UrunDetayId = seciliUrun.UrunDetayId
+                        //Kdv =seciliUrun.UrunDetay.Kdv
+                    });
+                }
+                seciliUrun.UrunStok--;
             }
-
             SepetGetir();
         }
-
+        private decimal total;
         private void SepetGetir()
         {
             lstSepet.Items.Clear();
@@ -74,8 +74,79 @@ namespace Market.WFA
             foreach (var sepetViewModel in sepet)
                 lstSepet.Items.Add(sepetViewModel);
 
-            var total = sepet.Sum(x => x.ToplamFiyat());
+            total = sepet.Sum(x => x.ToplamFiyat());
             lblToplam.Text = $"Toplam: {total:c2}";
+        }
+
+        private void btnOde_Click(object sender, EventArgs e)
+        {
+            pnlOdeme.Visible = true;
+            btnEkle.Enabled = false;
+            lstSepet.Enabled = false;
+            lstUrunler.Enabled = false;
+            btnOde.Enabled = false;
+            cbPoset.Visible = true;
+        }
+
+        private void rbNakit_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbNakit.Checked)
+            {
+                lblNakit.Visible = true;
+                txtNakit.Visible = true;
+                btnTamamla.Visible = true;
+            }
+        }
+
+        private void rbKart_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbKart.Checked)
+            {
+                lblNakit.Visible = false;
+                txtNakit.Visible = false;
+                btnTamamla.Visible = false;
+                lblParaUstu.Visible = false;
+                btnTamamla.Visible = true;
+            }
+        }
+
+        private void btnTamamla_Click(object sender, EventArgs e)
+        {
+            if (rbNakit.Checked == true)
+            {
+                if (txtNakit == null || txtNakit.Text == "")
+                {
+                    MessageBox.Show("Lutfen nakit girisi yapınız");
+                }
+                else
+                {
+                    var odenen = Convert.ToDecimal(txtNakit.Text);
+                    if (odenen >= anaToplam)
+                    {
+                        lblParaUstu.Visible = true;
+                        lblParaUstu.Text = $"Para Ustu: {(odenen - anaToplam):c2}";
+                    }
+                    else MessageBox.Show("Girilen para yetersiz");
+                }
+            }
+        }
+        private int posetSayisi = 0;
+        private decimal posetFiyat;
+        private decimal anaToplam = 0;
+        private void cbPoset_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbPoset.Checked == true)
+            {
+                nuPoset.Visible = true;
+            }
+        }
+
+        private void nuPoset_ValueChanged(object sender, EventArgs e)
+        {
+            posetSayisi = (int)nuPoset.Value;
+            posetFiyat = Convert.ToDecimal(posetSayisi * 0.25);
+            anaToplam = total + posetFiyat;
+            lblToplam.Text = $"Toplam: {anaToplam:c2}";
         }
     }
 }

@@ -19,6 +19,6 @@ namespace Market.Models.ViewModels
         public Kategori Kategori { get; set; }
         public UrunDetay UrunDetay { get; set; }
 
-        public override string ToString() => $"{UrunAd} - {UrunFiyat:c2}";
+        public override string ToString() => $"{UrunAd} - {UrunFiyat:c2} - {UrunStok}";
     }
 }
