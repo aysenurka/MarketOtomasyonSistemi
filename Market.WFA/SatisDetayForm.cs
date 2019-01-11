@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Market.Models.ViewModels;
 using Market.Models.Entities;
+using Market.BLL.Repository;
+using Market.Models.Enums;
 
 namespace Market.WFA
 {
@@ -127,6 +129,26 @@ namespace Market.WFA
                         lblParaUstu.Text = $"Para Ustu: {(odenen - anaToplam):c2}";
                     }
                     else MessageBox.Show("Girilen para yetersiz");
+                }
+            }
+
+            var rbuttonlar = pnlOdeme.Controls.OfType<RadioButton>().ToArray();
+            var odemeIndex = Array.IndexOf(rbuttonlar, rbuttonlar.Single(rb => rb.Checked));
+
+            if (rbNakit.Checked == true || rbKart.Checked == true)
+            {
+                try
+                {
+                    new SatisRepo().Insert(new Satis
+                    {
+                        SatisTarih = DateTime.Now,
+                        ToplamFiyat = anaToplam,
+                        OdemeTipi = (OdemeTipi)odemeIndex
+                    });
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Satıs eklenirken bir hata olustu");
                 }
             }
         }
