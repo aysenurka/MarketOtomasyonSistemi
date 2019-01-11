@@ -58,6 +58,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtKar = new System.Windows.Forms.TextBox();
             this.pnurunler = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtguncelFiyat = new System.Windows.Forms.TextBox();
             this.pnurunler.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -312,7 +314,7 @@
             // btnUrunGuncelle
             // 
             this.btnUrunGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunGuncelle.Location = new System.Drawing.Point(874, 133);
+            this.btnUrunGuncelle.Location = new System.Drawing.Point(874, 205);
             this.btnUrunGuncelle.Name = "btnUrunGuncelle";
             this.btnUrunGuncelle.Size = new System.Drawing.Size(131, 42);
             this.btnUrunGuncelle.TabIndex = 46;
@@ -351,11 +353,32 @@
             this.pnurunler.Size = new System.Drawing.Size(343, 105);
             this.pnurunler.TabIndex = 49;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(551, 137);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(94, 16);
+            this.label14.TabIndex = 51;
+            this.label14.Text = "Guncel Fiyat";
+            // 
+            // txtguncelFiyat
+            // 
+            this.txtguncelFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtguncelFiyat.Location = new System.Drawing.Point(853, 130);
+            this.txtguncelFiyat.Name = "txtguncelFiyat";
+            this.txtguncelFiyat.ReadOnly = true;
+            this.txtguncelFiyat.Size = new System.Drawing.Size(153, 22);
+            this.txtguncelFiyat.TabIndex = 50;
+            // 
             // KayitliUrunAlisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1154, 450);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtguncelFiyat);
             this.Controls.Add(this.pnurunler);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtKar);
@@ -425,5 +448,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtKar;
         private System.Windows.Forms.Panel pnurunler;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtguncelFiyat;
     }
 }

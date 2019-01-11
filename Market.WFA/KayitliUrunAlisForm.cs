@@ -124,6 +124,7 @@ namespace Market.WFA
             txtUrunAdetSayisi.ReadOnly = false;
             txtUrunGuncelFiyat.ReadOnly = false;
             pnurunler.Visible = false;
+            txtguncelFiyat.ReadOnly = false;
             
             //Kullanılabilir
             //this.Controls.OfType<TextBox>().All(tb => tb.ReadOnly = true);
@@ -149,6 +150,7 @@ namespace Market.WFA
                 //Guncelleurun.Fiyat = decimal.Parse(txtUrunGuncelFiyat.Text);
                 Guncelleurun.Kdv = decimal.Parse(txtKDVDegeri.Text);
                 Guncelleurun.Indirim = decimal.Parse(txtSEcilenindirim.Text);
+                Guncelleurun.Fiyat = decimal.Parse(txtguncelFiyat.Text);
                 urun.Update();
                 var urunFiyatG = new UrunRepo().GetById(Guncelleurun.UrunId);
                 urunFiyatG.UrunFiyat = Guncelleurun.SatisFiyat / Guncelleurun.ToplamAdet;
@@ -166,8 +168,6 @@ namespace Market.WFA
                         Indirim = x.Indirim,
                         Kar = x.Kar,
                         TaneSatis = x.Urun.UrunFiyat,
-                        //Adet = Convert.ToInt32(txtAlinanadetSayisi.Text),
-
                         Kdv = x.Kdv,
                         UrunId = x.UrunId,
                         Categoryİsmi = x.Urun.Kategori.KategoriAd,
