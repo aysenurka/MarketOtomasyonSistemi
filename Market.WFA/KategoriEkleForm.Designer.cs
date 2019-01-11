@@ -38,6 +38,7 @@
             // 
             // btnKategoriVazgec
             // 
+            this.btnKategoriVazgec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKategoriVazgec.Location = new System.Drawing.Point(169, 227);
             this.btnKategoriVazgec.Name = "btnKategoriVazgec";
             this.btnKategoriVazgec.Size = new System.Drawing.Size(109, 47);
@@ -48,6 +49,7 @@
             // 
             // btnYeniKategoriEkle
             // 
+            this.btnYeniKategoriEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnYeniKategoriEkle.Location = new System.Drawing.Point(36, 227);
             this.btnYeniKategoriEkle.Name = "btnYeniKategoriEkle";
             this.btnYeniKategoriEkle.Size = new System.Drawing.Size(107, 47);
@@ -58,6 +60,7 @@
             // 
             // txtAciklama
             // 
+            this.txtAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAciklama.Location = new System.Drawing.Point(36, 71);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(162, 111);
@@ -66,21 +69,24 @@
             // 
             // txtKategoriAdi
             // 
+            this.txtKategoriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKategoriAdi.Location = new System.Drawing.Point(36, 44);
             this.txtKategoriAdi.Name = "txtKategoriAdi";
-            this.txtKategoriAdi.Size = new System.Drawing.Size(162, 20);
+            this.txtKategoriAdi.Size = new System.Drawing.Size(162, 22);
             this.txtKategoriAdi.TabIndex = 36;
             // 
             // cmbKategoriler
             // 
+            this.cmbKategoriler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbKategoriler.FormattingEnabled = true;
             this.cmbKategoriler.Location = new System.Drawing.Point(36, 16);
             this.cmbKategoriler.Name = "cmbKategoriler";
-            this.cmbKategoriler.Size = new System.Drawing.Size(162, 21);
+            this.cmbKategoriler.Size = new System.Drawing.Size(162, 24);
             this.cmbKategoriler.TabIndex = 35;
             // 
             // treeKategoriView
             // 
+            this.treeKategoriView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.treeKategoriView.FullRowSelect = true;
             this.treeKategoriView.Location = new System.Drawing.Point(319, 16);
             this.treeKategoriView.Name = "treeKategoriView";
@@ -91,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 467);
+            this.ClientSize = new System.Drawing.Size(588, 353);
             this.Controls.Add(this.treeKategoriView);
             this.Controls.Add(this.txtAciklama);
             this.Controls.Add(this.txtKategoriAdi);

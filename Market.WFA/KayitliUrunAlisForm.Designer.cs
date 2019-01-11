@@ -53,6 +53,7 @@
             this.txtGuncelSatisFiyat = new System.Windows.Forms.TextBox();
             this.txtUrunTaneSatısFiyat = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -188,7 +189,7 @@
             // 
             // btnUrunAl
             // 
-            this.btnUrunAl.Location = new System.Drawing.Point(600, 200);
+            this.btnUrunAl.Location = new System.Drawing.Point(315, 379);
             this.btnUrunAl.Name = "btnUrunAl";
             this.btnUrunAl.Size = new System.Drawing.Size(92, 42);
             this.btnUrunAl.TabIndex = 33;
@@ -291,11 +292,21 @@
             this.label12.TabIndex = 44;
             this.label12.Text = "Ürün tane satis fiyatı";
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Location = new System.Drawing.Point(442, 379);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(92, 42);
+            this.btnGuncelle.TabIndex = 45;
+            this.btnGuncelle.Text = "Urun Guncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            // 
             // KayitliUrunAlisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtUrunTaneSatısFiyat);
             this.Controls.Add(this.label11);
@@ -356,5 +367,6 @@
         private System.Windows.Forms.TextBox txtGuncelSatisFiyat;
         private System.Windows.Forms.TextBox txtUrunTaneSatısFiyat;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnGuncelle;
     }
 }
