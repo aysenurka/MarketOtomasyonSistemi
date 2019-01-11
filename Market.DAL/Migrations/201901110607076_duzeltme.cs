@@ -3,7 +3,7 @@ namespace Market.DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class altustkat : DbMigration
+    public partial class duzeltme : DbMigration
     {
         public override void Up()
         {
@@ -63,14 +63,13 @@ namespace Market.DAL.Migrations
                 "dbo.SatisDetaylar",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
-                        UrunDetayId = c.Int(nullable: false),
+                        UrunId = c.Int(nullable: false),
                         SatisId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
+                .PrimaryKey(t => new { t.UrunId, t.SatisId })
                 .ForeignKey("dbo.Satislar", t => t.SatisId, cascadeDelete: true)
-                .ForeignKey("dbo.UrunDetaylar", t => t.UrunDetayId, cascadeDelete: true)
-                .Index(t => t.UrunDetayId)
+                .ForeignKey("dbo.Urunler", t => t.UrunId, cascadeDelete: true)
+                .Index(t => t.UrunId)
                 .Index(t => t.SatisId);
             
             CreateTable(
@@ -84,6 +83,7 @@ namespace Market.DAL.Migrations
                     })
                 .PrimaryKey(t => t.Id);
 
+
             Sql("alter table dbo.UrunDetaylar drop column ToplamAdet");
             Sql("alter table dbo.UrunDetaylar add [ToplamAdet] as ([Adet]*[BirimAdet])");
 
@@ -92,17 +92,18 @@ namespace Market.DAL.Migrations
             Sql("alter table dbo.UrunDetaylar drop column SatisFiyat");
             Sql("alter table dbo.UrunDetaylar add [SatisFiyat] as (([Fiyat]+[Fiyat]*[Kdv])-([Fiyat]+[Fiyat]*[Kdv])*[Indirim]+([Fiyat]+[Fiyat]*[Kdv])*[Kar]-([Fiyat]+[Fiyat]*[Kdv])*[Kar]*Indirim)");
 
+
         }
-        
+
         public override void Down()
         {
-            DropForeignKey("dbo.SatisDetaylar", "UrunDetayId", "dbo.UrunDetaylar");
+            DropForeignKey("dbo.SatisDetaylar", "UrunId", "dbo.Urunler");
             DropForeignKey("dbo.SatisDetaylar", "SatisId", "dbo.Satislar");
             DropForeignKey("dbo.UrunDetaylar", "UrunId", "dbo.Urunler");
             DropForeignKey("dbo.Urunler", "KategoriId", "dbo.Kategoriler");
             DropForeignKey("dbo.Kategoriler", "UstKategoriId", "dbo.Kategoriler");
             DropIndex("dbo.SatisDetaylar", new[] { "SatisId" });
-            DropIndex("dbo.SatisDetaylar", new[] { "UrunDetayId" });
+            DropIndex("dbo.SatisDetaylar", new[] { "UrunId" });
             DropIndex("dbo.UrunDetaylar", new[] { "Barkod" });
             DropIndex("dbo.UrunDetaylar", new[] { "UrunId" });
             DropIndex("dbo.Urunler", new[] { "KategoriId" });
