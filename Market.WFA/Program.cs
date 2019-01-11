@@ -18,7 +18,7 @@ namespace Market.WFA
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new YeniUrunDetayForm());
             //Application.Run(new KayitliUrunAlisForm());
-            Application.Run(new SatisDetayForm());
+            Application.Run(new GirisForm());
         }
     }
 }

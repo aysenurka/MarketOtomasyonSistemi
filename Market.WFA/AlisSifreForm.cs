@@ -16,27 +16,22 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
-        private YeniUrunDetayForm frmYeniUrunDetay;
+        private BarkodAnaForm frmBarkodAna;
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
             if (txtAd.Text == "admin" && txtSifre.Text == "1234")
             {
-                if (frmYeniUrunDetay == null || frmYeniUrunDetay.IsDisposed)
+                if (frmBarkodAna == null || frmBarkodAna.IsDisposed)
                 {
-                    frmYeniUrunDetay = new YeniUrunDetayForm()
+                    frmBarkodAna = new BarkodAnaForm()
                     {
-                        Text = "Yeni Urun Detay Form"
+                        Text = "Barkod Ana Form"
                     };
                 }
-                //lblAd.Visible = false;
-                //lblSifre.Visible = false;
-                //txtAd.Visible = false;
-                //txtSifre.Visible = false;
-                //btnGiris.Visible = false;
                 pnlSifre.Visible = false;
                 this.Close();
-                frmYeniUrunDetay.Show();
+                frmBarkodAna.Show();
             }
             else
             {
