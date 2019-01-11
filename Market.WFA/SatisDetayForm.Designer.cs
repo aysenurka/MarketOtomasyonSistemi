@@ -36,23 +36,30 @@
             this.rbKart = new System.Windows.Forms.RadioButton();
             this.rbNakit = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnOde = new System.Windows.Forms.Button();
             this.btnTamamla = new System.Windows.Forms.Button();
+            this.txtNakit = new System.Windows.Forms.TextBox();
+            this.lblNakit = new System.Windows.Forms.Label();
+            this.lblParaUstu = new System.Windows.Forms.Label();
+            this.nuPoset = new System.Windows.Forms.NumericUpDown();
+            this.cbPoset = new System.Windows.Forms.CheckBox();
             this.pnlOdeme.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPoset)).BeginInit();
             this.SuspendLayout();
             // 
             // lstUrunler
             // 
-            this.lstUrunler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lstUrunler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstUrunler.FormattingEnabled = true;
-            this.lstUrunler.ItemHeight = 16;
+            this.lstUrunler.ItemHeight = 20;
             this.lstUrunler.Location = new System.Drawing.Point(12, 12);
             this.lstUrunler.Name = "lstUrunler";
-            this.lstUrunler.Size = new System.Drawing.Size(227, 260);
+            this.lstUrunler.Size = new System.Drawing.Size(227, 244);
             this.lstUrunler.TabIndex = 0;
             // 
             // btnEkle
             // 
-            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.Location = new System.Drawing.Point(245, 12);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(93, 37);
@@ -63,12 +70,12 @@
             // 
             // lstSepet
             // 
-            this.lstSepet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lstSepet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstSepet.FormattingEnabled = true;
-            this.lstSepet.ItemHeight = 16;
+            this.lstSepet.ItemHeight = 20;
             this.lstSepet.Location = new System.Drawing.Point(442, 12);
             this.lstSepet.Name = "lstSepet";
-            this.lstSepet.Size = new System.Drawing.Size(346, 260);
+            this.lstSepet.Size = new System.Drawing.Size(346, 244);
             this.lstSepet.TabIndex = 2;
             // 
             // lblToplam
@@ -86,63 +93,144 @@
             this.pnlOdeme.Controls.Add(this.rbKart);
             this.pnlOdeme.Controls.Add(this.rbNakit);
             this.pnlOdeme.Controls.Add(this.label1);
-            this.pnlOdeme.Location = new System.Drawing.Point(442, 359);
+            this.pnlOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.pnlOdeme.Location = new System.Drawing.Point(541, 316);
             this.pnlOdeme.Name = "pnlOdeme";
-            this.pnlOdeme.Size = new System.Drawing.Size(331, 43);
+            this.pnlOdeme.Size = new System.Drawing.Size(247, 37);
             this.pnlOdeme.TabIndex = 4;
             this.pnlOdeme.Visible = false;
             // 
             // rbKart
             // 
             this.rbKart.AutoSize = true;
-            this.rbKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbKart.Location = new System.Drawing.Point(243, 13);
+            this.rbKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rbKart.Location = new System.Drawing.Point(110, 9);
             this.rbKart.Name = "rbKart";
-            this.rbKart.Size = new System.Drawing.Size(53, 20);
-            this.rbKart.TabIndex = 6;
+            this.rbKart.Size = new System.Drawing.Size(60, 24);
+            this.rbKart.TabIndex = 5;
             this.rbKart.TabStop = true;
             this.rbKart.Text = "Kart";
             this.rbKart.UseVisualStyleBackColor = true;
+            this.rbKart.CheckedChanged += new System.EventHandler(this.rbKart_CheckedChanged);
             // 
             // rbNakit
             // 
             this.rbNakit.AutoSize = true;
-            this.rbNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbNakit.Location = new System.Drawing.Point(156, 13);
+            this.rbNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rbNakit.Location = new System.Drawing.Point(176, 9);
             this.rbNakit.Name = "rbNakit";
-            this.rbNakit.Size = new System.Drawing.Size(62, 20);
-            this.rbNakit.TabIndex = 5;
+            this.rbNakit.Size = new System.Drawing.Size(68, 24);
+            this.rbNakit.TabIndex = 6;
             this.rbNakit.TabStop = true;
             this.rbNakit.Text = "Nakit";
             this.rbNakit.UseVisualStyleBackColor = true;
+            this.rbNakit.CheckedChanged += new System.EventHandler(this.rbNakit_CheckedChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(3, 13);
+            this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Odeme Tipi: ";
             // 
+            // btnOde
+            // 
+            this.btnOde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOde.Location = new System.Drawing.Point(442, 316);
+            this.btnOde.Name = "btnOde";
+            this.btnOde.Size = new System.Drawing.Size(93, 37);
+            this.btnOde.TabIndex = 5;
+            this.btnOde.Text = "Ode";
+            this.btnOde.UseVisualStyleBackColor = true;
+            this.btnOde.Click += new System.EventHandler(this.btnOde_Click);
+            // 
             // btnTamamla
             // 
-            this.btnTamamla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTamamla.Location = new System.Drawing.Point(442, 316);
+            this.btnTamamla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTamamla.Location = new System.Drawing.Point(692, 441);
             this.btnTamamla.Name = "btnTamamla";
             this.btnTamamla.Size = new System.Drawing.Size(93, 37);
-            this.btnTamamla.TabIndex = 5;
+            this.btnTamamla.TabIndex = 6;
             this.btnTamamla.Text = "Tamamla";
             this.btnTamamla.UseVisualStyleBackColor = true;
+            this.btnTamamla.Visible = false;
             this.btnTamamla.Click += new System.EventHandler(this.btnTamamla_Click);
+            // 
+            // txtNakit
+            // 
+            this.txtNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtNakit.Location = new System.Drawing.Point(664, 364);
+            this.txtNakit.MaxLength = 6;
+            this.txtNakit.Name = "txtNakit";
+            this.txtNakit.Size = new System.Drawing.Size(121, 26);
+            this.txtNakit.TabIndex = 7;
+            this.txtNakit.Visible = false;
+            // 
+            // lblNakit
+            // 
+            this.lblNakit.AutoSize = true;
+            this.lblNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblNakit.Location = new System.Drawing.Point(544, 367);
+            this.lblNakit.Name = "lblNakit";
+            this.lblNakit.Size = new System.Drawing.Size(101, 20);
+            this.lblNakit.TabIndex = 8;
+            this.lblNakit.Text = "Nakit Girisi:";
+            this.lblNakit.Visible = false;
+            // 
+            // lblParaUstu
+            // 
+            this.lblParaUstu.AutoSize = true;
+            this.lblParaUstu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblParaUstu.Location = new System.Drawing.Point(544, 406);
+            this.lblParaUstu.Name = "lblParaUstu";
+            this.lblParaUstu.Size = new System.Drawing.Size(94, 20);
+            this.lblParaUstu.TabIndex = 9;
+            this.lblParaUstu.Text = "Para Ustu:";
+            this.lblParaUstu.Visible = false;
+            // 
+            // nuPoset
+            // 
+            this.nuPoset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nuPoset.Location = new System.Drawing.Point(548, 446);
+            this.nuPoset.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.nuPoset.Name = "nuPoset";
+            this.nuPoset.Size = new System.Drawing.Size(75, 26);
+            this.nuPoset.TabIndex = 11;
+            this.nuPoset.Visible = false;
+            this.nuPoset.ValueChanged += new System.EventHandler(this.nuPoset_ValueChanged);
+            // 
+            // cbPoset
+            // 
+            this.cbPoset.AutoSize = true;
+            this.cbPoset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbPoset.Location = new System.Drawing.Point(446, 448);
+            this.cbPoset.Name = "cbPoset";
+            this.cbPoset.Size = new System.Drawing.Size(79, 24);
+            this.cbPoset.TabIndex = 12;
+            this.cbPoset.Text = "Poset:";
+            this.cbPoset.UseVisualStyleBackColor = true;
+            this.cbPoset.Visible = false;
+            this.cbPoset.CheckedChanged += new System.EventHandler(this.cbPoset_CheckedChanged);
             // 
             // SatisDetayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.cbPoset);
+            this.Controls.Add(this.nuPoset);
+            this.Controls.Add(this.lblParaUstu);
+            this.Controls.Add(this.lblNakit);
+            this.Controls.Add(this.txtNakit);
             this.Controls.Add(this.btnTamamla);
+            this.Controls.Add(this.btnOde);
             this.Controls.Add(this.pnlOdeme);
             this.Controls.Add(this.lblToplam);
             this.Controls.Add(this.lstSepet);
@@ -153,6 +241,7 @@
             this.Load += new System.EventHandler(this.SatisDetayForm_Load);
             this.pnlOdeme.ResumeLayout(false);
             this.pnlOdeme.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPoset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +257,12 @@
         private System.Windows.Forms.RadioButton rbKart;
         private System.Windows.Forms.RadioButton rbNakit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnOde;
         private System.Windows.Forms.Button btnTamamla;
+        private System.Windows.Forms.TextBox txtNakit;
+        private System.Windows.Forms.Label lblNakit;
+        private System.Windows.Forms.Label lblParaUstu;
+        private System.Windows.Forms.NumericUpDown nuPoset;
+        private System.Windows.Forms.CheckBox cbPoset;
     }
 }
