@@ -87,6 +87,7 @@
             this.lblToplam.Size = new System.Drawing.Size(72, 20);
             this.lblToplam.TabIndex = 3;
             this.lblToplam.Text = "Toplam:";
+            this.lblToplam.Visible = false;
             // 
             // pnlOdeme
             // 
@@ -145,6 +146,7 @@
             this.btnOde.TabIndex = 5;
             this.btnOde.Text = "Ode";
             this.btnOde.UseVisualStyleBackColor = true;
+            this.btnOde.Visible = false;
             this.btnOde.Click += new System.EventHandler(this.btnOde_Click);
             // 
             // btnTamamla

@@ -37,6 +37,9 @@ namespace Market.WFA
 
             seciliUrun = lstUrunler.SelectedItem as UrunViewModel;
 
+            btnOde.Visible = true;
+            lblToplam.Visible = true;
+
             bool varMi = false;
             var sepettekiUrun = new SepetViewModel();
             foreach (var sepetViewModel in sepet)
@@ -109,9 +112,11 @@ namespace Market.WFA
                 btnTamamla.Visible = false;
                 lblParaUstu.Visible = false;
                 btnTamamla.Visible = true;
+                odemeBasarili = true;
             }
         }
 
+        private bool odemeBasarili = false;
         private void btnTamamla_Click(object sender, EventArgs e)
         {
             if (rbNakit.Checked == true)
@@ -127,6 +132,7 @@ namespace Market.WFA
                     {
                         lblParaUstu.Visible = true;
                         lblParaUstu.Text = $"Para Ustu: {(odenen - anaToplam):c2}";
+                        odemeBasarili = true;
                     }
                     else MessageBox.Show("Girilen para yetersiz");
                 }
@@ -151,10 +157,32 @@ namespace Market.WFA
                     MessageBox.Show("Satıs eklenirken bir hata olustu");
                 }
             }
+
+            if (odemeBasarili)
+            {
+                lstUrunler.DataSource = UrunHelper.UrunleriGetir();
+                lstUrunler.Enabled = true;
+                lstSepet.Items.Clear();
+                btnEkle.Enabled = true;
+                btnOde.Enabled = true;
+                btnTamamla.Visible = false;
+                btnOde.Visible = false;
+                pnlOdeme.Visible = false;
+                pnlOdeme.Controls.Clear();
+                nuPoset.Value = 0;
+                nuPoset.Visible = false;
+                cbPoset.Checked = false;
+                lblToplam.Visible = false;
+                lblNakit.Visible = false;
+                //lblParaUstu.Visible = false;
+                txtNakit.Text = string.Empty;
+                txtNakit.Visible = false;
+                //this.Controls.Clear();
+            }
         }
         private int posetSayisi = 0;
         private decimal posetFiyat;
-        private decimal anaToplam = 0;
+        private decimal anaToplam ;
         private void cbPoset_CheckedChanged(object sender, EventArgs e)
         {
             if (cbPoset.Checked == true)
