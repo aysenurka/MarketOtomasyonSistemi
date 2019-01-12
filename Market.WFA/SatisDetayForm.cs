@@ -65,7 +65,10 @@ namespace Market.WFA
                         //Kdv =seciliUrun.UrunDetay.Kdv
                     });
                 }
-                seciliUrun.UrunStok--;
+
+                var guncellenecekUrun = new UrunRepo().GetById(seciliUrun.UrunId);
+                guncellenecekUrun.UrunStok = --seciliUrun.UrunStok;
+                new UrunRepo().Update();
             }
             SepetGetir();
         }
