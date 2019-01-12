@@ -26,9 +26,7 @@ namespace Market.WFA
         private UrunViewModel seciliUrun;
         private void SatisDetayForm_Load(object sender, EventArgs e)
         {
-
             lstUrunler.DataSource = UrunHelper.UrunleriGetir();
-            //lstSepet.DataSource=
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -100,6 +98,7 @@ namespace Market.WFA
                 lblNakit.Visible = true;
                 txtNakit.Visible = true;
                 btnTamamla.Visible = true;
+                pnlNakit.Visible = true;
             }
         }
 
@@ -112,7 +111,11 @@ namespace Market.WFA
                 btnTamamla.Visible = false;
                 lblParaUstu.Visible = false;
                 btnTamamla.Visible = true;
+
                 odemeBasarili = true;
+
+                if (cbPoset.Checked == false)
+                    anaToplam = total;
             }
         }
 
@@ -128,13 +131,21 @@ namespace Market.WFA
                 else
                 {
                     var odenen = Convert.ToDecimal(txtNakit.Text);
+
+                    if (posetSayisi == 0)
+                        anaToplam = total;
+
                     if (odenen >= anaToplam)
                     {
                         lblParaUstu.Visible = true;
                         lblParaUstu.Text = $"Para Ustu: {(odenen - anaToplam):c2}";
                         odemeBasarili = true;
                     }
-                    else MessageBox.Show("Girilen para yetersiz");
+                    else
+                    {
+                        odemeBasarili = false;
+                        MessageBox.Show("Girilen para yetersiz");
+                    }
                 }
             }
 
@@ -160,35 +171,50 @@ namespace Market.WFA
 
             if (odemeBasarili)
             {
-                lstUrunler.DataSource = UrunHelper.UrunleriGetir();
-                lstUrunler.Enabled = true;
-                lstSepet.Items.Clear();
-                btnEkle.Enabled = true;
-                btnOde.Enabled = true;
-                btnTamamla.Visible = false;
-                btnOde.Visible = false;
-                pnlOdeme.Visible = false;
-                pnlOdeme.Controls.Clear();
-                nuPoset.Value = 0;
-                nuPoset.Visible = false;
-                cbPoset.Checked = false;
-                lblToplam.Visible = false;
-                lblNakit.Visible = false;
-                //lblParaUstu.Visible = false;
-                txtNakit.Text = string.Empty;
-                txtNakit.Visible = false;
-                //this.Controls.Clear();
+                FormSifirla();
+                SepetGetir();
             }
         }
+
+        private void FormSifirla()
+        {
+            MessageBox.Show("Odeme tamamlandı");
+
+            lstUrunler.DataSource = UrunHelper.UrunleriGetir();
+            lstUrunler.Enabled = true;
+            btnEkle.Enabled = true;
+            lstSepet.Enabled = true;
+            btnOde.Enabled = true;
+            btnOde.Visible = false;
+            btnTamamla.Visible = false;
+            pnlOdeme.Visible = false;
+            pnlOdeme.Controls.Clear();
+            pnlNakit.Visible = false;
+            pnlNakit.Controls.Clear();
+            lblToplam.Text = "Toplam:";
+            lblParaUstu.Text = "Para Üstü:";
+            cbPoset.Checked = false;
+            nuPoset.Value = 0;
+            cbPoset.Visible = false;
+            nuPoset.Visible = false;
+
+            odemeBasarili = false;
+
+            sepet = new List<SepetViewModel>();
+        }
+
         private int posetSayisi = 0;
         private decimal posetFiyat;
-        private decimal anaToplam ;
+        private decimal anaToplam;
         private void cbPoset_CheckedChanged(object sender, EventArgs e)
         {
             if (cbPoset.Checked == true)
             {
                 nuPoset.Visible = true;
             }
+            else if (cbPoset.CheckState == CheckState.Unchecked)
+                posetSayisi = 0;
+
         }
 
         private void nuPoset_ValueChanged(object sender, EventArgs e)

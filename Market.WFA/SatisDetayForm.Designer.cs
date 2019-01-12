@@ -35,7 +35,7 @@
             this.pnlOdeme = new System.Windows.Forms.Panel();
             this.rbKart = new System.Windows.Forms.RadioButton();
             this.rbNakit = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblOdeme = new System.Windows.Forms.Label();
             this.btnOde = new System.Windows.Forms.Button();
             this.btnTamamla = new System.Windows.Forms.Button();
             this.txtNakit = new System.Windows.Forms.TextBox();
@@ -43,8 +43,10 @@
             this.lblParaUstu = new System.Windows.Forms.Label();
             this.nuPoset = new System.Windows.Forms.NumericUpDown();
             this.cbPoset = new System.Windows.Forms.CheckBox();
+            this.pnlNakit = new System.Windows.Forms.Panel();
             this.pnlOdeme.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPoset)).BeginInit();
+            this.pnlNakit.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstUrunler
@@ -93,7 +95,7 @@
             // 
             this.pnlOdeme.Controls.Add(this.rbKart);
             this.pnlOdeme.Controls.Add(this.rbNakit);
-            this.pnlOdeme.Controls.Add(this.label1);
+            this.pnlOdeme.Controls.Add(this.lblOdeme);
             this.pnlOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.pnlOdeme.Location = new System.Drawing.Point(541, 316);
             this.pnlOdeme.Name = "pnlOdeme";
@@ -127,15 +129,15 @@
             this.rbNakit.UseVisualStyleBackColor = true;
             this.rbNakit.CheckedChanged += new System.EventHandler(this.rbNakit_CheckedChanged);
             // 
-            // label1
+            // lblOdeme
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Odeme Tipi: ";
+            this.lblOdeme.AutoSize = true;
+            this.lblOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOdeme.Location = new System.Drawing.Point(3, 9);
+            this.lblOdeme.Name = "lblOdeme";
+            this.lblOdeme.Size = new System.Drawing.Size(109, 20);
+            this.lblOdeme.TabIndex = 4;
+            this.lblOdeme.Text = "Odeme Tipi: ";
             // 
             // btnOde
             // 
@@ -164,7 +166,7 @@
             // txtNakit
             // 
             this.txtNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtNakit.Location = new System.Drawing.Point(664, 364);
+            this.txtNakit.Location = new System.Drawing.Point(123, 6);
             this.txtNakit.MaxLength = 6;
             this.txtNakit.Name = "txtNakit";
             this.txtNakit.Size = new System.Drawing.Size(121, 26);
@@ -175,7 +177,7 @@
             // 
             this.lblNakit.AutoSize = true;
             this.lblNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblNakit.Location = new System.Drawing.Point(544, 367);
+            this.lblNakit.Location = new System.Drawing.Point(3, 9);
             this.lblNakit.Name = "lblNakit";
             this.lblNakit.Size = new System.Drawing.Size(101, 20);
             this.lblNakit.TabIndex = 8;
@@ -186,7 +188,7 @@
             // 
             this.lblParaUstu.AutoSize = true;
             this.lblParaUstu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblParaUstu.Location = new System.Drawing.Point(544, 406);
+            this.lblParaUstu.Location = new System.Drawing.Point(3, 48);
             this.lblParaUstu.Name = "lblParaUstu";
             this.lblParaUstu.Size = new System.Drawing.Size(94, 20);
             this.lblParaUstu.TabIndex = 9;
@@ -221,16 +223,26 @@
             this.cbPoset.Visible = false;
             this.cbPoset.CheckedChanged += new System.EventHandler(this.cbPoset_CheckedChanged);
             // 
+            // pnlNakit
+            // 
+            this.pnlNakit.Controls.Add(this.lblNakit);
+            this.pnlNakit.Controls.Add(this.txtNakit);
+            this.pnlNakit.Controls.Add(this.lblParaUstu);
+            this.pnlNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.pnlNakit.Location = new System.Drawing.Point(541, 355);
+            this.pnlNakit.Name = "pnlNakit";
+            this.pnlNakit.Size = new System.Drawing.Size(247, 80);
+            this.pnlNakit.TabIndex = 13;
+            this.pnlNakit.Visible = false;
+            // 
             // SatisDetayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.pnlNakit);
             this.Controls.Add(this.cbPoset);
             this.Controls.Add(this.nuPoset);
-            this.Controls.Add(this.lblParaUstu);
-            this.Controls.Add(this.lblNakit);
-            this.Controls.Add(this.txtNakit);
             this.Controls.Add(this.btnTamamla);
             this.Controls.Add(this.btnOde);
             this.Controls.Add(this.pnlOdeme);
@@ -244,6 +256,8 @@
             this.pnlOdeme.ResumeLayout(false);
             this.pnlOdeme.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPoset)).EndInit();
+            this.pnlNakit.ResumeLayout(false);
+            this.pnlNakit.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,7 +272,7 @@
         private System.Windows.Forms.Panel pnlOdeme;
         private System.Windows.Forms.RadioButton rbKart;
         private System.Windows.Forms.RadioButton rbNakit;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblOdeme;
         private System.Windows.Forms.Button btnOde;
         private System.Windows.Forms.Button btnTamamla;
         private System.Windows.Forms.TextBox txtNakit;
@@ -266,5 +280,6 @@
         private System.Windows.Forms.Label lblParaUstu;
         private System.Windows.Forms.NumericUpDown nuPoset;
         private System.Windows.Forms.CheckBox cbPoset;
+        private System.Windows.Forms.Panel pnlNakit;
     }
 }
