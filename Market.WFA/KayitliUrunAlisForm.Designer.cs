@@ -96,7 +96,7 @@
             // txtUrunKategori
             // 
             this.txtUrunKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunKategori.Location = new System.Drawing.Point(312, 54);
+            this.txtUrunKategori.Location = new System.Drawing.Point(209, 57);
             this.txtUrunKategori.Name = "txtUrunKategori";
             this.txtUrunKategori.ReadOnly = true;
             this.txtUrunKategori.Size = new System.Drawing.Size(153, 22);
@@ -105,7 +105,7 @@
             // txtUrunİsmi
             // 
             this.txtUrunİsmi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunİsmi.Location = new System.Drawing.Point(312, 78);
+            this.txtUrunİsmi.Location = new System.Drawing.Point(209, 81);
             this.txtUrunİsmi.Name = "txtUrunİsmi";
             this.txtUrunİsmi.ReadOnly = true;
             this.txtUrunİsmi.Size = new System.Drawing.Size(153, 22);
@@ -114,7 +114,7 @@
             // txtUrunAdetSayisi
             // 
             this.txtUrunAdetSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAdetSayisi.Location = new System.Drawing.Point(312, 215);
+            this.txtUrunAdetSayisi.Location = new System.Drawing.Point(209, 218);
             this.txtUrunAdetSayisi.Name = "txtUrunAdetSayisi";
             this.txtUrunAdetSayisi.ReadOnly = true;
             this.txtUrunAdetSayisi.Size = new System.Drawing.Size(153, 22);
@@ -123,7 +123,7 @@
             // txtBarkodNo
             // 
             this.txtBarkodNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBarkodNo.Location = new System.Drawing.Point(314, 15);
+            this.txtBarkodNo.Location = new System.Drawing.Point(211, 18);
             this.txtBarkodNo.Name = "txtBarkodNo";
             this.txtBarkodNo.Size = new System.Drawing.Size(154, 22);
             this.txtBarkodNo.TabIndex = 25;
@@ -160,7 +160,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(550, 54);
+            this.label6.Location = new System.Drawing.Point(398, 63);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(254, 16);
             this.label6.TabIndex = 29;
@@ -169,7 +169,7 @@
             // txtSEcilenindirim
             // 
             this.txtSEcilenindirim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSEcilenindirim.Location = new System.Drawing.Point(852, 48);
+            this.txtSEcilenindirim.Location = new System.Drawing.Point(700, 57);
             this.txtSEcilenindirim.Name = "txtSEcilenindirim";
             this.txtSEcilenindirim.ReadOnly = true;
             this.txtSEcilenindirim.Size = new System.Drawing.Size(153, 22);
@@ -178,7 +178,7 @@
             // txtKDVDegeri
             // 
             this.txtKDVDegeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKDVDegeri.Location = new System.Drawing.Point(853, 74);
+            this.txtKDVDegeri.Location = new System.Drawing.Point(701, 83);
             this.txtKDVDegeri.Name = "txtKDVDegeri";
             this.txtKDVDegeri.ReadOnly = true;
             this.txtKDVDegeri.Size = new System.Drawing.Size(153, 22);
@@ -188,7 +188,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(550, 80);
+            this.label7.Location = new System.Drawing.Point(398, 89);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(289, 16);
             this.label7.TabIndex = 31;
@@ -208,7 +208,7 @@
             // txtUrunGuncelFiyat
             // 
             this.txtUrunGuncelFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunGuncelFiyat.Location = new System.Drawing.Point(312, 243);
+            this.txtUrunGuncelFiyat.Location = new System.Drawing.Point(209, 246);
             this.txtUrunGuncelFiyat.Name = "txtUrunGuncelFiyat";
             this.txtUrunGuncelFiyat.ReadOnly = true;
             this.txtUrunGuncelFiyat.Size = new System.Drawing.Size(153, 22);
@@ -227,7 +227,7 @@
             // txtAlisFiyat
             // 
             this.txtAlisFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAlisFiyat.Location = new System.Drawing.Point(312, 187);
+            this.txtAlisFiyat.Location = new System.Drawing.Point(209, 190);
             this.txtAlisFiyat.Name = "txtAlisFiyat";
             this.txtAlisFiyat.ReadOnly = true;
             this.txtAlisFiyat.Size = new System.Drawing.Size(153, 22);
@@ -256,7 +256,7 @@
             // txtGuncelStok
             // 
             this.txtGuncelStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtGuncelStok.Location = new System.Drawing.Point(314, 105);
+            this.txtGuncelStok.Location = new System.Drawing.Point(209, 108);
             this.txtGuncelStok.Name = "txtGuncelStok";
             this.txtGuncelStok.ReadOnly = true;
             this.txtGuncelStok.Size = new System.Drawing.Size(153, 22);
@@ -275,7 +275,7 @@
             // txtGuncelSatisFiyat
             // 
             this.txtGuncelSatisFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtGuncelSatisFiyat.Location = new System.Drawing.Point(313, 131);
+            this.txtGuncelSatisFiyat.Location = new System.Drawing.Point(210, 134);
             this.txtGuncelSatisFiyat.Name = "txtGuncelSatisFiyat";
             this.txtGuncelSatisFiyat.ReadOnly = true;
             this.txtGuncelSatisFiyat.Size = new System.Drawing.Size(153, 22);
@@ -284,7 +284,7 @@
             // txtUrunTaneSatısFiyat
             // 
             this.txtUrunTaneSatısFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunTaneSatısFiyat.Location = new System.Drawing.Point(313, 159);
+            this.txtUrunTaneSatısFiyat.Location = new System.Drawing.Point(210, 162);
             this.txtUrunTaneSatısFiyat.Name = "txtUrunTaneSatısFiyat";
             this.txtUrunTaneSatısFiyat.ReadOnly = true;
             this.txtUrunTaneSatısFiyat.Size = new System.Drawing.Size(153, 22);
@@ -303,9 +303,9 @@
             // btnGuncelle
             // 
             this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Location = new System.Drawing.Point(422, 345);
+            this.btnGuncelle.Location = new System.Drawing.Point(450, 317);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(116, 57);
+            this.btnGuncelle.Size = new System.Drawing.Size(130, 70);
             this.btnGuncelle.TabIndex = 45;
             this.btnGuncelle.Text = "Guncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
@@ -314,9 +314,9 @@
             // btnUrunGuncelle
             // 
             this.btnUrunGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunGuncelle.Location = new System.Drawing.Point(874, 187);
+            this.btnUrunGuncelle.Location = new System.Drawing.Point(700, 190);
             this.btnUrunGuncelle.Name = "btnUrunGuncelle";
-            this.btnUrunGuncelle.Size = new System.Drawing.Size(131, 42);
+            this.btnUrunGuncelle.Size = new System.Drawing.Size(154, 42);
             this.btnUrunGuncelle.TabIndex = 46;
             this.btnUrunGuncelle.Text = "Urun Guncelle";
             this.btnUrunGuncelle.UseVisualStyleBackColor = true;
@@ -327,7 +327,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(551, 108);
+            this.label13.Location = new System.Drawing.Point(399, 117);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(72, 16);
             this.label13.TabIndex = 48;
@@ -336,7 +336,7 @@
             // txtKar
             // 
             this.txtKar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKar.Location = new System.Drawing.Point(852, 102);
+            this.txtKar.Location = new System.Drawing.Point(701, 111);
             this.txtKar.Name = "txtKar";
             this.txtKar.ReadOnly = true;
             this.txtKar.Size = new System.Drawing.Size(153, 22);
@@ -357,7 +357,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(551, 137);
+            this.label14.Location = new System.Drawing.Point(399, 146);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(94, 16);
             this.label14.TabIndex = 51;
@@ -367,7 +367,7 @@
             // txtguncelFiyat
             // 
             this.txtguncelFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtguncelFiyat.Location = new System.Drawing.Point(853, 130);
+            this.txtguncelFiyat.Location = new System.Drawing.Point(701, 139);
             this.txtguncelFiyat.Name = "txtguncelFiyat";
             this.txtguncelFiyat.ReadOnly = true;
             this.txtguncelFiyat.Size = new System.Drawing.Size(153, 22);
@@ -378,7 +378,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 450);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(1101, 450);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtguncelFiyat);
             this.Controls.Add(this.pnurunler);
@@ -409,6 +410,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "KayitliUrunAlisForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Urun Kabul Form";
             this.Load += new System.EventHandler(this.KayıtlıUrunAlısForm_Load);
             this.pnurunler.ResumeLayout(false);

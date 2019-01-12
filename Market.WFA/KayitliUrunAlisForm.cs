@@ -127,6 +127,7 @@ namespace Market.WFA
             txtguncelFiyat.ReadOnly = false;
             label14.Visible = true;
             txtguncelFiyat.Visible = true;
+            btnGuncelle.Visible = false;
             //Kullanılabilir
             //this.Controls.OfType<TextBox>().All(tb => tb.ReadOnly = true);
 
@@ -143,6 +144,7 @@ namespace Market.WFA
             txtUrunGuncelFiyat.ReadOnly = true;
             label14.Visible = true;
             txtguncelFiyat.Visible = true;
+            btnGuncelle.Visible = true;
 
             urunbul = txtBarkodNo.Text;
 

@@ -97,6 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(588, 353);
             this.Controls.Add(this.treeKategoriView);
             this.Controls.Add(this.txtAciklama);
@@ -105,6 +106,7 @@
             this.Controls.Add(this.btnKategoriVazgec);
             this.Controls.Add(this.btnYeniKategoriEkle);
             this.Name = "KategoriEkleForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KategoriEkleForm";
             this.Load += new System.EventHandler(this.KategoriEkleForm_Load);
             this.ResumeLayout(false);

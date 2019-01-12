@@ -36,7 +36,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(99, 118);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 67);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(283, 152);
             this.pictureBox1.TabIndex = 27;
@@ -44,9 +44,10 @@
             // 
             // btnBarkodUret
             // 
-            this.btnBarkodUret.Location = new System.Drawing.Point(256, 26);
+            this.btnBarkodUret.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBarkodUret.Location = new System.Drawing.Point(233, 17);
             this.btnBarkodUret.Name = "btnBarkodUret";
-            this.btnBarkodUret.Size = new System.Drawing.Size(85, 36);
+            this.btnBarkodUret.Size = new System.Drawing.Size(85, 29);
             this.btnBarkodUret.TabIndex = 26;
             this.btnBarkodUret.Text = "Barkod Tanı";
             this.btnBarkodUret.UseVisualStyleBackColor = true;
@@ -55,16 +56,18 @@
             // 
             // txtBarkod
             // 
-            this.txtBarkod.Location = new System.Drawing.Point(110, 42);
+            this.txtBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarkod.Location = new System.Drawing.Point(35, 24);
             this.txtBarkod.Name = "txtBarkod";
-            this.txtBarkod.Size = new System.Drawing.Size(100, 20);
+            this.txtBarkod.Size = new System.Drawing.Size(152, 22);
             this.txtBarkod.TabIndex = 25;
             // 
             // BarkodAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.ClientSize = new System.Drawing.Size(382, 274);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBarkodUret);
             this.Controls.Add(this.txtBarkod);
