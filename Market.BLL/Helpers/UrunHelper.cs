@@ -21,5 +21,16 @@ namespace Market.BLL.Helpers
                 UrunStok = x.UrunStok
             }).ToList();
         }
+
+        public static object StoktakiAzalanUrunler()
+        {
+            return new UrunRepo().GetAll().Where(x=>x.UrunStok<=20).Select(x => new UrunSiparisViewModel
+            {
+                UrunId = x.Id,
+                UrunAd = x.UrunAd,
+                UrunFiyat = x.UrunFiyat,
+                UrunStok = x.UrunStok,
+            }).ToList();
+        }
     }
 }
