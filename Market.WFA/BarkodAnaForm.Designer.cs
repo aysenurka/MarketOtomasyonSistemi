@@ -31,6 +31,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBarkodUret = new System.Windows.Forms.Button();
             this.txtBarkod = new System.Windows.Forms.TextBox();
+            this.lstStokdaAzalanUrunler = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,12 +63,22 @@
             this.txtBarkod.Size = new System.Drawing.Size(152, 22);
             this.txtBarkod.TabIndex = 25;
             // 
+            // lstStokdaAzalanUrunler
+            // 
+            this.lstStokdaAzalanUrunler.FormattingEnabled = true;
+            this.lstStokdaAzalanUrunler.Location = new System.Drawing.Point(391, 17);
+            this.lstStokdaAzalanUrunler.Name = "lstStokdaAzalanUrunler";
+            this.lstStokdaAzalanUrunler.Size = new System.Drawing.Size(292, 303);
+            this.lstStokdaAzalanUrunler.TabIndex = 28;
+            this.lstStokdaAzalanUrunler.SelectedIndexChanged += new System.EventHandler(this.lstStokdaAzalanUrunler_SelectedIndexChanged);
+            // 
             // BarkodAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(382, 274);
+            this.ClientSize = new System.Drawing.Size(1256, 497);
+            this.Controls.Add(this.lstStokdaAzalanUrunler);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBarkodUret);
             this.Controls.Add(this.txtBarkod);
@@ -84,5 +95,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBarkodUret;
         public System.Windows.Forms.TextBox txtBarkod;
+        private System.Windows.Forms.ListBox lstStokdaAzalanUrunler;
     }
 }

@@ -81,5 +81,10 @@ namespace Market.WFA
                 MessageBox.Show("Barkod okundu");
             }
         }
+
+        private void lstStokdaAzalanUrunler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

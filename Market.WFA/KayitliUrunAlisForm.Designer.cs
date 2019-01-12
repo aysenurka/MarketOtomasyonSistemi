@@ -379,7 +379,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1101, 450);
+            this.ClientSize = new System.Drawing.Size(1078, 512);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtguncelFiyat);
             this.Controls.Add(this.pnurunler);
