@@ -48,7 +48,7 @@
             this.pnYeniUrunEkle.Controls.Add(this.txtYeniUrunAdi);
             this.pnYeniUrunEkle.Location = new System.Drawing.Point(12, 12);
             this.pnYeniUrunEkle.Name = "pnYeniUrunEkle";
-            this.pnYeniUrunEkle.Size = new System.Drawing.Size(356, 255);
+            this.pnYeniUrunEkle.Size = new System.Drawing.Size(336, 212);
             this.pnYeniUrunEkle.TabIndex = 19;
             // 
             // cmbKategoriler
@@ -114,7 +114,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 269);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(362, 230);
             this.Controls.Add(this.pnYeniUrunEkle);
             this.Name = "UrunEkleForm";
             this.Text = "UrunEkleForm";

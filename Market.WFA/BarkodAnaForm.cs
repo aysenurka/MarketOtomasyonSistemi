@@ -1,5 +1,7 @@
-﻿using Market.BLL.Repository;
+﻿using Market.BLL.Helpers;
+using Market.BLL.Repository;
 using Market.Models.Entities;
+using Market.Models.ViewModels;
 using System;
 using System.Drawing.Printing;
 using System.Linq;
@@ -13,7 +15,7 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
-       
+
         private KayitliUrunAlisForm kayitliurunalisform;
         string ara;
         private void btnBarkodUret_Click(object sender, EventArgs e)
@@ -44,14 +46,14 @@ namespace Market.WFA
             txtBarkod.SelectionStart = txtBarkod.MaxLength;
             #endregion
             ara = txtBarkod.Text;
-            var sonuc = new UrunDetayRepo().GetAll().FirstOrDefault(x=>x.Barkod==ara);
-            if (sonuc==null)
+            var sonuc = new UrunDetayRepo().GetAll().FirstOrDefault(x => x.Barkod == ara);
+            if (sonuc == null)
             {
                 YeniUrunDetayForm yeniurunform = new YeniUrunDetayForm();
                 yeniurunform.txtBarkodNo.Text = ara;
                 yeniurunform.Show();
-             
-              
+
+
             }
             else
             {
@@ -79,6 +81,47 @@ namespace Market.WFA
             if (e.KeyCode == Keys.Enter)
             {
                 MessageBox.Show("Barkod okundu");
+            }
+        }
+
+
+        private void BarkodAnaForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUrunAl_Click(object sender, EventArgs e)
+        {
+            pnUrunKabul.Visible = true;
+            pnUrunStok.Visible = false;
+        }
+
+        private void btnStokSiparis_Click(object sender, EventArgs e)
+        {
+            lstStokdaAzalanUrunler.DataSource = UrunHelper.StoktakiAzalanUrunler();
+            pnUrunStok.Visible = true;
+            pnUrunKabul.Visible = false;
+        }
+
+        private void lstStokdaAzalanUrunler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            nuSiparisAdet.Value = 1;
+        }
+
+        private void btnSiparisVer_Click(object sender, EventArgs e)
+        {
+            if (lstStokdaAzalanUrunler.SelectedItem == null)
+            {
+                MessageBox.Show("Lütfen Bir Ürün Seciniz");
+                return;
+            }
+            else
+            {
+                var secili = lstStokdaAzalanUrunler.SelectedItem as UrunSiparisViewModel;
+                secili.AlınanSiparisSayisi =(int)nuSiparisAdet.Value;
+                var sonuc = new UrunRepo().UrunStokSiparis(secili);
+                MessageBox.Show($"{sonuc} Siparis Edildi.");
+                lstStokdaAzalanUrunler.DataSource = UrunHelper.StoktakiAzalanUrunler();
             }
         }
     }
