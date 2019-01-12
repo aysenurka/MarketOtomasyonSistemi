@@ -17,7 +17,7 @@ namespace Market.Models.ViewModels
         //public decimal ToplamFiyat { get; set } = Adet * Fiyat;
 
         //public override string ToString() => $"{UrunAdi} x{Adet} {ToplamFiyat():c2}";
-        public override string ToString() => $"{UrunAdi,-30} x{Adet,-7} %{Kdv,-7} {ToplamFiyat():c2}";
+        public override string ToString() => $"{UrunAdi,-20} x{Adet,-7} %{Kdv,-7} {ToplamFiyat():c2}";
 
         public decimal ToplamFiyat() => Adet * BirimFiyat;
     }

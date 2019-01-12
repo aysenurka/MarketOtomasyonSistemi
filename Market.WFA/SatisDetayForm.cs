@@ -24,6 +24,7 @@ namespace Market.WFA
 
         private List<SepetViewModel> sepet = new List<SepetViewModel>();
         private UrunViewModel seciliUrun;
+        private FisForm frmFis;
         private void SatisDetayForm_Load(object sender, EventArgs e)
         {
             lstUrunler.DataSource = UrunHelper.UrunleriGetir();
@@ -176,6 +177,16 @@ namespace Market.WFA
             {
                 FormSifirla();
                 SepetGetir();
+
+                if (frmFis == null || frmFis.IsDisposed)
+                {
+                    frmFis = new FisForm()
+                    {
+                        Text = "Fiş Form"
+                    };
+                    frmFis.Show();
+                    frmFis.
+                }
             }
         }
 

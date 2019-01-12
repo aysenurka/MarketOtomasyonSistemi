@@ -57,6 +57,12 @@
     <Compile Include="BarkodAnaForm.Designer.cs">
       <DependentUpon>BarkodAnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FisForm.Designer.cs">
+      <DependentUpon>FisForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GirisForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <EmbeddedResource Include="BarkodAnaForm.resx">
       <DependentUpon>BarkodAnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FisForm.resx">
+      <DependentUpon>FisForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GirisForm.resx">
       <DependentUpon>GirisForm.cs</DependentUpon>
