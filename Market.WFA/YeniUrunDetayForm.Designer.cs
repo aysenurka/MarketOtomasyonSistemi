@@ -365,11 +365,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(602, 469);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pnUrunBilgileri);
             this.Controls.Add(this.txtBarkodNo);
             this.Name = "YeniUrunDetayForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.YeniUrunForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdetBilgisi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKoliFiyati)).EndInit();

@@ -314,7 +314,7 @@
             // btnUrunGuncelle
             // 
             this.btnUrunGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunGuncelle.Location = new System.Drawing.Point(874, 205);
+            this.btnUrunGuncelle.Location = new System.Drawing.Point(874, 187);
             this.btnUrunGuncelle.Name = "btnUrunGuncelle";
             this.btnUrunGuncelle.Size = new System.Drawing.Size(131, 42);
             this.btnUrunGuncelle.TabIndex = 46;
@@ -362,6 +362,7 @@
             this.label14.Size = new System.Drawing.Size(94, 16);
             this.label14.TabIndex = 51;
             this.label14.Text = "Guncel Fiyat";
+            this.label14.Visible = false;
             // 
             // txtguncelFiyat
             // 
@@ -371,6 +372,7 @@
             this.txtguncelFiyat.ReadOnly = true;
             this.txtguncelFiyat.Size = new System.Drawing.Size(153, 22);
             this.txtguncelFiyat.TabIndex = 50;
+            this.txtguncelFiyat.Visible = false;
             // 
             // KayitliUrunAlisForm
             // 
