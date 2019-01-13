@@ -185,7 +185,7 @@ namespace Market.WFA
                         Text = "Fiş Form"
                     };
                     frmFis.Show();
-                    frmFis.
+                  
                 }
             }
         }
