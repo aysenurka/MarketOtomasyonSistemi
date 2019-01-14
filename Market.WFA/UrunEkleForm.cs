@@ -42,6 +42,7 @@ namespace Market.WFA
                 MessageBox.Show("Urun eklenirken bir hata olustu\n"+ex.Message);
             }
             yeniurundetayform.cmbUrunCategory.DataSource = UrunHelper.UrunleriGetir();
+            this.Close();
         }
 
         private void UrunEkleForm_Load(object sender, EventArgs e)

@@ -63,12 +63,14 @@ namespace Market.WFA
                 });
 
                 MessageBox.Show($"Oldu bu iş\n{id}");
+                
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message, "bir hata olustu");
             }
+            this.Close();
         }
 
         private void pnUrunBilgileri_Paint(object sender, PaintEventArgs e)
