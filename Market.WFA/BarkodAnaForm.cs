@@ -52,27 +52,19 @@ namespace Market.WFA
                 YeniUrunDetayForm yeniurunform = new YeniUrunDetayForm();
                 yeniurunform.txtBarkodNo.Text = ara;
                 yeniurunform.Show();
-
-
             }
             else
             {
-                if (kayitliurunalisform == null || kayitliurunalisform.IsDisposed)
-                {
-                    kayitliurunalisform = new KayitliUrunAlisForm
-                    {
-                        MdiParent = this
-                    };
-                    kayitliurunalisform.Show();
-                    kayitliurunalisform.txtBarkodNo.Text = ara;
-                }
+                KayitliUrunAlisForm kayitliurunalisform = new KayitliUrunAlisForm();
+                kayitliurunalisform.txtBarkodNo.Text = ara;
+                kayitliurunalisform.Show();
 
             }
         }
         private string UrunKodu()
         {
             Random rnd = new Random();
-            int sayi = rnd.Next(1, 1500);
+            int sayi = rnd.Next(0, 1);
             return sayi.ToString();
         }
         private void btnBarkodUret_KeyDown(object sender, KeyEventArgs e)
