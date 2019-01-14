@@ -8,10 +8,13 @@ namespace Market.Models.ViewModels
 {
     public class FisViewModel
     {
+        public List<SepetViewModel> SepetModel { get; set; }
         public int UrunId { get; set; }
         public string UrunAd { get; set; }
-        public decimal UrunToplamFiyat { get; set; }
+        public int UrunAdet { get; set; }
+        public decimal UrunBirimFiyat { get; set; }
         public int KategoriId { get; set; }
         public string KategoriAd { get; set; }
+        public DateTime Tarih { get; set; } = DateTime.Now.Date;
     }
 }
