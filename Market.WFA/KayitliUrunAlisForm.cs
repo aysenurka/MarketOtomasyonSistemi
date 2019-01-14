@@ -101,6 +101,8 @@ namespace Market.WFA
 
             var sonuc = UrunDetayHelper.BarkodluUrunuGetir(txtBarkodNo.Text);
             VerileriDoldur(sonuc);
+            txtguncelFiyat.Visible = false;
+            label14.Visible = false;
         }
 
         private void VerileriDoldur(KayitliOlanUrunViewModel sonuc)
