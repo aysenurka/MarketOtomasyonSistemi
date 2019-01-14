@@ -66,7 +66,7 @@ namespace Market.WFA
         private string UrunKodu()
         {
             Random rnd = new Random();
-            int sayi = rnd.Next(0, 10);
+            int sayi = rnd.Next(0,5);
             return sayi.ToString();
         }
         private void btnBarkodUret_KeyDown(object sender, KeyEventArgs e)

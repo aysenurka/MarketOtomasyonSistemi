@@ -137,9 +137,9 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(38, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 16);
+            this.label3.Size = new System.Drawing.Size(83, 16);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Urun Birim Adet";
+            this.label3.Text = "Koli ici Adet";
             // 
             // label4
             // 
@@ -147,9 +147,9 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(38, 176);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 16);
+            this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Urun  Koli veya birim fiyatı Fiyatı";
+            this.label4.Text = "Birim Fiyatı";
             // 
             // nuUrunKoliFiyati
             // 
@@ -218,7 +218,6 @@
             this.pnUrunBilgileri.Name = "pnUrunBilgileri";
             this.pnUrunBilgileri.Size = new System.Drawing.Size(504, 369);
             this.pnUrunBilgileri.TabIndex = 25;
-            this.pnUrunBilgileri.Paint += new System.Windows.Forms.PaintEventHandler(this.pnUrunBilgileri_Paint);
             // 
             // label10
             // 
@@ -245,6 +244,7 @@
             0,
             0});
             this.nuAdet.Name = "nuAdet";
+            this.nuAdet.ReadOnly = true;
             this.nuAdet.Size = new System.Drawing.Size(123, 23);
             this.nuAdet.TabIndex = 31;
             this.nuAdet.Value = new decimal(new int[] {
@@ -259,9 +259,9 @@
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(38, 263);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 16);
+            this.label9.Size = new System.Drawing.Size(76, 16);
             this.label9.TabIndex = 30;
-            this.label9.Text = "Kar Fiyatı";
+            this.label9.Text = "Kar Degeri";
             // 
             // nuUrunKarOranı
             // 
@@ -336,9 +336,9 @@
             this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(38, 205);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(124, 16);
+            this.label14.Size = new System.Drawing.Size(102, 16);
             this.label14.TabIndex = 26;
-            this.label14.Text = "Urun İndirim Fiyatı";
+            this.label14.Text = "İndirim Degeri ";
             // 
             // btnKaydet
             // 

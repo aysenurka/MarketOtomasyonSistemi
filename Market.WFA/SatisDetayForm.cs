@@ -21,7 +21,7 @@ namespace Market.WFA
         public FisForm frmFis;
         private void SatisDetayForm_Load(object sender, EventArgs e)
         {
-            lstUrunler.DataSource = UrunHelper.UrunleriGetir();
+            lstUrunler.DataSource = UrunHelper.StoktakiUrunleriGetir();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)

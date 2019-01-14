@@ -56,7 +56,7 @@ namespace Market.WFA
                     Kdv = nuYeniUrunKdvDegeri.Value,
                     UrunId = (cmbUrunCategory.SelectedItem as UrunViewModel).UrunId,
                     CategoryId = (cmbYeniCategory.SelectedItem as KategoriViewModel).KategoriId,
-                     UrunAlındıgıTarih = DateTime.Now,
+                    UrunAlındıgıTarih = DateTime.Now,
                     BirimAdet= (int)nuUrunAdetBilgisi.Value,
                     Fiyat=nuUrunKoliFiyati.Value,
 
@@ -71,11 +71,6 @@ namespace Market.WFA
                 MessageBox.Show(ex.Message, "bir hata olustu");
             }
             this.Close();
-        }
-
-        private void pnUrunBilgileri_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
