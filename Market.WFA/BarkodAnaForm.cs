@@ -52,6 +52,7 @@ namespace Market.WFA
                 YeniUrunDetayForm yeniurunform = new YeniUrunDetayForm();
                 yeniurunform.txtBarkodNo.Text = ara;
                 yeniurunform.Show();
+
             }
             else
             {
@@ -60,6 +61,7 @@ namespace Market.WFA
                 kayitliurunalisform.Show();
 
             }
+            txtBarkod.Text = string.Empty;
         }
         private string UrunKodu()
         {

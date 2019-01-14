@@ -67,9 +67,9 @@ namespace Market.WFA
                     });
                 }
 
-                var guncellenecekUrun = new UrunRepo().GetById(seciliUrun.UrunId);
-                guncellenecekUrun.UrunStok = --seciliUrun.UrunStok;
-                new UrunRepo().Update();
+                //var guncellenecekUrun = new UrunRepo().GetById(seciliUrun.UrunId);
+                //guncellenecekUrun.UrunStok = --seciliUrun.UrunStok;
+                //new UrunRepo().Update();
             }
             SepetGetir();
         }
@@ -160,12 +160,21 @@ namespace Market.WFA
             {
                 try
                 {
-                    new SatisRepo().Insert(new Satis
+                    //new SatisRepo().Insert(new Satis
+                    //{
+                    //    SatisTarih = DateTime.Now,
+                    //    ToplamFiyat = anaToplam,
+                    //    OdemeTipi = (OdemeTipi)odemeIndex
+                    //});
+                    var ekle = new SatisDetayRepo();
+                    var urunler = new SatisDetayViewModel
                     {
-                        SatisTarih = DateTime.Now,
-                        ToplamFiyat = anaToplam,
-                        OdemeTipi = (OdemeTipi)odemeIndex
-                    });
+                         anatoplam=anaToplam,
+                          odemeTipi=(OdemeTipi)odemeIndex,
+                           SepetModel=sepet,     
+                    };
+                    ekle.SatisYap(urunler);
+                    MessageBox.Show("Oldu bu iş");
                 }
                 catch (Exception)
                 {
@@ -200,6 +209,7 @@ namespace Market.WFA
                 //frmFis.lblFisInfo.Text += "bilgiler aktarıldı";
 
                 FormSifirla();
+                this.Close();
 
             }
         }
