@@ -59,6 +59,7 @@ namespace Market.WFA
                     UrunAlındıgıTarih = DateTime.Now,
                     BirimAdet= (int)nuUrunAdetBilgisi.Value,
                     Fiyat=nuUrunKoliFiyati.Value,
+                     UrunAdetAciklama=richAdetAciklama.Text
 
                 });
 

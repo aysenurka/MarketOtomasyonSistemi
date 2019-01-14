@@ -60,6 +60,8 @@
             this.pnurunler = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.txtguncelFiyat = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.richAdetAciklama = new System.Windows.Forms.RichTextBox();
             this.pnurunler.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -268,7 +270,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(11, 198);
+            this.label11.Location = new System.Drawing.Point(10, 203);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(137, 16);
             this.label11.TabIndex = 41;
@@ -307,7 +309,7 @@
             // btnGuncelle
             // 
             this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Location = new System.Drawing.Point(433, 282);
+            this.btnGuncelle.Location = new System.Drawing.Point(425, 350);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 70);
             this.btnGuncelle.TabIndex = 45;
@@ -352,7 +354,7 @@
             this.pnurunler.Controls.Add(this.txtAlinanadetSayisi);
             this.pnurunler.Controls.Add(this.label5);
             this.pnurunler.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnurunler.Location = new System.Drawing.Point(30, 262);
+            this.pnurunler.Location = new System.Drawing.Point(19, 330);
             this.pnurunler.Name = "pnurunler";
             this.pnurunler.Size = new System.Drawing.Size(343, 105);
             this.pnurunler.TabIndex = 49;
@@ -378,12 +380,34 @@
             this.txtguncelFiyat.TabIndex = 50;
             this.txtguncelFiyat.Visible = false;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(12, 259);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 16);
+            this.label15.TabIndex = 53;
+            this.label15.Text = "Urun Adet Bilgisi";
+            // 
+            // richAdetAciklama
+            // 
+            this.richAdetAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richAdetAciklama.Location = new System.Drawing.Point(211, 233);
+            this.richAdetAciklama.Name = "richAdetAciklama";
+            this.richAdetAciklama.ReadOnly = true;
+            this.richAdetAciklama.Size = new System.Drawing.Size(151, 42);
+            this.richAdetAciklama.TabIndex = 52;
+            this.richAdetAciklama.Text = "";
+            // 
             // KayitliUrunAlisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1078, 512);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.richAdetAciklama);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtguncelFiyat);
             this.Controls.Add(this.pnurunler);
@@ -458,5 +482,7 @@
         private System.Windows.Forms.Panel pnurunler;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtguncelFiyat;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.RichTextBox richAdetAciklama;
     }
 }

@@ -50,6 +50,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.richAdetAciklama = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdetBilgisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunKoliFiyati)).BeginInit();
             this.pnUrunBilgileri.SuspendLayout();
@@ -195,6 +197,8 @@
             // 
             // pnUrunBilgileri
             // 
+            this.pnUrunBilgileri.Controls.Add(this.label5);
+            this.pnUrunBilgileri.Controls.Add(this.richAdetAciklama);
             this.pnUrunBilgileri.Controls.Add(this.label10);
             this.pnUrunBilgileri.Controls.Add(this.nuAdet);
             this.pnUrunBilgileri.Controls.Add(this.label9);
@@ -216,14 +220,14 @@
             this.pnUrunBilgileri.Controls.Add(this.label4);
             this.pnUrunBilgileri.Location = new System.Drawing.Point(12, 41);
             this.pnUrunBilgileri.Name = "pnUrunBilgileri";
-            this.pnUrunBilgileri.Size = new System.Drawing.Size(504, 369);
+            this.pnUrunBilgileri.Size = new System.Drawing.Size(531, 436);
             this.pnUrunBilgileri.TabIndex = 25;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(36, 263);
+            this.label10.Location = new System.Drawing.Point(36, 403);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 16);
             this.label10.TabIndex = 32;
@@ -233,7 +237,7 @@
             // nuAdet
             // 
             this.nuAdet.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuAdet.Location = new System.Drawing.Point(258, 256);
+            this.nuAdet.Location = new System.Drawing.Point(258, 396);
             this.nuAdet.Maximum = new decimal(new int[] {
             500,
             0,
@@ -345,7 +349,7 @@
             // btnKaydet
             // 
             this.btnKaydet.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKaydet.Location = new System.Drawing.Point(171, 285);
+            this.btnKaydet.Location = new System.Drawing.Point(171, 324);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(210, 66);
             this.btnKaydet.TabIndex = 24;
@@ -363,12 +367,31 @@
             this.label15.TabIndex = 26;
             this.label15.Text = "Barkod";
             // 
+            // richAdetAciklama
+            // 
+            this.richAdetAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richAdetAciklama.Location = new System.Drawing.Point(258, 256);
+            this.richAdetAciklama.Name = "richAdetAciklama";
+            this.richAdetAciklama.Size = new System.Drawing.Size(123, 51);
+            this.richAdetAciklama.TabIndex = 33;
+            this.richAdetAciklama.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(41, 267);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 16);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Urun Adet Bilgisi";
+            // 
             // YeniUrunDetayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
-            this.ClientSize = new System.Drawing.Size(602, 469);
+            this.ClientSize = new System.Drawing.Size(609, 517);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pnUrunBilgileri);
             this.Controls.Add(this.txtBarkodNo);
@@ -411,5 +434,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown nuAdet;
         public System.Windows.Forms.ComboBox cmbUrunCategory;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox richAdetAciklama;
     }
 }

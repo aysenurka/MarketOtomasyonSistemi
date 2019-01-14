@@ -24,6 +24,7 @@ namespace Market.BLL.Repository
                         BirimAdet = model.BirimAdet,
                         UrunId = model.UrunId,
                         Indirim = model.Indirim,
+                         UrunAdetAciklama=model.UrunAdetAciklama,
 
                     };
                     db.UrunDetaylar.Add(UrunDetayEkle);

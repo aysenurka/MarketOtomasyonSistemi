@@ -120,6 +120,7 @@ namespace Market.WFA
             txtUrunAdetSayisi.Text = sonuc.BirimAdet.ToString();
             txtKDVDegeri.Text = sonuc.Kdv.ToString();
             txtUrunGuncelFiyat.Text = sonuc.Fiyat.ToString("c2");
+            richAdetAciklama.Text = sonuc.UrunAciklama;
         }
     }
 }

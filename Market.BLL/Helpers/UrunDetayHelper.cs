@@ -32,7 +32,9 @@ namespace Market.BLL.Helpers
                         AlişFiyat = x.AlisFiyat,
                         GuncelStok = x.Urun.UrunStok,
                         SatisFiyati = x.SatisFiyat,
-                        ToplamAdet = x.ToplamAdet
+                        ToplamAdet = x.ToplamAdet,
+                         UrunAciklama=x.UrunAdetAciklama,
+                        
                     }).ToList().FirstOrDefault();
         }
     }
