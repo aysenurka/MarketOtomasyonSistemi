@@ -23,10 +23,21 @@ namespace Market.WFA
         private UrunViewModel seciliUrun;
         public FisForm frmFis;
         private SiparisBarkodViewModel barkodbulunan;
+        //private SiparisBarkodViewModel seciliUrun;
 
         private void SatisDetayForm_Load(object sender, EventArgs e)
         {
             //lstUrunler.DataSource = UrunHelper.StoktakiUrunleriGetir();
+            lstUrunler.DataSource = new UrunDetayRepo().GetAll().Select(x => new SiparisBarkodViewModel
+            {
+                BirimAdet = x.BirimAdet,
+                SatisFiyati = x.SatisFiyat,
+                UrunAd = x.Urun.UrunAd,
+                UrunDetayId = x.Id,
+                UrunAciklama = x.UrunAdetAciklama,
+                UrunStok = x.Urun.UrunStok,
+                UrunFiyat = x.Urun.UrunFiyat
+            }).ToList();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -308,14 +319,14 @@ namespace Market.WFA
             lblToplam.Text = $"Toplam: {anaToplam:c2}";
         }
         private string barkodno;
-      
+
         private void txtBarkodNo_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 barkodno = txtBarkodNo.Text;
                 var sonuc = new UrunDetayRepo().GetAll().FirstOrDefault(x => x.Barkod == barkodno);
-               
+
                 if (sonuc == null)
                 {
                     MessageBox.Show("Yanlıs bir barkod girdiniz\nTekrar giriniz deneyiniz");
@@ -323,21 +334,7 @@ namespace Market.WFA
                 }
                 else
                 {
-                    barkodbulunan = new UrunDetayRepo().GetAll().Where(x => x.Barkod == barkodno).Select(x => new SiparisBarkodViewModel
-                    {                  
-                        UrunDetayId = x.Id,
-                        UrunId = x.UrunId,
-                        UrunAdi=x.Urun.UrunAd,
-                        SatisFiyati=x.Urun.UrunFiyat,
-                        BirimAdet = x.BirimAdet,
-                        Adet = x.Adet,
-                        Barkod = x.Barkod,
-                        GuncelStok = x.Urun.UrunStok,
-                        AlişFiyat = x.AlisFiyat,
-                        UrunAciklama = x.UrunAdetAciklama,
-
-                    }).First();
-                    lstUrunler.Items.Add(barkodbulunan);
+                   
 
                 }
                 txtBarkodNo.Text = string.Empty;

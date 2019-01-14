@@ -9,29 +9,19 @@ namespace Market.Models.ViewModels
 {
     public class SiparisBarkodViewModel
     {
-        public int UrunDetayId { get; set; }
         public int UrunId { get; set; }
-    
-        public string UrunAdi { get; set; }
-        public string Barkod { get; set; }
+        public string UrunAd { get; set; }
+        public int UrunStok { get; set; }
+        public decimal UrunFiyat { get; set; }
+        public int KategoriId { get; set; }
+        public int UrunDetayId { get; set; }
         public int BirimAdet { get; set; }
-        public int Adet { get; set; }
-        public decimal Fiyat { get; set; }
-        public DateTime UrunAlındıgıTarih { get; set; }
-
-        public decimal TaneSatis { get; set; }
-    
-  
-        public decimal AlişFiyat { get; set; }
-        public decimal ToplamAdet { get; set; }
         public decimal SatisFiyati { get; set; }
-        public decimal GuncelStok { get; set; }
         public string UrunAciklama { get; set; }
-        public virtual Urun Urun { get; set; }
-        public Satis satis { get; set; }
-        public SatisDetay Satisdetay { get; set; }
+        public Kategori Kategori { get; set; }
+        public UrunDetay UrunDetay { get; set; }
 
-        public override string ToString() => $"{UrunAdi}  {SatisFiyati:c2} Bilgi : {UrunAciklama} ";
-       
+        public override string ToString() => $"{UrunAd}--{SatisFiyati:c2}-{UrunAciklama}";
+
     }
 }
