@@ -17,6 +17,7 @@ namespace Market.Models.ViewModels
         public int UrunDetayId { get; set; }
         public int BirimAdet { get; set; }
         public string Barkod { get; set; }
+        public decimal Adet { get; set; }
         public decimal SatisFiyati { get; set; }
         public string UrunAciklama { get; set; }
         public Kategori Kategori { get; set; }

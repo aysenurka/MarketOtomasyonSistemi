@@ -35,7 +35,7 @@ namespace Market.BLL.Repository
                             BirimFiyat = item.BirimFiyat
                         });
                         var urun = db.Urunler.Find(item.UrunId);
-                        urun.UrunStok = urun.UrunStok - item.Adet;
+                        urun.UrunStok = urun.UrunStok - (item.Adet*model.BirimAdet);
                         new UrunRepo().Update();
                     }
                     db.SaveChanges();

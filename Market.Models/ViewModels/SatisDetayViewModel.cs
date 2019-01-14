@@ -17,7 +17,11 @@ namespace Market.Models.ViewModels
         public int KategoriId { get; set; }
         public string KategoriAd { get; set; }
         public decimal anatoplam { get; set; }
+        public int BirimAdet { get; set; }
+        public decimal AlinanurunAdedi { get; set; }
+       
         public OdemeTipi odemeTipi { get; set; }
+        
         public DateTime Tarih { get; set; } = DateTime.Now.Date;
     }
 }

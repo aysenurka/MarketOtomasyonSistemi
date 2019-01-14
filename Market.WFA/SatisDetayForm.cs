@@ -20,10 +20,10 @@ namespace Market.WFA
         }
 
         private List<SepetViewModel> sepet = new List<SepetViewModel>();
-        private UrunViewModel seciliUrun;
+        //private UrunViewModel seciliUrun;
         public FisForm frmFis;
         private SiparisBarkodViewModel barkodbulunan;
-        //private SiparisBarkodViewModel seciliUrun;
+        private SiparisBarkodViewModel seciliUrun;
 
         private void SatisDetayForm_Load(object sender, EventArgs e)
         {
@@ -34,9 +34,15 @@ namespace Market.WFA
                 SatisFiyati = x.SatisFiyat,
                 UrunAd = x.Urun.UrunAd,
                 UrunDetayId = x.Id,
+                Barkod=x.Barkod,
+                 UrunId=x.UrunId,
                 UrunAciklama = x.UrunAdetAciklama,
                 UrunStok = x.Urun.UrunStok,
-                UrunFiyat = x.Urun.UrunFiyat
+                UrunFiyat = x.Urun.UrunFiyat,
+                Adet=x.Adet, 
+               
+               
+                
             }).ToList();
         }
 
@@ -44,7 +50,7 @@ namespace Market.WFA
         {
             if (lstUrunler.SelectedItem == null) return;
 
-            seciliUrun = lstUrunler.SelectedItem as UrunViewModel;
+            seciliUrun = lstUrunler.SelectedItem as SiparisBarkodViewModel;
 
             btnOde.Visible = true;
             lblToplam.Visible = true;
@@ -53,7 +59,7 @@ namespace Market.WFA
             var sepettekiUrun = new SepetViewModel();
             foreach (var sepetViewModel in sepet)
             {
-                if (seciliUrun.UrunId == sepetViewModel.UrunId)
+                if (seciliUrun.Barkod == sepetViewModel.Barkod)
                 {
                     varMi = true;
                     sepettekiUrun = sepetViewModel;
@@ -72,7 +78,10 @@ namespace Market.WFA
                         UrunAdi = seciliUrun.UrunAd,
                         BirimFiyat = seciliUrun.UrunFiyat,
                         Adet = 1,
-                        UrunDetayId = seciliUrun.UrunDetayId
+                        Barkod = seciliUrun.Barkod,
+                        UrunDetayId = seciliUrun.UrunDetayId,
+                         SatısFiyatı=seciliUrun.SatisFiyati,
+                        
                         //Kdv =seciliUrun.UrunDetay.Kdv
                     });
                 }
@@ -182,6 +191,9 @@ namespace Market.WFA
                         anatoplam = anaToplam,
                         odemeTipi = (OdemeTipi)odemeIndex,
                         SepetModel = sepet,
+                         BirimAdet=seciliUrun.BirimAdet,
+                       
+                   
                     };
                     satısid = ekle.SatisYap(urunler);
                     MessageBox.Show("Oldu bu iş\nSatıs Yapıldı.");
@@ -340,7 +352,8 @@ namespace Market.WFA
                         UrunDetayId = x.Id,
                         UrunAciklama = x.UrunAdetAciklama,
                         UrunStok = x.Urun.UrunStok,
-                        UrunFiyat = x.Urun.UrunFiyat
+                        UrunFiyat = x.Urun.UrunFiyat,
+                        UrunId = x.UrunId,
                     }).ToList();
                     MessageBox.Show(" Kayıtlı Barkod Bulunamadı");
 
@@ -358,7 +371,8 @@ namespace Market.WFA
                         UrunDetayId = x.Id,
                         UrunAciklama = x.UrunAdetAciklama,
                         UrunStok = x.Urun.UrunStok,
-                        UrunFiyat = x.Urun.UrunFiyat
+                        UrunFiyat = x.Urun.UrunFiyat,
+                        Adet = x.Adet
 
                     });
 
