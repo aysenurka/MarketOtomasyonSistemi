@@ -32,6 +32,7 @@
             this.alisIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alisIslemleriToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.satisIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.raporIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msIslemler.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             // 
             this.alisIslemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alisIslemleriToolStripMenuItem1,
-            this.satisIslemleriToolStripMenuItem});
+            this.satisIslemleriToolStripMenuItem,
+            this.raporIslemleriToolStripMenuItem});
             this.alisIslemleriToolStripMenuItem.Name = "alisIslemleriToolStripMenuItem";
             this.alisIslemleriToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.alisIslemleriToolStripMenuItem.Text = "Islemler";
@@ -67,6 +69,13 @@
             this.satisIslemleriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.satisIslemleriToolStripMenuItem.Text = "Satis Islemleri";
             this.satisIslemleriToolStripMenuItem.Click += new System.EventHandler(this.satisIslemleriToolStripMenuItem_Click);
+            // 
+            // raporIslemleriToolStripMenuItem
+            // 
+            this.raporIslemleriToolStripMenuItem.Name = "raporIslemleriToolStripMenuItem";
+            this.raporIslemleriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.raporIslemleriToolStripMenuItem.Text = "Rapor Islemleri";
+            this.raporIslemleriToolStripMenuItem.Click += new System.EventHandler(this.raporIslemleriToolStripMenuItem_Click);
             // 
             // GirisForm
             // 
@@ -97,6 +106,7 @@
         private System.Windows.Forms.ToolStripMenuItem alisIslemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alisIslemleriToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem satisIslemleriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem raporIslemleriToolStripMenuItem;
     }
 }
 
