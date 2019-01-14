@@ -92,6 +92,12 @@
     <Compile Include="AlisSifreForm.Designer.cs">
       <DependentUpon>AlisSifreForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporForm.Designer.cs">
+      <DependentUpon>RaporForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SatisDetayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="AlisSifreForm.resx">
       <DependentUpon>AlisSifreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporForm.resx">
+      <DependentUpon>RaporForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SatisDetayForm.resx">
       <DependentUpon>SatisDetayForm.cs</DependentUpon>

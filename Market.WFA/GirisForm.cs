@@ -43,5 +43,19 @@ namespace Market.WFA
             }
             frmSatisSifre.Show();
         }
+
+        private RaporForm frmRapor;
+        private void raporIslemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmRapor == null || frmRapor.IsDisposed)
+            {
+                frmRapor=new RaporForm()
+                {
+                    Text = "Raporlar",
+                    MdiParent = this
+                };
+            }
+            frmRapor.Show();
+        }
     }
 }
