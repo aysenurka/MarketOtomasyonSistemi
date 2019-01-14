@@ -24,7 +24,7 @@ namespace Market.WFA
 
         private List<SepetViewModel> sepet = new List<SepetViewModel>();
         private UrunViewModel seciliUrun;
-        private FisForm frmFis;
+        public FisForm frmFis;
         private void SatisDetayForm_Load(object sender, EventArgs e)
         {
             lstUrunler.DataSource = UrunHelper.UrunleriGetir();
@@ -175,7 +175,7 @@ namespace Market.WFA
 
             if (odemeBasarili)
             {
-                FormSifirla();
+                //FormSifirla();
                 SepetGetir();
 
                 if (frmFis == null || frmFis.IsDisposed)
@@ -185,8 +185,22 @@ namespace Market.WFA
                         Text = "Fiş Form"
                     };
                     frmFis.Show();
-                  
+
                 }
+                frmFis.satisDetayForm = this;
+                foreach (var item in sepet)
+                {
+                    frmFis.lblFisInfo.Text += $"{item.ToString()}\n";
+                }
+                if (odemeIndex == 0)
+                    frmFis.lblFisInfo.Text += $"\n\n\nToplam: {anaToplam}\n\n\nOdeme Tipi: {(OdemeTipi)odemeIndex}";
+                else if(odemeIndex==1)
+                    frmFis.lblFisInfo.Text += $"\n\n\nToplam: {anaToplam}\n\n\nOdeme Tipi: {(OdemeTipi)odemeIndex}" +
+                        $"\n{lblParaUstu.Text}";
+                //frmFis.lblFisInfo.Text += "bilgiler aktarıldı";
+
+                FormSifirla();
+
             }
         }
 

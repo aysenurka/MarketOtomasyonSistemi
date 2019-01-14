@@ -8,7 +8,7 @@ namespace Market.Models.Enums
 {
     public enum OdemeTipi
     {
-        Nakit,
-        Kart
+        Kart,
+        Nakit
     }
 }

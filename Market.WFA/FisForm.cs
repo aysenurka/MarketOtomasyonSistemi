@@ -16,5 +16,12 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
+        public SatisDetayForm satisDetayForm;
+
+        private void FisForm_Load(object sender, EventArgs e)
+        {
+            satisDetayForm = new SatisDetayForm();
+            satisDetayForm.frmFis = this;
+        }
     }
 }
