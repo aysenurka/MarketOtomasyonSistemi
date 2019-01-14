@@ -16,7 +16,7 @@ namespace Market.WFA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KayitliUrunAlisForm());
+            Application.Run(new BarkodAnaForm());
         }
     }
 }

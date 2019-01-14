@@ -36,9 +36,9 @@
             this.btnStokSiparis = new System.Windows.Forms.Button();
             this.pnUrunKabul = new System.Windows.Forms.Panel();
             this.pnUrunStok = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.nuSiparisAdet = new System.Windows.Forms.NumericUpDown();
             this.btnSiparisVer = new System.Windows.Forms.Button();
+            this.nuSiparisAdet = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnUrunKabul.SuspendLayout();
             this.pnUrunStok.SuspendLayout();
@@ -127,15 +127,16 @@
             this.pnUrunStok.TabIndex = 32;
             this.pnUrunStok.Visible = false;
             // 
-            // label1
+            // btnSiparisVer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(353, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 16);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Siparis Sayisini Giriniz";
+            this.btnSiparisVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiparisVer.Location = new System.Drawing.Point(356, 95);
+            this.btnSiparisVer.Name = "btnSiparisVer";
+            this.btnSiparisVer.Size = new System.Drawing.Size(160, 45);
+            this.btnSiparisVer.TabIndex = 33;
+            this.btnSiparisVer.Text = "Siparis Ver";
+            this.btnSiparisVer.UseVisualStyleBackColor = true;
+            this.btnSiparisVer.Click += new System.EventHandler(this.btnSiparisVer_Click);
             // 
             // nuSiparisAdet
             // 
@@ -159,16 +160,15 @@
             0,
             0});
             // 
-            // btnSiparisVer
+            // label1
             // 
-            this.btnSiparisVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiparisVer.Location = new System.Drawing.Point(356, 95);
-            this.btnSiparisVer.Name = "btnSiparisVer";
-            this.btnSiparisVer.Size = new System.Drawing.Size(160, 45);
-            this.btnSiparisVer.TabIndex = 33;
-            this.btnSiparisVer.Text = "Siparis Ver";
-            this.btnSiparisVer.UseVisualStyleBackColor = true;
-            this.btnSiparisVer.Click += new System.EventHandler(this.btnSiparisVer_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(353, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 16);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Siparis Sayisini Giriniz";
             // 
             // BarkodAnaForm
             // 
