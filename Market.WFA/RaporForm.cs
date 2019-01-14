@@ -269,5 +269,31 @@ namespace Market.WFA
 
             dgvRapor.DataSource = yillik.ToList();
         }
+
+        private void btnKategori_Click(object sender, EventArgs e)
+        {
+            KategoriRapor();
+        }
+
+        private void KategoriRapor()
+        {
+            var urunler = new UrunRepo().GetAll();
+            var urunDetaylar = new UrunDetayRepo().GetAll();
+            var kategoriler = new KategoriRepo().GetAll();
+
+            var kat = from u in urunler
+                join k in kategoriler on u.KategoriId equals k.Id
+                join ud in urunDetaylar on u.Id equals ud.UrunId
+                orderby k.KategoriAd
+                select new
+                {
+                    k.KategoriAd,
+                    u.UrunAd,
+                    u.UrunFiyat,
+                    u.UrunStok,
+                };
+
+            dgvRapor.DataSource = kat.ToList();
+        }
     }
 }

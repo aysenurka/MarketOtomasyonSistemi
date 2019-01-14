@@ -34,6 +34,7 @@
             this.btnAylik = new System.Windows.Forms.Button();
             this.btnYillik = new System.Windows.Forms.Button();
             this.dtpTarihSec = new System.Windows.Forms.DateTimePicker();
+            this.btnKategori = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRapor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,18 +97,33 @@
             this.dtpTarihSec.Size = new System.Drawing.Size(200, 20);
             this.dtpTarihSec.TabIndex = 5;
             // 
+            // btnKategori
+            // 
+            this.btnKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKategori.Location = new System.Drawing.Point(677, 12);
+            this.btnKategori.Name = "btnKategori";
+            this.btnKategori.Size = new System.Drawing.Size(99, 34);
+            this.btnKategori.TabIndex = 6;
+            this.btnKategori.Text = "Kategori";
+            this.btnKategori.UseVisualStyleBackColor = true;
+            this.btnKategori.Click += new System.EventHandler(this.btnKategori_Click);
+            // 
             // RaporForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 492);
+            this.Controls.Add(this.btnKategori);
             this.Controls.Add(this.dtpTarihSec);
             this.Controls.Add(this.btnYillik);
             this.Controls.Add(this.btnAylik);
             this.Controls.Add(this.btnHaftalik);
             this.Controls.Add(this.btnGunluk);
             this.Controls.Add(this.dgvRapor);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RaporForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RaporForm";
             this.Load += new System.EventHandler(this.RaporForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRapor)).EndInit();
@@ -123,5 +139,6 @@
         private System.Windows.Forms.Button btnAylik;
         private System.Windows.Forms.Button btnYillik;
         private System.Windows.Forms.DateTimePicker dtpTarihSec;
+        private System.Windows.Forms.Button btnKategori;
     }
 }
