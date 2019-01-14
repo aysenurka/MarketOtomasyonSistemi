@@ -145,7 +145,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 176);
+            this.label4.Location = new System.Drawing.Point(38, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 7;
@@ -154,7 +154,7 @@
             // nuUrunKoliFiyati
             // 
             this.nuUrunKoliFiyati.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuUrunKoliFiyati.Location = new System.Drawing.Point(258, 169);
+            this.nuUrunKoliFiyati.Location = new System.Drawing.Point(258, 140);
             this.nuUrunKoliFiyati.Maximum = new decimal(new int[] {
             500,
             0,
@@ -223,16 +223,17 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(36, 147);
+            this.label10.Location = new System.Drawing.Point(36, 263);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 16);
             this.label10.TabIndex = 32;
             this.label10.Text = "Adet Sayisi";
+            this.label10.Visible = false;
             // 
             // nuAdet
             // 
             this.nuAdet.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuAdet.Location = new System.Drawing.Point(258, 140);
+            this.nuAdet.Location = new System.Drawing.Point(258, 256);
             this.nuAdet.Maximum = new decimal(new int[] {
             500,
             0,
@@ -252,12 +253,13 @@
             0,
             0,
             0});
+            this.nuAdet.Visible = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(38, 263);
+            this.label9.Location = new System.Drawing.Point(38, 234);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 16);
             this.label9.TabIndex = 30;
@@ -272,7 +274,7 @@
             0,
             0,
             131072});
-            this.nuUrunKarOranı.Location = new System.Drawing.Point(260, 256);
+            this.nuUrunKarOranı.Location = new System.Drawing.Point(258, 227);
             this.nuUrunKarOranı.Maximum = new decimal(new int[] {
             1,
             0,
@@ -291,7 +293,7 @@
             0,
             0,
             131072});
-            this.nuYeniUrunKdvDegeri.Location = new System.Drawing.Point(260, 227);
+            this.nuYeniUrunKdvDegeri.Location = new System.Drawing.Point(258, 198);
             this.nuYeniUrunKdvDegeri.Maximum = new decimal(new int[] {
             1,
             0,
@@ -305,7 +307,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(40, 234);
+            this.label11.Location = new System.Drawing.Point(40, 205);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(80, 16);
             this.label11.TabIndex = 27;
@@ -320,7 +322,7 @@
             0,
             0,
             131072});
-            this.nuYeniUrunIndirim.Location = new System.Drawing.Point(258, 198);
+            this.nuYeniUrunIndirim.Location = new System.Drawing.Point(258, 169);
             this.nuYeniUrunIndirim.Maximum = new decimal(new int[] {
             1,
             0,
@@ -334,7 +336,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(38, 205);
+            this.label14.Location = new System.Drawing.Point(38, 176);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(102, 16);
             this.label14.TabIndex = 26;
@@ -343,9 +345,9 @@
             // btnKaydet
             // 
             this.btnKaydet.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKaydet.Location = new System.Drawing.Point(216, 285);
+            this.btnKaydet.Location = new System.Drawing.Point(171, 285);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(167, 66);
+            this.btnKaydet.Size = new System.Drawing.Size(210, 66);
             this.btnKaydet.TabIndex = 24;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;

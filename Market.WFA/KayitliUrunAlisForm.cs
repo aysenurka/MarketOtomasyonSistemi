@@ -29,17 +29,15 @@ namespace Market.WFA
        
         private void button1_Click(object sender, EventArgs e)
         {
-            ////Düzeltilicek Bulunan Barkodun gelmesine göre 
+           
             try
             {
-                
-
+ 
                 var sonuc = UrunDetayHelper.BarkodluUrunuGetir(txtBarkodNo.Text);
                 sonuc.Adet = Convert.ToInt32(txtAlinanadetSayisi.Text);
                 var deger = new UrunDetayRepo().KayitliUrunEkle(sonuc);
                 MessageBox.Show($"{deger} Stoga Eklendi..");
-
-                VerileriDoldur(sonuc);
+                new UrunRepo().Update();
 
             }
             catch (Exception ex)
@@ -47,7 +45,8 @@ namespace Market.WFA
 
                 throw;
             }
-
+            var sonucx = UrunDetayHelper.BarkodluUrunuGetir(txtBarkodNo.Text);
+            VerileriDoldur(sonucx);
             this.Close();
         }
 
@@ -101,6 +100,8 @@ namespace Market.WFA
 
             var sonuc = UrunDetayHelper.BarkodluUrunuGetir(txtBarkodNo.Text);
             VerileriDoldur(sonuc);
+            txtguncelFiyat.Visible = false;
+            label14.Visible = false;
         }
 
         private void VerileriDoldur(KayitliOlanUrunViewModel sonuc)
