@@ -61,6 +61,7 @@
     <Compile Include="ViewModels\KayitliOlanUrunViewModel.cs" />
     <Compile Include="ViewModels\KayitliOlmayanUrunViewModel.cs" />
     <Compile Include="ViewModels\SepetViewModel.cs" />
+    <Compile Include="ViewModels\SiparisBarkodViewModel.cs" />
     <Compile Include="ViewModels\UrunSiparisViewModel.cs" />
     <Compile Include="ViewModels\UrunViewModel.cs" />
   </ItemGroup>

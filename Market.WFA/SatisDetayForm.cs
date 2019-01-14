@@ -15,16 +15,18 @@ namespace Market.WFA
     public partial class SatisDetayForm : Form
     {
         public SatisDetayForm()
-        { 
+        {
             InitializeComponent();
         }
 
         private List<SepetViewModel> sepet = new List<SepetViewModel>();
         private UrunViewModel seciliUrun;
         public FisForm frmFis;
+        private SiparisBarkodViewModel barkodbulunan;
+
         private void SatisDetayForm_Load(object sender, EventArgs e)
         {
-            lstUrunler.DataSource = UrunHelper.StoktakiUrunleriGetir();
+            //lstUrunler.DataSource = UrunHelper.StoktakiUrunleriGetir();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -166,11 +168,11 @@ namespace Market.WFA
                     var ekle = new SatisDetayRepo();
                     var urunler = new SatisDetayViewModel
                     {
-                         anatoplam=anaToplam,
-                          odemeTipi=(OdemeTipi)odemeIndex,
-                           SepetModel=sepet,     
+                        anatoplam = anaToplam,
+                        odemeTipi = (OdemeTipi)odemeIndex,
+                        SepetModel = sepet,
                     };
-                     satısid = ekle.SatisYap(urunler);
+                    satısid = ekle.SatisYap(urunler);
                     MessageBox.Show("Oldu bu iş\nSatıs Yapıldı.");
                 }
                 catch (Exception)
@@ -202,7 +204,7 @@ namespace Market.WFA
                 frmFis.lblFis.Text += $"Fis No: {satısid}";
                 if (odemeIndex == 0)
                     frmFis.lblFisInfo.Text += $"\n\n\nToplam: {anaToplam}\n\n\nOdeme Tipi: {(OdemeTipi)odemeIndex}";
-                else if(odemeIndex==1)
+                else if (odemeIndex == 1)
                     frmFis.lblFisInfo.Text += $"\n\n\nToplam: {anaToplam}\n\n\nOdeme Tipi: {(OdemeTipi)odemeIndex}" +
                         $"\n{lblParaUstu.Text}";
 
@@ -239,7 +241,7 @@ namespace Market.WFA
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Pdf için bir hata oluştu\n"+ex.Message);
+                            MessageBox.Show("Pdf için bir hata oluştu\n" + ex.Message);
                         }
 
                         finally
@@ -304,6 +306,42 @@ namespace Market.WFA
             posetFiyat = Convert.ToDecimal(posetSayisi * 0.25);
             anaToplam = total + posetFiyat;
             lblToplam.Text = $"Toplam: {anaToplam:c2}";
+        }
+        private string barkodno;
+      
+        private void txtBarkodNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                barkodno = txtBarkodNo.Text;
+                var sonuc = new UrunDetayRepo().GetAll().FirstOrDefault(x => x.Barkod == barkodno);
+               
+                if (sonuc == null)
+                {
+                    MessageBox.Show("Yanlıs bir barkod girdiniz\nTekrar giriniz deneyiniz");
+
+                }
+                else
+                {
+                    barkodbulunan = new UrunDetayRepo().GetAll().Where(x => x.Barkod == barkodno).Select(x => new SiparisBarkodViewModel
+                    {                  
+                        UrunDetayId = x.Id,
+                        UrunId = x.UrunId,
+                        UrunAdi=x.Urun.UrunAd,
+                        SatisFiyati=x.Urun.UrunFiyat,
+                        BirimAdet = x.BirimAdet,
+                        Adet = x.Adet,
+                        Barkod = x.Barkod,
+                        GuncelStok = x.Urun.UrunStok,
+                        AlişFiyat = x.AlisFiyat,
+                        UrunAciklama = x.UrunAdetAciklama,
+
+                    }).First();
+                    lstUrunler.Items.Add(barkodbulunan);
+
+                }
+                txtBarkodNo.Text = string.Empty;
+            }
         }
     }
 }

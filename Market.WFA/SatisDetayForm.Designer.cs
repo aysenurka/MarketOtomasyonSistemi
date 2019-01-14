@@ -44,6 +44,8 @@
             this.nuPoset = new System.Windows.Forms.NumericUpDown();
             this.cbPoset = new System.Windows.Forms.CheckBox();
             this.pnlNakit = new System.Windows.Forms.Panel();
+            this.txtBarkodNo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlOdeme.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPoset)).BeginInit();
             this.pnlNakit.SuspendLayout();
@@ -56,13 +58,13 @@
             this.lstUrunler.ItemHeight = 20;
             this.lstUrunler.Location = new System.Drawing.Point(12, 12);
             this.lstUrunler.Name = "lstUrunler";
-            this.lstUrunler.Size = new System.Drawing.Size(227, 244);
+            this.lstUrunler.Size = new System.Drawing.Size(387, 244);
             this.lstUrunler.TabIndex = 0;
             // 
             // btnEkle
             // 
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.Location = new System.Drawing.Point(245, 12);
+            this.btnEkle.Location = new System.Drawing.Point(244, 270);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(93, 37);
             this.btnEkle.TabIndex = 1;
@@ -235,11 +237,32 @@
             this.pnlNakit.TabIndex = 13;
             this.pnlNakit.Visible = false;
             // 
+            // txtBarkodNo
+            // 
+            this.txtBarkodNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarkodNo.Location = new System.Drawing.Point(119, 413);
+            this.txtBarkodNo.Name = "txtBarkodNo";
+            this.txtBarkodNo.Size = new System.Drawing.Size(168, 22);
+            this.txtBarkodNo.TabIndex = 14;
+            this.txtBarkodNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkodNo_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 416);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Ürün Okutun";
+            // 
             // SatisDetayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtBarkodNo);
             this.Controls.Add(this.pnlNakit);
             this.Controls.Add(this.cbPoset);
             this.Controls.Add(this.nuPoset);
@@ -281,5 +304,7 @@
         private System.Windows.Forms.NumericUpDown nuPoset;
         private System.Windows.Forms.CheckBox cbPoset;
         private System.Windows.Forms.Panel pnlNakit;
+        private System.Windows.Forms.TextBox txtBarkodNo;
+        private System.Windows.Forms.Label label1;
     }
 }
