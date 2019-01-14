@@ -320,7 +320,10 @@ namespace Market.WFA
         }
         private string barkodno;
 
-        private void txtBarkodNo_KeyDown(object sender, KeyEventArgs e)
+
+
+
+        private void txtBarkodNo_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -329,15 +332,41 @@ namespace Market.WFA
 
                 if (sonuc == null)
                 {
-                    MessageBox.Show("Yanlıs bir barkod girdiniz\nTekrar giriniz deneyiniz");
+                    lstUrunler.DataSource = new UrunDetayRepo().GetAll().Select(x => new SiparisBarkodViewModel
+                    {
+                        BirimAdet = x.BirimAdet,
+                        SatisFiyati = x.SatisFiyat,
+                        UrunAd = x.Urun.UrunAd,
+                        UrunDetayId = x.Id,
+                        UrunAciklama = x.UrunAdetAciklama,
+                        UrunStok = x.Urun.UrunStok,
+                        UrunFiyat = x.Urun.UrunFiyat
+                    }).ToList();
+                    MessageBox.Show(" Kayıtlı Barkod Bulunamadı");
 
                 }
+
                 else
                 {
-                   
+                    List<SiparisBarkodViewModel> bulunanList = new List<SiparisBarkodViewModel>();
+                    var bulunan = new UrunDetayRepo().GetAll(x => x.Barkod == barkodno).Select(x => new SiparisBarkodViewModel
+                    {
 
+                        BirimAdet = x.BirimAdet,
+                        SatisFiyati = x.SatisFiyat,
+                        UrunAd = x.Urun.UrunAd,
+                        UrunDetayId = x.Id,
+                        UrunAciklama = x.UrunAdetAciklama,
+                        UrunStok = x.Urun.UrunStok,
+                        UrunFiyat = x.Urun.UrunFiyat
+
+                    });
+
+                    bulunanList.AddRange(bulunan);
+                    lstUrunler.DataSource = bulunanList;
                 }
-                txtBarkodNo.Text = string.Empty;
+
+
             }
         }
     }
