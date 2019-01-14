@@ -38,9 +38,8 @@
             this.lblFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblFis.Location = new System.Drawing.Point(12, 9);
             this.lblFis.Name = "lblFis";
-            this.lblFis.Size = new System.Drawing.Size(29, 16);
+            this.lblFis.Size = new System.Drawing.Size(0, 16);
             this.lblFis.TabIndex = 0;
-            this.lblFis.Text = "Fis";
             // 
             // lblFisInfo
             // 

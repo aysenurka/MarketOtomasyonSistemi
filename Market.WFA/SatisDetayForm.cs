@@ -4,8 +4,11 @@ using Market.Models.Enums;
 using Market.Models.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Market.WFA
 {
@@ -168,7 +171,7 @@ namespace Market.WFA
                            SepetModel=sepet,     
                     };
                      satısid = ekle.SatisYap(urunler);
-                    MessageBox.Show("Oldu bu iş\Satıs Yapıldı.");
+                    MessageBox.Show("Oldu bu iş\nSatıs Yapıldı.");
                 }
                 catch (Exception)
                 {
@@ -195,13 +198,58 @@ namespace Market.WFA
                 {
                     frmFis.lblFisInfo.Text += $"{item.ToString()}\n";
                 }
+
+                frmFis.lblFis.Text += $"Fis No: {satısid}";
                 if (odemeIndex == 0)
                     frmFis.lblFisInfo.Text += $"\n\n\nToplam: {anaToplam}\n\n\nOdeme Tipi: {(OdemeTipi)odemeIndex}";
                 else if(odemeIndex==1)
                     frmFis.lblFisInfo.Text += $"\n\n\nToplam: {anaToplam}\n\n\nOdeme Tipi: {(OdemeTipi)odemeIndex}" +
                         $"\n{lblParaUstu.Text}";
-                
+
                 //frmFis.lblFisInfo.Text += "bilgiler aktarıldı";
+
+
+                using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF File|*.pdf", ValidateNames = true })
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        Document doc = new Document(PageSize.A5.Rotate());
+                        try
+                        {
+                            PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+                            doc.Open();
+                            var urunsatis = lstSepet.Items;
+
+                            DateTime tarih = DateTime.Now;
+
+                            doc.Add(new Paragraph("WIS101 \nBesiktas/ISTANBUL \nKuloglu Mh., Barbaros Blv. Yildiz IS Hani No:9"));
+                            doc.Add(new Paragraph($"\nFis No:{new SatisRepo().GetAll().Last().Id}\nTarih: {tarih.ToString("dd.MM.yyyy")} Saat: {tarih.ToString("HH:mm:ss")}"));
+                            doc.Add(new Paragraph("\nÜrün Listesi\n------------------------------------------------------"));
+                            doc.Add(new Paragraph("\nUrun adı             Adet        Fiyat\n"));
+                            foreach (var item in urunsatis)
+                            {
+                                doc.Add(new Paragraph(item.ToString()));
+                            }
+                            doc.Add(new Paragraph($"\n{lblToplam.Text:c2}"));
+                            doc.Add(new Paragraph($"\nÖdeme Yöntemi : {(OdemeTipi)odemeIndex}"));
+
+                            if (rbNakit.Checked == true)
+                            {
+                                doc.Add(new Paragraph($"Alinan Miktar: {(txtNakit.Text):c2}\n{lblParaUstu.Text:c2}"));
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Pdf için bir hata oluştu\n"+ex.Message);
+                        }
+
+                        finally
+                        {
+                            doc.Close();
+                        }
+                    }
+
+
+
 
                 FormSifirla();
                 this.Close();
