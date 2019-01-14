@@ -16,27 +16,29 @@ namespace Market.WFA
             InitializeComponent();
 
         }
-
+        public BarkodAnaForm barkodgel;
         private void KayıtlıUrunAlısForm_Load(object sender, EventArgs e)
         {
-            string urunbul = "123";
 
-            var sonuc = UrunDetayHelper.BarkodluUrunuGetir(urunbul);
+          
+            var sonuc = UrunDetayHelper.BarkodluUrunuGetir(txtBarkodNo.Text);
+
             VerileriDoldur(sonuc);
 
         }
-        string urunbul;
+       
         private void button1_Click(object sender, EventArgs e)
         {
             ////Düzeltilicek Bulunan Barkodun gelmesine göre 
             try
             {
-                urunbul = txtBarkodNo.Text;
+                
 
-                var sonuc = UrunDetayHelper.BarkodluUrunuGetir(urunbul);
+                var sonuc = UrunDetayHelper.BarkodluUrunuGetir(txtBarkodNo.Text);
                 sonuc.Adet = Convert.ToInt32(txtAlinanadetSayisi.Text);
                 var deger = new UrunDetayRepo().KayitliUrunEkle(sonuc);
                 MessageBox.Show($"{deger} Stoga Eklendi..");
+
                 VerileriDoldur(sonuc);
 
             }
@@ -78,12 +80,11 @@ namespace Market.WFA
             label14.Visible = true;
             txtguncelFiyat.Visible = true;
             btnGuncelle.Visible = true;
-
-            urunbul = txtBarkodNo.Text;
+            
 
             using (var urun = new UrunDetayRepo())
             {
-                var Guncelleurun = new UrunDetayRepo().GetAll().Where(x => x.Barkod == urunbul).FirstOrDefault();
+                var Guncelleurun = new UrunDetayRepo().GetAll().Where(x => x.Barkod == txtBarkodNo.Text).FirstOrDefault();
                 Guncelleurun.Kar = decimal.Parse(txtKar.Text);
                 //Guncelleurun.Fiyat = decimal.Parse(txtUrunGuncelFiyat.Text);
                 Guncelleurun.Kdv = decimal.Parse(txtKDVDegeri.Text);
@@ -97,9 +98,8 @@ namespace Market.WFA
                 MessageBox.Show($"{Guncelleurun.Urun.UrunAd} isimli urun guncellendi.");
             }
 
-            var sonuc = UrunDetayHelper.BarkodluUrunuGetir(urunbul);
+            var sonuc = UrunDetayHelper.BarkodluUrunuGetir(txtBarkodNo.Text);
             VerileriDoldur(sonuc);
-
         }
 
         private void VerileriDoldur(KayitliOlanUrunViewModel sonuc)
