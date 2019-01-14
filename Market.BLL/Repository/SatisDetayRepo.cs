@@ -31,7 +31,7 @@ namespace Market.BLL.Repository
                         {
                             Id = satis.Id,
                             Id2 = item.UrunId,
-                            Adet = item.Adet,
+                            Adet = item.Adet*(int)model.BirimAdet,
                             BirimFiyat = item.BirimFiyat
                         });
                         var urun = db.Urunler.Find(item.UrunId);

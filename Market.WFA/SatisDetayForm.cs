@@ -40,6 +40,7 @@ namespace Market.WFA
                 UrunStok = x.Urun.UrunStok,
                 UrunFiyat = x.Urun.UrunFiyat,
                 Adet=x.Adet, 
+                
                
                
                 
@@ -192,7 +193,7 @@ namespace Market.WFA
                         odemeTipi = (OdemeTipi)odemeIndex,
                         SepetModel = sepet,
                          BirimAdet=seciliUrun.BirimAdet,
-                       
+                      
                    
                     };
                     satısid = ekle.SatisYap(urunler);
