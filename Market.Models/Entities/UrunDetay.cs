@@ -14,6 +14,8 @@ namespace Market.Models.Entities
         public string Barkod { get; set; }
         public int Adet { get; set; }
         public int BirimAdet { get; set; } = 1;
+        [StringLength(200)]
+        public string UrunAdetAciklama { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int ToplamAdet
         {
