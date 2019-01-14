@@ -343,7 +343,7 @@
             // btnKaydet
             // 
             this.btnKaydet.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKaydet.Location = new System.Drawing.Point(214, 285);
+            this.btnKaydet.Location = new System.Drawing.Point(216, 285);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(167, 66);
             this.btnKaydet.TabIndex = 24;
