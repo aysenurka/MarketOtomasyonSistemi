@@ -18,6 +18,7 @@ namespace Market.WFA
 
         private KayitliUrunAlisForm kayitliurunalisform;
         string ara;
+        string eara;
         private void btnBarkodUret_Click(object sender, EventArgs e)
         {
 
@@ -69,15 +70,6 @@ namespace Market.WFA
             int sayi = rnd.Next(0,5);
             return sayi.ToString();
         }
-        private void btnBarkodUret_KeyDown(object sender, KeyEventArgs e)
-        {
-
-            if (e.KeyCode == Keys.Enter)
-            {
-                MessageBox.Show("Barkod okundu");
-            }
-        }
-
 
         private void BarkodAnaForm_Load(object sender, EventArgs e)
         {
@@ -116,6 +108,30 @@ namespace Market.WFA
                 var sonuc = new UrunRepo().UrunStokSiparis(secili);
                 MessageBox.Show($"{sonuc} Siparis Edildi.");
                 lstStokdaAzalanUrunler.DataSource = UrunHelper.StoktakiAzalanUrunler();
+            }
+        }
+
+        private void txtBarkod_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                eara = txtBarkod.Text;
+                var sonuc = new UrunDetayRepo().GetAll().FirstOrDefault(x => x.Barkod == eara);
+                if (sonuc == null)
+                {
+                    YeniUrunDetayForm yeniurunform = new YeniUrunDetayForm();
+                    yeniurunform.txtBarkodNo.Text = eara;
+                    yeniurunform.Show();
+
+                }
+                else
+                {
+                    KayitliUrunAlisForm kayitliurunalisform = new KayitliUrunAlisForm();
+                    kayitliurunalisform.txtBarkodNo.Text = eara;
+                    kayitliurunalisform.Show();
+
+                }
+                txtBarkod.Text = string.Empty;
             }
         }
     }

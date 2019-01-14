@@ -48,7 +48,7 @@ namespace Market.WFA
                 throw;
             }
 
-
+            this.Close();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace Market.WFA
                 //Guncelleurun.Fiyat = decimal.Parse(txtUrunGuncelFiyat.Text);
                 Guncelleurun.Kdv = decimal.Parse(txtKDVDegeri.Text);
                 Guncelleurun.Indirim = decimal.Parse(txtSEcilenindirim.Text);
-                Guncelleurun.Fiyat = decimal.Parse(txtguncelFiyat.Text);
+                //Guncelleurun.Fiyat = decimal.Parse(txtguncelFiyat.Text);
                 urun.Update();
                 var urunFiyatG = new UrunRepo().GetById(Guncelleurun.UrunId);
                 urunFiyatG.UrunFiyat = Guncelleurun.SatisFiyat / Guncelleurun.ToplamAdet;

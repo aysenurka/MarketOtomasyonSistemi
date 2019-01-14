@@ -47,7 +47,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(36, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(36, 95);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(283, 152);
             this.pictureBox1.TabIndex = 27;
@@ -58,12 +58,12 @@
             this.btnBarkodUret.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBarkodUret.Location = new System.Drawing.Point(234, 6);
             this.btnBarkodUret.Name = "btnBarkodUret";
-            this.btnBarkodUret.Size = new System.Drawing.Size(85, 29);
+            this.btnBarkodUret.Size = new System.Drawing.Size(120, 62);
             this.btnBarkodUret.TabIndex = 26;
-            this.btnBarkodUret.Text = "Barkod Tanı";
+            this.btnBarkodUret.Text = "Barkod Olustur Ve Ara";
             this.btnBarkodUret.UseVisualStyleBackColor = true;
             this.btnBarkodUret.Click += new System.EventHandler(this.btnBarkodUret_Click);
-            this.btnBarkodUret.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnBarkodUret_KeyDown);
+           
             // 
             // txtBarkod
             // 
@@ -72,6 +72,7 @@
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(152, 22);
             this.txtBarkod.TabIndex = 25;
+            this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
             // lstStokdaAzalanUrunler
             // 
@@ -85,7 +86,7 @@
             // btnUrunAl
             // 
             this.btnUrunAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUrunAl.Location = new System.Drawing.Point(416, 118);
+            this.btnUrunAl.Location = new System.Drawing.Point(483, 100);
             this.btnUrunAl.Name = "btnUrunAl";
             this.btnUrunAl.Size = new System.Drawing.Size(114, 60);
             this.btnUrunAl.TabIndex = 29;
@@ -96,7 +97,7 @@
             // btnStokSiparis
             // 
             this.btnStokSiparis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStokSiparis.Location = new System.Drawing.Point(561, 118);
+            this.btnStokSiparis.Location = new System.Drawing.Point(483, 176);
             this.btnStokSiparis.Name = "btnStokSiparis";
             this.btnStokSiparis.Size = new System.Drawing.Size(114, 60);
             this.btnStokSiparis.TabIndex = 30;
@@ -111,7 +112,7 @@
             this.pnUrunKabul.Controls.Add(this.btnBarkodUret);
             this.pnUrunKabul.Location = new System.Drawing.Point(29, 44);
             this.pnUrunKabul.Name = "pnUrunKabul";
-            this.pnUrunKabul.Size = new System.Drawing.Size(356, 230);
+            this.pnUrunKabul.Size = new System.Drawing.Size(404, 277);
             this.pnUrunKabul.TabIndex = 31;
             this.pnUrunKabul.Visible = false;
             // 

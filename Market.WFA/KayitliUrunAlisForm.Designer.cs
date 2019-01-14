@@ -87,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 221);
+            this.label3.Location = new System.Drawing.Point(11, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 16);
             this.label3.TabIndex = 2;
@@ -105,7 +105,7 @@
             // txtUrunİsmi
             // 
             this.txtUrunİsmi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunİsmi.Location = new System.Drawing.Point(209, 81);
+            this.txtUrunİsmi.Location = new System.Drawing.Point(209, 83);
             this.txtUrunİsmi.Name = "txtUrunİsmi";
             this.txtUrunİsmi.ReadOnly = true;
             this.txtUrunİsmi.Size = new System.Drawing.Size(153, 22);
@@ -114,7 +114,7 @@
             // txtUrunAdetSayisi
             // 
             this.txtUrunAdetSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAdetSayisi.Location = new System.Drawing.Point(209, 218);
+            this.txtUrunAdetSayisi.Location = new System.Drawing.Point(209, 136);
             this.txtUrunAdetSayisi.Name = "txtUrunAdetSayisi";
             this.txtUrunAdetSayisi.ReadOnly = true;
             this.txtUrunAdetSayisi.Size = new System.Drawing.Size(153, 22);
@@ -208,7 +208,7 @@
             // txtUrunGuncelFiyat
             // 
             this.txtUrunGuncelFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunGuncelFiyat.Location = new System.Drawing.Point(209, 246);
+            this.txtUrunGuncelFiyat.Location = new System.Drawing.Point(209, 164);
             this.txtUrunGuncelFiyat.Name = "txtUrunGuncelFiyat";
             this.txtUrunGuncelFiyat.ReadOnly = true;
             this.txtUrunGuncelFiyat.Size = new System.Drawing.Size(153, 22);
@@ -218,16 +218,16 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 249);
+            this.label8.Location = new System.Drawing.Point(10, 167);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 16);
+            this.label8.Size = new System.Drawing.Size(108, 16);
             this.label8.TabIndex = 34;
-            this.label8.Text = "Guncel Fiyat";
+            this.label8.Text = "Ham Alış Fiyat";
             // 
             // txtAlisFiyat
             // 
             this.txtAlisFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAlisFiyat.Location = new System.Drawing.Point(209, 190);
+            this.txtAlisFiyat.Location = new System.Drawing.Point(209, 192);
             this.txtAlisFiyat.Name = "txtAlisFiyat";
             this.txtAlisFiyat.ReadOnly = true;
             this.txtAlisFiyat.Size = new System.Drawing.Size(153, 22);
@@ -237,11 +237,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 193);
+            this.label9.Location = new System.Drawing.Point(10, 198);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 16);
+            this.label9.Size = new System.Drawing.Size(88, 16);
             this.label9.TabIndex = 37;
-            this.label9.Text = "Alis Fiyati";
+            this.label9.Text = "KDV\'li Fiyat";
             // 
             // label10
             // 
@@ -266,7 +266,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 137);
+            this.label11.Location = new System.Drawing.Point(11, 223);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(137, 16);
             this.label11.TabIndex = 41;
@@ -275,7 +275,7 @@
             // txtGuncelSatisFiyat
             // 
             this.txtGuncelSatisFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtGuncelSatisFiyat.Location = new System.Drawing.Point(210, 134);
+            this.txtGuncelSatisFiyat.Location = new System.Drawing.Point(209, 220);
             this.txtGuncelSatisFiyat.Name = "txtGuncelSatisFiyat";
             this.txtGuncelSatisFiyat.ReadOnly = true;
             this.txtGuncelSatisFiyat.Size = new System.Drawing.Size(153, 22);
@@ -284,21 +284,23 @@
             // txtUrunTaneSatısFiyat
             // 
             this.txtUrunTaneSatısFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunTaneSatısFiyat.Location = new System.Drawing.Point(210, 162);
+            this.txtUrunTaneSatısFiyat.Location = new System.Drawing.Point(851, 306);
             this.txtUrunTaneSatısFiyat.Name = "txtUrunTaneSatısFiyat";
             this.txtUrunTaneSatısFiyat.ReadOnly = true;
             this.txtUrunTaneSatısFiyat.Size = new System.Drawing.Size(153, 22);
             this.txtUrunTaneSatısFiyat.TabIndex = 43;
+            this.txtUrunTaneSatısFiyat.Visible = false;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(12, 165);
+            this.label12.Location = new System.Drawing.Point(653, 309);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(148, 16);
             this.label12.TabIndex = 44;
             this.label12.Text = "Ürün tane satis fiyatı";
+            this.label12.Visible = false;
             // 
             // btnGuncelle
             // 
