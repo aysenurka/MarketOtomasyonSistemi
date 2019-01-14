@@ -40,7 +40,7 @@ namespace Market.BLL.Repository
                     }
                     db.SaveChanges();
                     tran.Commit();
-                    return 1;
+                    return satis.Id;
                 }
                 catch (Exception ex)
                 {

@@ -116,7 +116,7 @@ namespace Market.WFA
                     anaToplam = total;
             }
         }
-
+        private int satısid;
         private bool odemeBasarili = false;
         private void btnTamamla_Click(object sender, EventArgs e)
         {
@@ -167,8 +167,8 @@ namespace Market.WFA
                           odemeTipi=(OdemeTipi)odemeIndex,
                            SepetModel=sepet,     
                     };
-                    ekle.SatisYap(urunler);
-                    MessageBox.Show("Oldu bu iş");
+                     satısid = ekle.SatisYap(urunler);
+                    MessageBox.Show("Oldu bu iş\Satıs Yapıldı.");
                 }
                 catch (Exception)
                 {
@@ -200,6 +200,7 @@ namespace Market.WFA
                 else if(odemeIndex==1)
                     frmFis.lblFisInfo.Text += $"\n\n\nToplam: {anaToplam}\n\n\nOdeme Tipi: {(OdemeTipi)odemeIndex}" +
                         $"\n{lblParaUstu.Text}";
+                
                 //frmFis.lblFisInfo.Text += "bilgiler aktarıldı";
 
                 FormSifirla();
