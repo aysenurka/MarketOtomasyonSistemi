@@ -22,6 +22,7 @@ namespace Market.WFA
             cmbYeniCategory.DataSource = KategoriHelper.EnUstKategorileriGetir();
 
             cmbUrunCategory.DataSource = UrunHelper.UrunleriGetir();
+            cmbUrunCategory.DisplayMember = "UrunAd";
         }
 
      
