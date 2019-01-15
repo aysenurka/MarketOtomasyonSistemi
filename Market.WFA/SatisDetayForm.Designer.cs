@@ -79,7 +79,7 @@
             this.lstSepet.ItemHeight = 20;
             this.lstSepet.Location = new System.Drawing.Point(442, 12);
             this.lstSepet.Name = "lstSepet";
-            this.lstSepet.Size = new System.Drawing.Size(346, 244);
+            this.lstSepet.Size = new System.Drawing.Size(570, 244);
             this.lstSepet.TabIndex = 2;
             // 
             // lblToplam
@@ -245,7 +245,6 @@
             this.txtBarkodNo.Size = new System.Drawing.Size(168, 22);
             this.txtBarkodNo.TabIndex = 14;
             this.txtBarkodNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkodNo_KeyDown_1);
-     
             // 
             // label1
             // 
@@ -261,7 +260,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 490);
+            this.ClientSize = new System.Drawing.Size(1074, 508);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBarkodNo);
             this.Controls.Add(this.pnlNakit);
