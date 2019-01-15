@@ -83,7 +83,7 @@ namespace Market.WFA
                         UrunDetayId = seciliUrun.UrunDetayId,
                          SatısFiyatı=seciliUrun.SatisFiyati,
                           BirimAdet=seciliUrun.BirimAdet,
-                        
+                        AciklamaAlani=seciliUrun.UrunAciklama,
                         //Kdv =seciliUrun.UrunDetay.Kdv
                     });
                 }

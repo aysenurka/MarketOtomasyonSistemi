@@ -17,11 +17,12 @@ namespace Market.Models.ViewModels
         public string Barkod { get; set; }
         public decimal SatısFiyatı { get; set; }
         public decimal BirimAdet { get; set; }
+        public string AciklamaAlani { get; set; }
 
         //public decimal ToplamFiyat { get; set } = Adet * Fiyat;
 
         //public override string ToString() => $"{UrunAdi} x{Adet} {ToplamFiyat():c2}";
-        public override string ToString() => $"{UrunAdi,-20} x{Adet,-7} {ToplamFiyat():c2}";
+        public override string ToString() => $"{UrunAdi,-20} x{Adet,-7} {ToplamFiyat():c2} {AciklamaAlani}";
 
         public decimal ToplamFiyat() => Adet * SatısFiyatı;
     }
