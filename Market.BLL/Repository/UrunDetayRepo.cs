@@ -60,6 +60,7 @@ namespace Market.BLL.Repository
 
                     var urun = new UrunRepo().GetById(model.UrunId);
                     urun.UrunStok = urun.UrunStok + (model.Adet*bulurundetay.BirimAdet);
+                    urun.UrunFiyat = model.SatisFiyati / model.BirimAdet;
                     
                     new UrunRepo().Update();
                     tran.Commit();

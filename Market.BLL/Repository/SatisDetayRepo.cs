@@ -31,14 +31,17 @@ namespace Market.BLL.Repository
                         {
                             Id = satis.Id,
                             Id2 = item.UrunId,
-                            Adet = item.Adet*(int)model.BirimAdet,
+                            Adet = item.Adet*(int)item.BirimAdet,
                             BirimFiyat = item.BirimFiyat
                         });
+                        db.SaveChanges();
                         var urun = db.Urunler.Find(item.UrunId);
-                        urun.UrunStok = urun.UrunStok - (item.Adet*model.BirimAdet);
-                        new UrunRepo().Update();
+                        urun.UrunStok = urun.UrunStok - (item.Adet * (int)item.BirimAdet);
+                        db.SaveChanges();
+                       
+                        
                     }
-                    db.SaveChanges();
+               
                     tran.Commit();
                     return satis.Id;
                 }

@@ -16,6 +16,7 @@ namespace Market.Models.ViewModels
         public decimal Kdv { get; set; }
         public string Barkod { get; set; }
         public decimal SatısFiyatı { get; set; }
+        public decimal BirimAdet { get; set; }
 
         //public decimal ToplamFiyat { get; set } = Adet * Fiyat;
 
